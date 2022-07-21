@@ -9,8 +9,8 @@ Footer START -->
 			<div class="col-lg-3">
 				<!-- logo -->
 				<a class="me-0" href="index.html">
-					<img class="light-mode-item" src="assets/logo.png" alt="logo" width="80%"> 
-					<img class="dark-mode-item" src="assets/logo.png" alt="logo" width="80%">
+					<img class="light-mode-item" routerLink="/home" src="assets/Edutech-logo.svg" alt="logo" width="90%"> 
+					<img class="dark-mode-item" routerLink="/home" src="assets/Edutech-logo.svg" alt="logo" width="90%">
 				</a>
 				<p class="my-3">We are a young team of diversified people who have education close to our hearts and are extremely passionate about global and domestic education. With experience close</p>
 				<!-- Social media icon -->
@@ -30,7 +30,7 @@ Footer START -->
 					<div *ngFor="let footerItem of footerItems" class="col-6 col-md-4">
 						<h5 class="mb-2 mb-md-4">{{footerItem['heading']}}</h5>
 						<ul *ngFor="let subItem of footerItem['items']" class="nav flex-column">
-							<li class="nav-item"><a class="nav-link" href="#">{{subItem['name']}}</a></li>
+							<li class="nav-item"><a class="nav-link" [routerLink]="[subItem?.link]">{{subItem['name']}}</a></li>
 						</ul>
 					</div>
 				</div>

@@ -1,0 +1,116 @@
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+    <!-- =======================
+    Page Banner START -->
+    <section class="py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="p-4 text-center rounded-3" style="background-color: #444cae;">
+                        <h1 class="text-white m-0">Testimonials</h1>
+                        <!-- Breadcrumb -->
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dark breadcrumb-dots mb-0">
+                                    <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Page Banner END -->
+    
+    <!-- =======================
+    Inner part START -->
+    <section class="pt-4">
+        <div class="container">
+            <!-- Search option START -->
+            <div class="row mb-4 align-items-center">
+                <!-- Search bar -->
+                <!-- <div class="col-sm-6 col-xl-4">
+                    <form class="border rounded p-2">
+                        <div class="input-group input-borderless">
+                            <input class="form-control me-1" type="search" placeholder="Search instructor">
+                            <button type="button" class="btn btn-primary mb-0 rounded"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div> -->
+    
+                <!-- Select option -->
+                <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
+                    <form class="border rounded p-2">
+                        <select class="form-select form-select-sm js-choice input-borderless" aria-label=".form-select-sm">
+                            <option value="">All</option>
+                            <option>K12</option>
+                            <option>Undergraduate</option>
+                            <option>Postgraduate</option>
+                        </select>
+                    </form>
+                </div>
+    
+                <!-- Select option -->
+                <!-- <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
+                    <form class="border rounded p-2">
+                        <select class="form-select form-select-sm js-choice input-borderless" aria-label=".form-select-sm">
+                            <option value="">Sort by</option>
+                            <option>Most popular</option>
+                            <option>Most viewed</option>
+                            <option>Top rated</option>
+                        </select>
+                    </form>
+                </div> -->
+    
+                <!-- Button -->
+                <!-- <div class="col-sm-6 col-xl-2 mt-3 mt-xl-0 d-grid">
+                    <a href="#" class="btn btn-lg btn-primary mb-0">Filter Results</a>
+                </div> -->
+            </div>
+            <!-- Search option END -->
+    
+            <!-- Instructor list START -->
+            <div class="row g-4 justify-content-center">
+    
+                <!-- Card item START -->
+                <div *ngFor="let item of testimonialsIteams" class="col-lg-10 col-xl-6">
+                    <div  class="card shadow p-2">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <img src="assets/images/instructor/01.jpg" class="rounded-3" alt="...">
+                            </div>
+    
+                            <!-- Card body -->
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <!-- Title -->
+                                    <div class="d-sm-flex justify-content-sm-between mb-2 mb-sm-3">
+                                        <div>
+                                            <h5 class="card-title mb-0"><a href="#">{{item?.name}}</a></h5>
+                                            <!-- <p class="small mb-2 mb-sm-0">Professor at Sigma College</p> -->
+                                        </div>
+                                        <span class="h6 fw-light badge bg-purple bg-opacity-10" style="color:#444cae ;">Class {{item?.class}}</span>
+                                    </div>
+                                    <!-- Content -->
+                                    <p class="mb-3">{{item?.comments}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card item END -->
+
+            </div>
+            <!-- Instructor list END -->
+        </div>
+    </section>
+    <!-- =======================
+    Inner part END -->
+    
+</main>
+<!-- **************** MAIN CONTENT END **************** -->

@@ -5,7 +5,7 @@
 		<div class="container">
 			<!-- Logo START -->
 			<a class="navbar-brand" routerLink="/home">
-				<img class="light-mode-item navbar-brand-item" src="assets/logo.png"  alt="logo">
+				<img class="light-mode-item navbar-brand-item" src="assets/Edutech-logo.svg"  alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
 			</a>
 			<!-- Logo END -->
@@ -29,11 +29,11 @@
 						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menuItem?.label}}</a>
 						<ul class="dropdown-menu" aria-labelledby="demoMenu">
 							<li *ngFor="let item of menuItem['normalMenuItems']" class="dropdown-submenu dropend"> 
-								<a class="dropdown-item dropdown-toggle" [routerLink]="[item?.link , item?.menuId ,item?.name]">{{item?.name}}</a>
+								<!-- <a class="dropdown-item dropdown-toggle" [routerLink]="[item?.link , item?.menuId ,item?.name]">{{item?.name}}</a> -->
 								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
 									<li *ngFor="let subMenuItem of item['subMenu']"> 
-										<a class="dropdown-item" [routerLink]="[subMenuItem?.link]">{{subMenuItem?.title}}
-										</a>
+										<!-- <a class="dropdown-item" [routerLink]="[subMenuItem?.link , subMenuItem?.id]">{{subMenuItem?.title}}
+										</a> -->
 									</li>
 								</ul>
 							</li>

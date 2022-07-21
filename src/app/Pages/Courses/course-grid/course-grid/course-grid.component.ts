@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { megaMenuItems } from 'src/app/common-content/header-Iteams';
+import { DataService } from 'src/app/Services/data.service';
 
 @Component({
   selector: 'app-course-grid',
@@ -17,10 +18,11 @@ export class CourseGridComponent implements OnInit {
 
   constructor(
     private router: ActivatedRoute,
+    private dataService:DataService,
   ) { }
 
   ngOnInit(): void {
-    this.megaMenuItems = this.getMegaMenu();
+    this.megaMenuItems = this.dataService.getMegaMenu();
     this.router.params.subscribe(params => {
       this.selectedCourseId = params['menuId'];
       // console.log(this.selectedCourseId);
@@ -28,10 +30,7 @@ export class CourseGridComponent implements OnInit {
     });
   }
 
-  getMegaMenu(){
-    return megaMenuItems;
-  }
-
+  //Get Course Grid By Id
   getSelectedCourse(id:any){
     for (let i = 0; i < this.megaMenuItems.length; i++) {
       this.selectedCourse = this.megaMenuItems[i];

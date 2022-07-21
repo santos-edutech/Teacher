@@ -5,8 +5,8 @@
 		<div class="container-fluid px-3 px-xl-5">
 			<!-- Logo START -->
 			<a class="navbar-brand" routerLink="/home">
-				<img class="light-mode-item navbar-brand-item" src="assets/logo.png" alt="logo">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				<img class="light-mode-item navbar-brand-item" src="assets/Edutech-logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/Edutech-logo.svg" alt="logo">
 			</a>
 			<!-- Logo END -->
 
@@ -208,16 +208,16 @@
 
 				<!-- Nav Main menu START -->
 				
-				<ul  class="navbar-nav navbar-nav-scroll me-auto ">
+				<ul  class="navbar-nav navbar-nav-scroll me-auto">
 					<!-- Nav item-->
-					<li *ngFor="let menuItem of megaMenuItems" class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menuItem?.label}}</a>
-						<ul class="dropdown-menu" aria-labelledby="demoMenu">
-							<li *ngFor="let item of menuItem['normalMenuItems']" class="dropdown-submenu dropend"> 
-								<a class="dropdown-item dropdown-toggle" [routerLink]="[item?.link , item?.menuId,item?.name]">{{item?.name}}</a>
+					<li *ngFor="let menuItem of megaMenuItems" class="nav-item" [ngClass]="menuItem?.normalMenuItems ? 'dropdown' : ''">
+						<a class="nav-link " [ngClass]="menuItem?.normalMenuItems ? 'dropdown-toggle' : ''" [routerLink]="menuItem?.link" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menuItem?.label}}</a>
+						<ul class="dropdown-menu"  aria-labelledby="demoMenu">
+							<li *ngFor="let item of menuItem['normalMenuItems']" class="dropend" [ngClass]="item?.subMenu ? 'dropdown-submenu' : '' "> 
+								<a class="dropdown-item " [ngClass]="item?.subMenu ? 'dropdown-toggle' : '' " [routerLink]="item?.menuId ? [item?.link , item?.menuId,item?.name] : [item?.link] ">{{item?.name}}</a>
 								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
 									<li *ngFor="let subMenuItem of item['subMenu']"> 
-										<a class="dropdown-item" [routerLink]="['/course-details']">{{subMenuItem?.title}}
+										<a class="dropdown-item" (click)="link(item,subMenuItem)">{{subMenuItem?.title}}
 										</a>
 									</li>
 								</ul>
