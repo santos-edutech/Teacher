@@ -1,6 +1,7 @@
 export const megaMenuItems : Array<Object>=[
     {
         'label': 'Courses',
+        'link':null,
         'normalMenuItems': [
             {
                 'menuId':'1',
@@ -239,15 +240,17 @@ export const megaMenuItems : Array<Object>=[
     },
     {
         'label': 'Products',
+        'link':null,
         'normalMenuItems': [
             {
                 'name': 'Assessments - Pariksha',
-                'link': '/',
+                'link': '/pariksha',
             },
         ],
     },
     {
         'label': 'Consulting',
+        'link':null,
         'normalMenuItems': [
             {
                 'name': 'Information Technology',
@@ -269,26 +272,32 @@ export const megaMenuItems : Array<Object>=[
     },
     {
         'label': 'Buy Courses',
-        'normalMenuItems':[],
+        'link':'/',
+        'normalMenuItems':null,
     },
     {
         'label': 'More',
+        'link':null,
         'normalMenuItems': [
             {
-                'name': 'About',
-                'link': '/',
+                'name': 'About Us',
+                'link': '/about-us',
+            },
+            {
+                'name': 'Contact Us',
+                'link': '/contact-us',
             },
             {
                 'name': 'Testimonials',
-                'link': '/',
+                'link': '/testimonials',
             },
             {
                 'name': 'Learning Centre',
-                'link': '/',
+                'link': '/learning-centre',
             },
             {
                 'name': 'Learning Partner',
-                'link': '/',
+                'link': '/learning-partner',
             },
             {
                 'name': 'B2B Partnerships',
@@ -297,6 +306,10 @@ export const megaMenuItems : Array<Object>=[
             {
                 'name': 'B2G',
                 'link': '/',
+            },
+            {
+                'name': 'FAQs',
+                'link': '/faqs',
             },
         ],
     },

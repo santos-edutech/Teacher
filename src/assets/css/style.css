@@ -2777,8 +2777,8 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  /* -webkit-print-color-adjust: exact;
-          color-adjust: exact; */
+  -webkit-print-color-adjust: exact;
+          color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
@@ -18045,7 +18045,7 @@ textarea.form-control-lg {
     z-index: 1100 !important;
   }
   .navbar-expand-sm .navbar-brand .navbar-brand-item {
-    height: 60px;
+    height: 36px;
     display: block;
     width: auto;
   }
@@ -18233,7 +18233,7 @@ textarea.form-control-lg {
     z-index: 1100 !important;
   }
   .navbar-expand-md .navbar-brand .navbar-brand-item {
-    height: 60px;
+    height: 36px;
     display: block;
     width: auto;
   }
@@ -18421,7 +18421,7 @@ textarea.form-control-lg {
     z-index: 1100 !important;
   }
   .navbar-expand-lg .navbar-brand .navbar-brand-item {
-    height: 60px;
+    height: 36px;
     display: block;
     width: auto;
   }
@@ -18609,7 +18609,7 @@ textarea.form-control-lg {
     z-index: 1100 !important;
   }
   .navbar-expand-xl .navbar-brand .navbar-brand-item {
-    height: 60px;
+    height: 36px;
     display: block;
     width: auto;
   }
@@ -18797,7 +18797,7 @@ textarea.form-control-lg {
     z-index: 1100 !important;
   }
   .navbar-expand-xxl .navbar-brand .navbar-brand-item {
-    height: 60px;
+    height: 36px;
     display: block;
     width: auto;
   }
@@ -18984,7 +18984,7 @@ textarea.form-control-lg {
   z-index: 1100 !important;
 }
 .navbar-expand .navbar-brand .navbar-brand-item {
-  height: 60px;
+  height: 36px;
   display: block;
   width: auto;
 }

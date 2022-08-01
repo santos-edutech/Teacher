@@ -4,11 +4,11 @@ export const footerItems: Array<Object> =[
         'items' : [
             {
                 'name': 'About us',
-                'link': '',
+                'link': '/about-us',
             },
             {
                 'name': 'Contact us',
-                'link': '',
+                'link': '/contact-us',
             },
             {
                 'name': 'News and Blogs',
@@ -29,26 +29,22 @@ export const footerItems: Array<Object> =[
        'items' : [
         {
             'name': 'Documentation',
-            'link': '/about-us',
-            'external-link': false,
+            'link': '',
             
         },
         {
             'name': 'Faq',
-            'link': '/privacy-policy',
-            'external-link': false,
+            'link': '/faqs',
         
         },
         {
             'name': 'Forum',
-            'link': '/terms-of-service',
-            'external-link': false,
+            'link': '',
             
         },
         {
             'name': 'Sitemap',
-            'link': '/return-policy',
-            'external-link': false,
+            'link': '',
             
         },
        ]
@@ -59,17 +55,14 @@ export const footerItems: Array<Object> =[
             {
                 'name': 'Become a teacher',
                 'link': '',
-                'external-link': true,
             },
             {
                 'name': 'How to guide',
                 'link': '',
-                'external-link': true,
             },
             {
                 'name': 'Terms & Conditions',
                 'link': '',
-                'external-link': true,
             },
         ]
     },
