@@ -17,6 +17,10 @@ import { ParikshaComponent } from './Pages/Products/pariksha/pariksha.component'
 import { LearningCentreComponent } from './Pages/More/learning-centre/learning-centre.component';
 import { LearningPartnerComponent } from './Pages/More/learning-partner/learning-partner.component';
 import { FaqComponent } from './Pages/More/faq/faq.component';
+import { SchoolsComponent } from './Pages/Consulting/schools/schools.component';
+import { StemLabsComponent } from './Pages/Consulting/stem-labs/stem-labs.component';
+import { ITComponent } from './Pages/Consulting/it/it.component';
+import { CollegesComponent } from './Pages/Consulting/colleges/colleges.component';
 
 
 @NgModule({
@@ -33,6 +37,10 @@ import { FaqComponent } from './Pages/More/faq/faq.component';
     LearningCentreComponent,
     LearningPartnerComponent,
     FaqComponent,
+    SchoolsComponent,
+    StemLabsComponent,
+    ITComponent,
+    CollegesComponent,
   ],
   imports: [
     BrowserModule,

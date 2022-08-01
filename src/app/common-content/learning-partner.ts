@@ -1,42 +1,42 @@
 export const learningPatner : Array<Object>=[
     {
-        'image':'',
+        'image':'assets/learning/01.svg',
         'title':'TECH PLATFORM',
     },
     {
-        'image':'',
+        'image':'assets/learning/03.svg',
         'title':'WEBINARS',
     },
     {
-        'image':'',
+        'image':'assets/learning/05.svg',
         'title':'SOP',
     },
     {
-        'image':'',
+        'image':'assets/learning/04.svg',
         'title':'COUNSELING',
     },
     {
-        'image':'',
+        'image':'assets/learning/02.svg',
         'title':'TELECALLING',
     },
     {
-        'image':'',
+        'image':'assets/learning/Digital Marketing.svg',
         'title':'DIGITAL MARKETING',
     },
     {
-        'image':'',
+        'image':'assets/learning/Staff Training.svg',
         'title':'STAFF TRAINING',
     },
     {
-        'image':'',
+        'image':'assets/learning/Branding.svg',
         'title':'BRANDING',
     },
     {
-        'image':'',
+        'image':'assets/learning/Teachers.svg',
         'title':'TEACHERS',
     },
     {
-        'image':'',
+        'image':'assets/learning/Navigation Program.svg',
         'title':'NAVIGATION PROGRAM',
     },
 ];

@@ -14,7 +14,8 @@ export class CourseGridComponent implements OnInit {
   selectedCourse: any;
   courseMenuItem:any;
   courseSubMenuItem :any;
-  currentCourses : any;
+  couSubMenuId: any;
+  courseMenuName: any;
 
   constructor(
     private router: ActivatedRoute,
@@ -39,12 +40,16 @@ export class CourseGridComponent implements OnInit {
         const element = this.courseMenuItem[j];
         // console.log(element);
         if(element.menuId==id){
+          this.couSubMenuId = element.menuId;
+          this.courseMenuName = element.name ;
           this.courseSubMenuItem = element.subMenu;
-          this.currentCourses=element.name;
-          // console.log(this.currentCourses);
+          // console.log(this.courseSubMenuItem);
         }
       }
     }
   }
 
+
 }
+
+

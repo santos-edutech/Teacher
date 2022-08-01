@@ -175,33 +175,9 @@ export const megaMenuItems : Array<Object>=[
                     },
                 ],
             },
+          
             {
                 'menuId':'5',
-                'name': 'Coding',
-                'link':'/course-grid/',
-                'subMenu':[
-                    {
-                        'id':'1',
-                        'title':'Python',
-                        'link': '/course-details/',
-                        'details':''
-                    },
-                    {
-                        'id':'2',
-                        'title':'Java',
-                        'link': '/course-details/',
-                        'details':''
-                    },
-                    {
-                        'id':'3',
-                        'title':'UI/UX Development',
-                        'link': '/course-details/',
-                        'details':''
-                    },
-                ],
-            },
-            {
-                'menuId':'6',
                 'name': 'Data Science',
                 'link':'/course-grid/',
                 'subMenu':[
@@ -226,6 +202,31 @@ export const megaMenuItems : Array<Object>=[
                     {
                         'id':'4',
                         'title':'Big Data – Emerging Sectors',
+                        'link': '/course-details/',
+                        'details':''
+                    },
+                ],
+            },
+            {
+                'menuId':'6',
+                'name': 'Coding',
+                'link':'/course-grid/',
+                'subMenu':[
+                    {
+                        'id':'1',
+                        'title':'Python',
+                        'link': '/course-details/',
+                        'details':''
+                    },
+                    {
+                        'id':'2',
+                        'title':'Java',
+                        'link': '/course-details/',
+                        'details':''
+                    },
+                    {
+                        'id':'3',
+                        'title':'UI/UX Development',
                         'link': '/course-details/',
                         'details':''
                     },
@@ -262,11 +263,11 @@ export const megaMenuItems : Array<Object>=[
             },
             {
                 'name': 'Schools',
-                'link': '/',
+                'link': '/schools',
             },
             {
                 'name': 'Engineering Colleges',
-                'link': '/',
+                'link': '/colleges',
             },
         ],
     },
