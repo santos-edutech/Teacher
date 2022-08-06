@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { megaMenuItems } from '../common-content/header-Iteams';
 import { careerMappingTracking } from '../common-content/learning-center';
 import { learningPatner } from '../common-content/learning-partner';
+import { subjectDetails } from '../common-content/subject-details';
 import { testimonials } from '../common-content/testimonials';
 
 @Injectable({
@@ -28,6 +29,11 @@ export class DataService {
   //Get careerMappingTracking function
   getCareerMappingTracking(){
     return careerMappingTracking;
+  }
+
+  //Get subject Details function
+  geSubjectDetails(){
+    return subjectDetails;
   }
 
 }

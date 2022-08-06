@@ -1,6 +1,11 @@
 import { Routes } from "@angular/router";
+import { ShopProductDetailComponent } from "../Pages/Buy-Courses/shop-product-detail/shop-product-detail.component";
+import { ShopComponent } from "../Pages/Buy-Courses/shop/shop.component";
 import { CollegesComponent } from "../Pages/Consulting/colleges/colleges.component";
+import { ITComponent } from "../Pages/Consulting/it/it.component";
 import { SchoolsComponent } from "../Pages/Consulting/schools/schools.component";
+import { StemLabsComponent } from "../Pages/Consulting/stem-labs/stem-labs.component";
+import { TestComponent } from "../Pages/Courses/course-grid/test/test.component";
 import { HomeComponent } from "../Pages/home/home.component";
 import { AboutUsComponent } from "../Pages/More/about-us/about-us.component";
 import { ContactUsComponent } from "../Pages/More/contact-us/contact-us.component";
@@ -55,5 +60,25 @@ export const routes: Routes = [
     {
         path:"colleges",
         component:CollegesComponent,
+    },
+    {
+        path:"shop",
+        component:ShopComponent,
+    },
+    {
+        path:"shop-product-detail",
+        component:ShopProductDetailComponent,
+    },
+    {
+        path:"information-technology",
+        component:ITComponent,
+    },
+    {
+        path:"STEM-Labs",
+        component:StemLabsComponent,
+    },
+    {
+        path:'test',
+        component:TestComponent,
     },
 ];

@@ -18,6 +18,8 @@ export class CourseDetailsComponent implements OnInit {
   menuItemList: any;
   selectedSubMenuCourseTitle: any;
   selectedSubMenuCourseDetails: any;
+  courseDetails : any;
+  result: any;
 
   constructor(
     private dataService:DataService,
@@ -33,7 +35,19 @@ export class CourseDetailsComponent implements OnInit {
       // console.log(this.selectedCourseId);
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
     });
-    
+    // console.log(this.result);
+    this.courseDetails = this.dataService.geSubjectDetails();
+    this.result= this.menuItemList.map((a:any)=>{
+      // console.log(a.id);
+      let obj2 = this.courseDetails.find((b:any)=> {
+        console.log(b);
+        return b.title === a.title;
+      });
+      console.log(obj2);
+      if(obj2)
+       Object.assign(a,obj2);
+      return a;
+     });
   }
 
   getSelectedSubmenuCourse(MenuId:any,ID:any){
@@ -45,12 +59,15 @@ export class CourseDetailsComponent implements OnInit {
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
             this.selectedSubMenuCourseDetails = subMenuItem.details;
-            // details
             // console.log(this.SelectedSubMenuCourse);
           }
         }
       }
     }
   }
+
+list(){
+
+}
 
 }

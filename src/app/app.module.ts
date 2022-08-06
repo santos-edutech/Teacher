@@ -21,6 +21,10 @@ import { SchoolsComponent } from './Pages/Consulting/schools/schools.component';
 import { StemLabsComponent } from './Pages/Consulting/stem-labs/stem-labs.component';
 import { ITComponent } from './Pages/Consulting/it/it.component';
 import { CollegesComponent } from './Pages/Consulting/colleges/colleges.component';
+import { ShopComponent } from './Pages/Buy-Courses/shop/shop.component';
+import { ShopProductDetailComponent } from './Pages/Buy-Courses/shop-product-detail/shop-product-detail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -41,12 +45,16 @@ import { CollegesComponent } from './Pages/Consulting/colleges/colleges.componen
     StemLabsComponent,
     ITComponent,
     CollegesComponent,
+    ShopComponent,
+    ShopProductDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CourseGridModule,
-    SharedModule
+    SharedModule,
+    FormsModule, 
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

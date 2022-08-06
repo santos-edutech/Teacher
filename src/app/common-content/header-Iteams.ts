@@ -12,60 +12,70 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'SAT General',
                         'link': '/course-details/',
-                        'details':'SAT General is a standardised exam generally used for college admission in the US.'
+                        'image':'assets/images/courses/4by3/08.jpg',
+                        'details':'EduTechEx SAT Program is designed by subject matter experts and senior counselors having more than a decade experience in teaching SAT programs worldwide and counselling thousands of students to get admitted into their dream universities worldwide.'
                     },
                     {
                         'id':'2',
                         'title':'Advanced Placement Tests',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/26.jpg',
                         'details':'Advanced Placement tests are college level exams for high school students relevant for admissions'
                     },
                     {
                         'id':'3',
                         'title':'Ivy League Admission Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/25.jpg',
                         'details':'A foundation course is a programme that will prepare you for an undergraduate degree at university.'
                     },
                     {
                         'id':'4',
                         'title':'Medical Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/24.jpg',
                         'details':''
                     },
                     {
                         'id':'5',
                         'title':'Indian Entrance Prep',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'6',
                         'title':'Career Counselling',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'7',
                         'title':'Foundation Programs',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'8',
                         'title':'IBDP After School Prep',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'9',
                         'title':'Cambridge After School Prep',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'10',
                         'title':'After School Services',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
@@ -79,30 +89,35 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'Abroad Masters Placement',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'2',
                         'title':'Abroad Exchange Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'3',
                         'title':'Skill Training Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'4',
                         'title':'Career Navigation',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'5',
                         'title':'CRT Module',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
@@ -116,36 +131,42 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'Abroad Ph.D. Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'2',
                         'title':'Indian Ph.D. Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'3',
                         'title':'Abroad Medical',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'4',
                         'title':'Abroad Exchange Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'5',
                         'title':'Skill Training Program',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'6',
                         'title':'Career Navigation',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
@@ -159,18 +180,21 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'Salesforce',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'2',
                         'title':'NDT',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'3',
                         'title':'Actuarial Science',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
@@ -185,24 +209,28 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'Artificial Intelligence',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'2',
                         'title':'Machine Learning',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'3',
                         'title':'Cyber Security',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'4',
                         'title':'Big Data – Emerging Sectors',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
@@ -216,26 +244,24 @@ export const megaMenuItems : Array<Object>=[
                         'id':'1',
                         'title':'Python',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'2',
                         'title':'Java',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                     {
                         'id':'3',
                         'title':'UI/UX Development',
                         'link': '/course-details/',
+                        'image':'assets/images/courses/4by3/08.jpg',
                         'details':''
                     },
                 ],
-            },
-            {
-                'menuId':'7',
-                'name': 'Internships',
-                'link':'/course-grid/',
             },
         ],
     },
@@ -254,12 +280,16 @@ export const megaMenuItems : Array<Object>=[
         'link':null,
         'normalMenuItems': [
             {
+                'name': 'Internships',
+                'link':'/test',
+            },
+            {
                 'name': 'Information Technology',
-                'link': '/',
+                'link': '/information-technology',
             },
             {
                 'name': 'STEM Labs',
-                'link': '/',
+                'link': '/STEM-Labs',
             },
             {
                 'name': 'Schools',
@@ -273,7 +303,7 @@ export const megaMenuItems : Array<Object>=[
     },
     {
         'label': 'Buy Courses',
-        'link':'/',
+        'link':'/shop',
         'normalMenuItems':null,
     },
     {
@@ -302,10 +332,6 @@ export const megaMenuItems : Array<Object>=[
             },
             {
                 'name': 'B2B Partnerships',
-                'link': '/',
-            },
-            {
-                'name': 'B2G',
                 'link': '/',
             },
             {

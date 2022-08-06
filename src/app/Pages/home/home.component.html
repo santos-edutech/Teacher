@@ -85,7 +85,7 @@
         <!-- SVG END -->
 
         <figure class="position-absolute  top-50 end-0 translate-middle-y">
-            <video class="" autoplay loop src="assets/front.webm" style="width: 700px;"></video>
+            <video class="" autoplay loop src="assets/home.mp4" style="width: 700px;"></video>
         </figure>
     
         <!-- SVG START -->
@@ -255,7 +255,7 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="fs-1" style="color:#2AB2A6">Most Popular
                         Courses
-                </h2>
+                    </h2>
                     <p class="mb-0">Choose from hundreds of courses from specialist organizations</p>
                 </div>
             </div>
@@ -263,8 +263,8 @@
             <!-- Tabs START -->
             <ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
                 <!-- Tab item -->
-                <ng-container *ngFor="let item of menuItem; let i=index " >
-                    <li *ngIf="i<5" class="nav-item me-2 me-sm-5">
+                <ng-container *ngFor="let item of menuItem; let i=index">
+                    <li *ngIf="i<6" class="nav-item me-2 me-sm-5">
                         <a class="nav-link mb-2 mb-md-0"   id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1" aria-selected="false" (click)="getSelectedCourse(item.menuId)">{{item?.name}}</a>
                     </li>
                 </ng-container>
