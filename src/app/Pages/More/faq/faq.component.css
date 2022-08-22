@@ -1,0 +1,6 @@
+.nav-link.active {
+    color: #2AB2A6;
+    background-color: transparent;
+    border-color: transparent transparent red;
+    border-bottom: 3px solid !important;
+}

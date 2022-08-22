@@ -41,7 +41,25 @@ export const testimonials : Array<Object>=[
             },
             {
                 'subjectId' :'3',
-                'subJectName':'Ivy League Admission Program',
+                'subJectName':'Ivy League Program',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/03.jpg",
+                        "name":"atul",
+                        "class":"8th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/03.jpg",
+                        "name":"santosh",
+                        "class":"8th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+            {
+                'subjectId' :'4',
+                'subJectName':'Medical Program',
                 'review':[
                     {
                         "images":"assets/images/instructor/03.jpg",
@@ -65,7 +83,7 @@ export const testimonials : Array<Object>=[
         'subject':[
             {
                 'subjectId' :'1',
-                'subJectName':'Abroad Masters Placement',
+                'subJectName':'Abroad Masters',
                 'review':[
                     {
                         "images":"assets/images/instructor/04.jpg",
@@ -83,7 +101,7 @@ export const testimonials : Array<Object>=[
             },
             {
                 'subjectId' :'2',
-                'subJectName':'Abroad Exchange Program',
+                'subJectName':'Abroad Exchange',
                 'review':[
                     {
                         "images":"assets/images/instructor/05.jpg",
@@ -101,7 +119,25 @@ export const testimonials : Array<Object>=[
             },
             {
                 'subjectId' :'3',
-                'subJectName':'Skill Training Program',
+                'subJectName':'General & Subject GRE',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/06.jpg",
+                        "name":"aditya",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/06.jpg",
+                        "name":"poorna",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+            {
+                'subjectId' :'4',
+                'subJectName':'TOEFL-IELTS',
                 'review':[
                     {
                         "images":"assets/images/instructor/06.jpg",
@@ -119,5 +155,90 @@ export const testimonials : Array<Object>=[
             },
         ],
     },
+    {
+        'courseId':'3',
+        'label':'Postgraduate',
+        'subject':[
+            {
+                'subjectId' :'1',
+                'subJectName':'Abroad Ph.D.',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/04.jpg",
+                        "name":"Ranjit",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/04.jpg",
+                        "name":"Rajendra",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+            {
+                'subjectId' :'2',
+                'subJectName':'Abroad Medical',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/05.jpg",
+                        "name":"swaroop",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/05.jpg",
+                        "name":"sita",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        'courseId':'4',
+        'label':'Internships',
+        'subject':[
+            {
+                'subjectId' :'1',
+                'subJectName':'Core Sectors',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/04.jpg",
+                        "name":"Ranjit",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/04.jpg",
+                        "name":"Rajendra",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+            {
+                'subjectId' :'2',
+                'subJectName':'IT – Data Science',
+                'review':[
+                    {
+                        "images":"assets/images/instructor/05.jpg",
+                        "name":"swaroop",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                    {
+                        "images":"assets/images/instructor/05.jpg",
+                        "name":"sita",
+                        "class":"10th",
+                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                    },
+                ],
+            },
+        ],
+    },
+    
     
 ];

@@ -58,7 +58,7 @@ export class TestimonialsComponent implements OnInit {
       for(let list of this.subjectList){
         for(let review of list.review){
         this.allReviewList.push(review);
-        console.log(this.allReviewList);
+        // console.log(this.allReviewList);
         }
       }
     }

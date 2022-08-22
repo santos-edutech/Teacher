@@ -25,6 +25,8 @@ import { ShopComponent } from './Pages/Buy-Courses/shop/shop.component';
 import { ShopProductDetailComponent } from './Pages/Buy-Courses/shop-product-detail/shop-product-detail.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { InternshipsComponent } from './Pages/Consulting/internships/internships.component';
+import { BlogsComponent } from './Pages/More/blogs/blogs.component';
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import { FormsModule } from '@angular/forms';
     CollegesComponent,
     ShopComponent,
     ShopProductDetailComponent,
+    InternshipsComponent,
+    BlogsComponent,
   ],
   imports: [
     BrowserModule,

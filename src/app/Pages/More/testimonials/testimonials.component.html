@@ -33,11 +33,11 @@
             <!-- Search option START -->
             <div class="row mb-4 align-items-center">
                
-                <!-- Select course option -->
+                <!-- Select Segment option -->
                 <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
                     <form class="border rounded p-2">
                         <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelect(val.value)' #val>
-                            <option  value="null">Select Courses</option>
+                            <option  value="null">Select Segment</option>
                             <option *ngFor="let item of testimonialsIteams" [value]="item?.label">
                                 <ng-container>
                                     {{item?.label}}
@@ -47,11 +47,11 @@
                     </form>
                 </div>
     
-                <!-- Select subject option -->
+                <!--  Select Course  option -->
                 <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
                     <form class="border rounded p-2">
                         <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectSub(val2.value)' #val2>
-                            <option  value="null">Select Subject</option>
+                            <option  value="null"> Select Course</option>
                             <option *ngFor="let subjectItem of testimonialsSubjectItem" [value]="subjectItem?.subJectName">
                                 <ng-container>
                                     {{subjectItem?.subJectName}}

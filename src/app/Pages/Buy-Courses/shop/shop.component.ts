@@ -16,6 +16,7 @@ export class ShopComponent implements OnInit {
   couSubMenuId: any;
   courseMenuName: any;
   searchText: any;
+  courseId: any ;
 
   constructor(
     private router: ActivatedRoute,
@@ -25,7 +26,6 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     this.megaMenuItems = this.dataService.getMegaMenu();
     this.menuItem = this.megaMenuItems[0]['normalMenuItems'];
-    // console.log(this.menuItem[0]['menuId']);
     this.allCoursesSubjects();
   }
 
@@ -47,7 +47,6 @@ export class ShopComponent implements OnInit {
   allCoursesSubjects(){
     this.courseSubMenuItem =[];
     for(let courses of this.menuItem){
-      // this.courseSubMenuItem = courses.subMenu;
       for(let subject of courses.subMenu){
         this.courseSubMenuItem.push(subject);
       }
