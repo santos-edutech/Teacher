@@ -32,57 +32,48 @@
         <div class="container">
             <!-- Search option START -->
             <div class="row mb-4 align-items-center">
-                <!-- Search bar -->
-                <!-- <div class="col-sm-6 col-xl-4">
-                    <form class="border rounded p-2">
-                        <div class="input-group input-borderless">
-                            <input class="form-control me-1" type="search" placeholder="Search instructor">
-                            <button type="button" class="btn btn-primary mb-0 rounded"><i class="fas fa-search"></i></button>
-                        </div>
-                    </form>
-                </div> -->
-    
-                <!-- Select option -->
+               
+                <!-- Select Segment option -->
                 <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
                     <form class="border rounded p-2">
-                        <select class="form-select form-select-sm js-choice input-borderless" aria-label=".form-select-sm">
-                            <option value="">All</option>
-                            <option>K12</option>
-                            <option>Undergraduate</option>
-                            <option>Postgraduate</option>
+                        <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelect(val.value)' #val>
+                            <option  value="null">Select Segment</option>
+                            <option *ngFor="let item of testimonialsIteams" [value]="item?.label">
+                                <ng-container>
+                                    {{item?.label}}
+                                </ng-container>
+                            </option>
                         </select>
                     </form>
                 </div>
     
-                <!-- Select option -->
-                <!-- <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
+                <!--  Select Course  option -->
+                <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
                     <form class="border rounded p-2">
-                        <select class="form-select form-select-sm js-choice input-borderless" aria-label=".form-select-sm">
-                            <option value="">Sort by</option>
-                            <option>Most popular</option>
-                            <option>Most viewed</option>
-                            <option>Top rated</option>
+                        <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectSub(val2.value)' #val2>
+                            <option  value="null"> Select Course</option>
+                            <option *ngFor="let subjectItem of testimonialsSubjectItem" [value]="subjectItem?.subJectName">
+                                <ng-container>
+                                    {{subjectItem?.subJectName}}
+                                </ng-container>
+                            </option>
                         </select>
                     </form>
-                </div> -->
-    
-                <!-- Button -->
-                <!-- <div class="col-sm-6 col-xl-2 mt-3 mt-xl-0 d-grid">
-                    <a href="#" class="btn btn-lg btn-primary mb-0">Filter Results</a>
-                </div> -->
+                </div>
+
             </div>
             <!-- Search option END -->
     
-            <!-- Instructor list START -->
+            <!-- Reviews list START -->
             <div class="row g-4 justify-content-center">
     
                 <!-- Card item START -->
-                <div *ngFor="let item of testimonialsIteams" class="col-lg-10 col-xl-6">
+                <div *ngFor="let item of allReviewList" class="col-lg-10 col-xl-6">
                     <div  class="card shadow p-2">
                         <div class="row g-0">
                             <!-- Image -->
                             <div class="col-md-4">
-                                <img src="assets/images/instructor/01.jpg" class="rounded-3" alt="...">
+                                <img [src]="item['images']" class="rounded-3" alt="...">
                             </div>
     
                             <!-- Card body -->
@@ -106,7 +97,7 @@
                 <!-- Card item END -->
 
             </div>
-            <!-- Instructor list END -->
+            <!-- Reviews list END -->
         </div>
     </section>
     <!-- =======================

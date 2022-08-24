@@ -1,0 +1,8 @@
+.custom-border{
+    border: 1px solid #313d9c;
+}
+
+.custom-botton:hover{
+    background-color: #313d9c;
+    color: white;
+}

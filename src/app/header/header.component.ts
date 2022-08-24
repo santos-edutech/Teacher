@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { megaMenuItems } from '../common-content/header-Iteams';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,23 +9,13 @@ import { megaMenuItems } from '../common-content/header-Iteams';
 })
 export class HeaderComponent implements OnInit {
   megaMenuItems: any;
-  selectedCourseId: any;
-  selectedCourse: any;
-  courseMenuItem: any;
-  courseSubMenuItem: any;
   
-  constructor() { }
+  constructor(
+    private dataService:DataService,
+  ) { }
 
   ngOnInit(): void {
-    this.megaMenuItems = this.getMegaMenu();
-  }
-
-  getMegaMenu(){
-    return megaMenuItems;
-  }
-
-  link(item:any ,subMenuItem:any){
-    return 
+    this.megaMenuItems = this.dataService.getMegaMenu();
   }
 
 }

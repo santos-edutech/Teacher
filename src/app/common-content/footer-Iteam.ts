@@ -3,19 +3,15 @@ export const footerItems: Array<Object> =[
         'heading':'Company', 
         'items' : [
             {
-                'name': 'About us',
+                'name': 'About Us',
                 'link': '/about-us',
             },
             {
-                'name': 'Contact us',
+                'name': 'Contact Us',
                 'link': '/contact-us',
             },
             {
                 'name': 'News and Blogs',
-                'link': '',
-            },
-            {
-                'name': 'Library',
                 'link': '',
             },
             {
@@ -25,43 +21,47 @@ export const footerItems: Array<Object> =[
         ]
     },
     {
-       'heading':'Community', 
+       'heading':'Services', 
        'items' : [
         {
-            'name': 'Documentation',
+            'name': 'SAT',
             'link': '',
             
         },
         {
-            'name': 'Faq',
-            'link': '/faqs',
+            'name': 'APs',
+            'link': '',
         
         },
         {
-            'name': 'Forum',
+            'name': 'Ivy League Program',
             'link': '',
             
         },
         {
-            'name': 'Sitemap',
+            'name': 'Job Mapping',
             'link': '',
             
         },
        ]
     },
     {
-        'heading':'Teaching', 
+        'heading':'Resources', 
         'items': [
             {
-                'name': 'Become a teacher',
+                'name': 'Pariksa – Assessments',
                 'link': '',
             },
             {
-                'name': 'How to guide',
+                'name': 'Career Navigation',
                 'link': '',
             },
             {
-                'name': 'Terms & Conditions',
+                'name': 'Internships',
+                'link': '',
+            },
+            {
+                'name': 'Testimonials',
                 'link': '',
             },
         ]

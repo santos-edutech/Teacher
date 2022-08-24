@@ -1,6 +1,14 @@
 import { Routes } from "@angular/router";
+import { ShopProductDetailComponent } from "../Pages/Buy-Courses/shop-product-detail/shop-product-detail.component";
+import { ShopComponent } from "../Pages/Buy-Courses/shop/shop.component";
+import { CollegesComponent } from "../Pages/Consulting/colleges/colleges.component";
+import { InternshipsComponent } from "../Pages/Consulting/internships/internships.component";
+import { ITComponent } from "../Pages/Consulting/it/it.component";
+import { SchoolsComponent } from "../Pages/Consulting/schools/schools.component";
+import { StemLabsComponent } from "../Pages/Consulting/stem-labs/stem-labs.component";
 import { HomeComponent } from "../Pages/home/home.component";
 import { AboutUsComponent } from "../Pages/More/about-us/about-us.component";
+import { BlogsComponent } from "../Pages/More/blogs/blogs.component";
 import { ContactUsComponent } from "../Pages/More/contact-us/contact-us.component";
 import { FaqComponent } from "../Pages/More/faq/faq.component";
 import { LearningCentreComponent } from "../Pages/More/learning-centre/learning-centre.component";
@@ -46,4 +54,36 @@ export const routes: Routes = [
         path:"faqs",
         component:FaqComponent,
     },
+    {
+        path:"schools",
+        component:SchoolsComponent,
+    },
+    {
+        path:"colleges",
+        component:CollegesComponent,
+    },
+    {
+        path:"shop",
+        component:ShopComponent,
+    },
+    {
+        path:"shop-product-detail/:menuId/:id",
+        component:ShopProductDetailComponent,
+    },
+    {
+        path:"information-technology",
+        component:ITComponent,
+    },
+    {
+        path:"STEM-Labs",
+        component:StemLabsComponent,
+    },
+    {
+        path:'internships',
+        component:InternshipsComponent,
+    },
+    {
+        path:'blogs',
+        component:BlogsComponent
+    }
 ];

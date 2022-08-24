@@ -174,13 +174,13 @@
             <div class="row g-4">
                 <!-- Item -->
                 <div *ngFor="let list of learningPatnerList" class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition" style="background-color:#444cae;">
+                    <div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
                         <!-- Image -->
-                        <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
-                            <img src="assets/images/element/data-science.svg" alt="">
+                        <div class="">
+                            <img [src]="[list?.image]" alt="" width="60%">
                         </div>
                         <!-- Title -->
-                        <h5 class="mb-1"><a class="stretched-link text-white">{{list?.title}}</a></h5>
+                        <h5 class="mb-1"><a class="stretched-link" style="color:#313d9c ;">{{list?.title}}</a></h5>
                     </div>
                 </div>
             </div>

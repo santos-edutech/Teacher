@@ -26,7 +26,10 @@
 				<ul class="navbar-nav navbar-nav-scroll me-auto">
 					<!-- Nav item 1 Demos -->
 					<li class="nav-item dropdown dropdown-menu-shadow-stacked">
-						<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0" href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+						<a class="nav-link btn-lg btn-primary-soft px-3 py-3 py-xl-0 btn" href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-ui-radios-grid me-2"></i>
+							<span>Category</span>
+						</a>
 						<ul class="dropdown-menu" aria-labelledby="categoryMenu">
 
 							<!-- Dropdown submenu -->
@@ -217,7 +220,7 @@
 								<a class="dropdown-item " [ngClass]="item?.subMenu ? 'dropdown-toggle' : '' " [routerLink]="item?.menuId ? [item?.link , item?.menuId,item?.name] : [item?.link] ">{{item?.name}}</a>
 								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
 									<li *ngFor="let subMenuItem of item['subMenu']"> 
-										<a class="dropdown-item" (click)="link(item,subMenuItem)">{{subMenuItem?.title}}
+										<a class="dropdown-item" [routerLink]="['/course-details' ,item?.menuId,item?.name,subMenuItem?.id,subMenuItem?.title]">{{subMenuItem?.title}}
 										</a>
 									</li>
 								</ul>
