@@ -1,0 +1,25 @@
+<div class="admin">
+    <mat-sidenav-container >
+      <mat-sidenav #sidebar mode="side" opened="opened" class="vh-100">
+        <app-sidebar></app-sidebar>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="content">
+          <div class="toolbar sticky-top">
+            <mat-toolbar style="font-size: 13px; background-color: #fff; height: 63.7px;box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);">
+              <div class="box-left mt-3">
+              <mat-icon (click)="sidebar.toggle()" style="margin-right:20px; ">menu</mat-icon>
+              <p>Admin Panel</p>
+            </div>
+              <div class="box-right">
+                <p>Hello! Venkata raman</p>
+              </div>
+            </mat-toolbar>
+          </div>
+          <div class="main" style="background-color: #F5F8FF; height:90vh;">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

@@ -1,0 +1,21 @@
+form mat-icon{
+    width: 40px;
+    height: 28px;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+    background-color: #8C8C8C;
+  }
+  .col-lg-2 h3 {
+   margin: auto;
+   padding: 5px;
+  }
+  .col-lg-2 h3:hover{
+    background-color: #409EB8;
+    cursor: pointer;
+    background-size: cover;
+    
+  }
+  .col-lg-2 h3:focus{
+    background-color: #409EB8;
+  }

@@ -1,0 +1,22 @@
+
+<div class="dashboard overflow-hidden">
+    <div class="mx-5">
+        <div class="row">
+            <div class="col-lg-2 d-flex flex-column mt-5 border bg-white p-2 align-items-center position-relative">
+                <h3 [routerLink]="['manage-segement']">Manage Segement</h3>
+                <h3 [routerLink]="['manage-grades']">Manage Grades</h3>
+                <h3 [routerLink]="['manage-curriculum']">Manage Currciculum</h3>
+                <h3 [routerLink]="['manage-subject']">Manage Subject </h3>
+                <h3 [routerLink]="['manage-topics']">Manage Topics</h3>
+                <h3 [routerLink]="['accessment-name']">Assessment Name</h3>
+            </div>
+           <div class="col-lg-10">
+            <router-outlet></router-outlet>
+           </div>
+          
+        </div>
+      
+    </div>
+    
+</div>
+
