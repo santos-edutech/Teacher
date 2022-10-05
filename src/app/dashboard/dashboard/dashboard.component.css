@@ -1,0 +1,19 @@
+.cards .card{
+    width: 230px;
+    border-left: 3px solid #313d9c;
+    text-align: center;
+    height: 70px;
+    border-radius: 0%;
+}
+.cards .card .card-item{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.cards .card .card-item h3,p{
+    font-weight:500;
+    font-size: 18px;
+}
+.cards .card .card-item p{
+    color: #35B18A;
+}

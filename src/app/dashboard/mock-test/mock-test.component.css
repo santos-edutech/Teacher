@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+  }
+  table th{
+    font-size: 15px;
+    color: black;
+    font-weight:300px;
+    background-color: #F3F3F3;
+  }

@@ -1,0 +1,55 @@
+<div style="width:1000px ; height:100%;">
+    <div class="sidebar float-start mx-3" style="width:230px; height:500px; background-color: #F3F3F3;">
+        <h2>Uploaded 15 Images</h2>
+        <div>
+            <form></form>
+        </div>
+    </div>
+    <div class="float-center " >
+        <div class="main-body w-100  rounded-3 p-3  bg-white" style="height:auto ; border:1px solid #EEEEEE;">
+            <ckeditor [(ngModel)]="ckeditorContent">
+                <ckbutton [name]="'saveButton'" [command]="'saveCmd'" (click)="save($event)" [icon]="'save.png'"
+                    [label]="'Save Document'" [toolbar]="'clipboard,1'">
+                </ckbutton>
+            </ckeditor>
+            <div>
+                <h3 class="mx-5 mt-3">Correct Answer</h3>
+                <div class="d-flex justify-content-start">
+                    <div class="form-group d-flex justify-content-start">
+                       <button type="button" class="btn text-white" style="background-color:#313D9C;">A</button> <input type="radio"  class="btn text-white border" style="background-color:#313D9C;">
+                    </div>&nbsp;&nbsp;
+                    <div class="form-group w-100">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start mt-3">
+                    <div class="form-group d-flex justify-content-start">
+                       <button type="button" class="btn text-white" style="background-color:#313D9C;">B</button> <input type="radio"  class="btn text-white border" style="background-color:#313D9C;">
+                    </div>&nbsp;&nbsp;
+                    <div class="form-group w-100">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start mt-3">
+                    <div class="form-group d-flex justify-content-start">
+                       <button type="button" class="btn text-white" style="background-color:#313D9C;">C</button> <input type="radio"  class="btn text-white border" style="background-color:#313D9C;">
+                    </div>&nbsp;&nbsp;
+                    <div class="form-group w-100">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start mt-3">
+                    <div class="form-group d-flex justify-content-start">
+                       <button type="button" class="btn text-white" style="background-color:#313D9C;">D</button> <input type="radio"  class="btn text-white border" style="background-color:#313D9C;">
+                    </div>&nbsp;&nbsp;
+                    <div class="form-group w-100">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+

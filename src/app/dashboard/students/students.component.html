@@ -1,0 +1,85 @@
+<div class="dashboard overflow-hidden">
+    <div class="mx-3 ">
+        <div class="d-flex mb-3 justify-content-between align-items-center">
+            <h3 class="fw-bold  mt-5 fs-4 ">Students List </h3> 
+            <div class="search-container">
+              <form action="/action_page.php" class="mt-5 d-flex">
+                <input type="text" placeholder="Search.." name="search" style="width:400px ; border: 1px solid rgba(0,0,0,0.2);height: 40px;">
+                <mat-icon style="background-color:#8C8C8C; width: 40px;height: 40px; color: #fff;text-align: center;padding-top: 10px;">search</mat-icon>
+              </form>
+            </div>
+           
+            <div class="btn  btn-sm mt-5 me-4 " style="height:30px ;background-color: #35B18A; color:#fff;" routerLink="/home/create-student">+ Create </div>
+          </div>
+        <div class="main-body w-100  rounded-3   bg-white" style="height:75vh ; border:1px solid #EEEEEE;">
+        
+            <!-- Datatable Search funcatn -->
+            <div class="d-flex align-items-center justify-content-end mb-3 mt-3 mx-3">
+                <span class="h6 mt-1">Search : </span>
+                <input type="search"  class="border p-1 border-2" style="outline: none;">
+            </div>
+           <!-- material table -->
+           <table mat-table [dataSource]="dataSource" class="mt-4">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef>Sl No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef>Student Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="phone">
+              <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+              <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="grade">
+                <th mat-header-cell *matHeaderCellDef> Grade </th>
+                <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+            <ng-container matColumnDef="curriculum">
+                <th mat-header-cell *matHeaderCellDef> Curriculum </th>
+                <td mat-cell *matCellDef="let element"> {{element.curriculum}} </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Action </th>
+                <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+          <!-- Pagination -->
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons   aria-label="Select page of periodic elements"></mat-paginator>
+           
+          
+        </div>
+       
+    </div>
+    
+</div>
+
+
+
+

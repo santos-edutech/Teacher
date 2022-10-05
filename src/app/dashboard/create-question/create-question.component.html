@@ -1,0 +1,100 @@
+<div class="overflow-hidden mx-3 row">
+    <div class="col-lg-3 sidebar mt-5 rounded-3" style="width:280px; height:8auto;background-color:#313D9C;">
+        <h2 class="text-white mb-4 mx-4">Question Entry Option</h2>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Select Segment</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>English 1</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Select Grade</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>K12 Curriculum </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Select Topic</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>K12 Curriculum </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Select Curriculum</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>K12 Curriculum </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Select Subject</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>K12 Curriculum </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="form-group p-2">
+            <label for="name" class="text-white mb-2">Question Type</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Fill in the Blanks</option>
+                <option value="1">Multiple Choice Questions</option>
+                <option value="2">Multiple Select Questions</option>
+                <option value="3">Fill in the Blanks</option>
+                <option value="3">True/False</option>
+                <option value="3">Match the Following </option>
+                <option value="3">Essay</option>
+                <option value="3">Descriptive Math Question</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-9 mt-5 ">
+        <div class="d-flex justify-content-start">
+            <h3 class="fw-bold">Question Details </h3>
+            <div class="btn  btn-sm  me-4 mx-3" style="height:30px ;background-color: #35B18A; color:#fff;"
+                routerLink="">Bulk Upload</div>
+        </div>
+
+        <div class="main-body w-100  rounded-3 p-3  bg-white" style="height:auto ; border:1px solid #EEEEEE;">
+            <ckeditor [(ngModel)]="ckeditorContent">
+                <ckbutton [name]="'saveButton'" [command]="'saveCmd'" (click)="save($event)" [icon]="'save.png'"
+                    [label]="'Save Document'" [toolbar]="'clipboard,1'">
+                </ckbutton>
+            </ckeditor>
+            <div>
+                <h3 class="mx-5 mt-3">Correct Answer</h3>
+                <div class="d-flex justify-content-start">
+                    <div class="form-group ">
+                        <button type="button" class="btn text-white" style="background-color:#313D9C;">01</button>
+                    </div>&nbsp;&nbsp;
+                    <div class="form-group w-100">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex float-end mt-3">
+            <div class="form-group ">
+                <button type="button" class="btn text-white shadow" style="background-color:#2AB2A6;">Save</button>
+            </div>
+            <div class="form-group mx-2 ">
+                <button type="button" class="btn text-white shadow" style="background-color:#2AB2A6;">Save & Next
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

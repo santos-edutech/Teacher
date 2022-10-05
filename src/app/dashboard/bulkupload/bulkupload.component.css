@@ -1,0 +1,8 @@
+.add{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color:  #F3F3F3;
+}

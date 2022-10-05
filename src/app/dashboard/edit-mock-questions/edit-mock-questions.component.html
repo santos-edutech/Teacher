@@ -1,0 +1,60 @@
+<div class="dashboard overflow-hidden">
+    <div class="mx-5">
+        <div class="d-flex mb-3 justify-content-between align-items-center">
+            <h3 class="fw-bold  mt-5  ">ICSE 10th Exam</h3>
+            <div class="btn  btn-sm mt-5 me-4 "  (click)="openDialog()" style="height:30px ;background-color: #35B18A; color:#fff;" >+ Add Section</div>
+  </div>
+        <div class="main-body w-100  rounded-3   bg-white" style=" border:1px solid #EEEEEE; height: 50px;">
+            <h3 class="fw-100 p-2">Instructions</h3>
+        </div>
+        <div class="main-body w-100  rounded-3 mt-3  bg-white d-flex justify-content-between"
+            style=" border:1px solid #EEEEEE; height: 50px; cursor: pointer;"  [routerLink]="['/home/edit-question-details']">
+            <h3 class="fw-100 p-2">Section A</h3>
+            <div class="d-flex mx-4 mt-2">
+                <h3 class="mx-5">80 questions</h3>
+                <div>
+                    <!-- Button to Open the Modal -->
+
+    <span class="material-icons" (click)="openDialog()" style="cursor:pointer;">
+        edit
+    </span>
+                    <span class="material-icons mx-3"  style="cursor:pointer;">
+                        delete_outline
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="main-body w-100  rounded-3 mt-3  bg-white d-flex justify-content-between"
+            style=" border:1px solid #EEEEEE; height: 50px;">
+            <h3 class="fw-100 p-2">Section B</h3>
+            <div class="d-flex mx-4 mt-2">
+                <h3 class="mx-5">80 questions</h3>
+                <div>
+                    <span class="material-icons">
+                        edit
+                    </span>
+                    <span class="material-icons mx-3">
+                        delete_outline
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="main-body w-100  rounded-3 mt-3  bg-white d-flex justify-content-between"
+            style=" border:1px solid #EEEEEE; height: 50px;">
+         
+            <h3 class="fw-100 p-2">Section C</h3>
+            <div class="d-flex mx-4 mt-2">
+                <h3 class="mx-5">80 questions</h3>
+                <div>
+                    <span class="material-icons">
+                        edit
+                    </span>
+                    <span class="material-icons mx-3">
+                        delete_outline
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+  

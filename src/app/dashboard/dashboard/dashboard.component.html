@@ -1,0 +1,45 @@
+<div class="mx-5" style="overflow: hidden;">
+<h2 class="mt-5 fw-bold">Dashboard</h2>
+<div class="cards d-flex justify-contentet-start mt-4 ">
+    <div class="card me-4">
+        <div class="card-body">
+            <div class="card-item">
+                <h3>Total Admins</h3> <p>512</p>
+            </div>
+        </div>
+    </div>
+    <div class="card me-4">
+        <div class="card-body">
+            <div class="card-item">
+                <h3>Active</h3> <p>23</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-item">
+                <h3>Inactive</h3> <p>12</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="main-body w-100  rounded-3 p-3  bg-white" style="height:auto ; border:1px solid #EEEEEE;">
+    <ckeditor [(ngModel)]="ckeditorContent">
+        <ckbutton [name]="'saveButton'" [command]="'saveCmd'" (click)="save($event)" [icon]="'save.png'"
+            [label]="'Save Document'" [toolbar]="'clipboard,1'">
+        </ckbutton>
+    </ckeditor>
+    <div>
+        <h3 class="mx-5 mt-3">Correct Answer</h3>
+        <div class="d-flex justify-content-start">
+            <div class="form-group ">
+                <button type="button" class="btn text-white" style="background-color:#313D9C;">01</button>
+            </div>&nbsp;&nbsp;
+            <div class="form-group w-100">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>

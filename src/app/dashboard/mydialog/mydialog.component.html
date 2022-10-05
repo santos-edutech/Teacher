@@ -1,0 +1,33 @@
+<div class=" dialog-box">
+    <div class="d-flex justify-content-between">
+        <h1 mat-dialog-title>Section Title</h1>
+        <button mat-icon-button [mat-dialog-close]="false"><mat-icon>close</mat-icon></button>
+    </div>
+<div mat-dialog-content>
+  <!-- <p>What's your favorite animal?</p> -->
+  <mat-form-field appearance="fill">
+    <div class="form-group">
+        <label for="name">Section Name</label>
+        <input type="text" class="form-control mt-2">
+    </div>
+    <div class="form-group mt-3">
+        <label for="name">Total Questions</label>
+        <input type="text" class="form-control mt-2">
+    </div>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="align-items-center">
+    <button  mat-button [mat-dialog-close]="false" class="btn shadow" data-bs-dismiss="modal" style="background-color: #fff;">Cancel</button>
+    <button mat-button [mat-dialog-close]="true" class="btn shadow text-white "style="background-color: #35B18A;">Create</button>
+</div>
+</div>
+
+<!-- <div>
+    <div mat-dialog-content>
+        <h3>All Questions Within this Section will be Deleted. <br> Are you sure want to delete this section ?</h3>
+    </div>
+    <div mat-dialog-actions class="float-end">
+        <button  mat-button [mat-dialog-close]="true" class="btn shadow text-white" data-bs-dismiss="modal" style="background-color:#35B18A; ">Yes</button>
+        <button mat-button [mat-dialog-close]="true" class="btn shadow  "style="background-color:#fff; ">No</button>
+    </div>
+</div> -->

@@ -1,0 +1,13 @@
+
+mat-sidenav{
+    background-color: hsl(233, 52%, 40%);
+    width: 260px;
+    height: 100%;
+    border-right:1px solid white;
+}
+.box-right{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    right: 20px;
+}
