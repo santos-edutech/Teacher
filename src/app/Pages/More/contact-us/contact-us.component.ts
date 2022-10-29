@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,9 +9,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  contactUsForm:any = FormGroup;
+  userData : AngularFirestoreCollection<any>;
+  isSubmit = true ;
+  sumbmitMessage="Thank you for contacting us.";
+  display : any;
+
+  constructor(
+    public fb: FormBuilder,
+    private db: AngularFirestore,
+  ) { }
 
   ngOnInit(): void {
+    this.userData = this.db.collection('contactus');
+    this.contactUsForm = this.fb.group({
+      name:['', [Validators.required]],
+      email:['', Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
+      mobile:['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      message:['', [Validators.required]],
+    });
   }
+
+  onSumbit(){
+    this.userData.add(this.contactUsForm.value).then(res =>{
+      this.openModal();
+    });
+    this.isSubmit = true ;
+    setTimeout(()=>{
+      this.onCloseHandled();
+      this.isSubmit = false ;
+      this.contactUsForm.reset();
+    },6000);
+  }
+
+   // Model Open Funcation
+   openModal(){
+    this.display='block';
+  }
+
+  // Model close Funcation
+  onCloseHandled(){
+    this.display='none'
+  }
+  
 
 }

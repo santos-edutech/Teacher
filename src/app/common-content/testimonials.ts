@@ -9,15 +9,27 @@ export const testimonials : Array<Object>=[
                 'review':[
                     {
                         "images":"assets/images/instructor/01.jpg",
-                        "name":"Deepak",
-                        "class":"10th",
-                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                        "name":"Sarayu Nadiva",
+                        "class":"12th",
+                        "score":"SAT Score : (1550/1600)",
+                        "universities":"Yale and Cornell",
+                        "comments":"I have a dream to study quantum physics at one of the ivy leagues in the US. EduTechEx SAT training program along with their expert counselling played a very important role in making my dream come true."
                     },
                     {
                         "images":"assets/images/instructor/01.jpg",
-                        "name":"Ram",
-                        "class":"10th",
-                        "comments":"I used to make a lot of silly and careless mistakes earlier, which have improved now after using the app. EDUTECHEx’S helped me boost my academic performance"
+                        "name":"Simha Davalekar",
+                        "class":"12th",
+                        "score":"SAT Score : (1600/1600)",
+                        "universities":"MIT and Iowa",
+                        "comments":"My dream to become an aeronautical engineer date back to my child hood. I was extremely fortunate to be associated with EduTechEx and by taking their SAT program, I formed a solid foundation for my successful ivy league application process."
+                    },
+                    {
+                        "images":"assets/images/instructor/01.jpg",
+                        "name":"Sureya Khan",
+                        "class":"12th",
+                        "score":"SAT Score : (1580/1600)",
+                        "universities":"Columbian & Penn State",
+                        "comments":"I took SAT training from different players in the market, but my score never crossed 1400. A friend of mine introduced me to EduTechEx, their innovative SAT training program not only helped me score 1580 in SAT but also through their expert counselling I was able to apply to the right universities considering my interest in media studies and journalism."
                     },
                 ],
             },

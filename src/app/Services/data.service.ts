@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { apCourses } from '../common-content/apCourses';
+import { allCourseForBuy } from '../common-content/buyCourses';
 import { generalFaqs } from '../common-content/faqs';
 import { megaMenuItems } from '../common-content/header-Iteams';
+import { IndianEntrancePrepDetails } from '../common-content/indian-entrance-list';
 import { allJobs } from '../common-content/jobs';
 import { careerMappingTracking } from '../common-content/learning-center';
 import { learningPatner } from '../common-content/learning-partner';
+import { medicineCountries } from '../common-content/medicine-country';
+import { schoolServices } from '../common-content/school-services';
 import { subjectDetails } from '../common-content/subject-details';
 import { testimonials } from '../common-content/testimonials';
 
@@ -45,6 +50,31 @@ export class DataService {
 
   getAllJobs(){
     return allJobs;
+  }
+
+  // GET apcourses Function
+  getAllApCourses(){
+    return apCourses;
+  }
+
+   // GET Medicin country Function
+  getAllMedicineCountries(){
+    return medicineCountries
+  }
+
+  // GET all buycourse Funcation
+  getAllBuyCourses(){
+    return allCourseForBuy;
+  }
+
+  // Get allIndianEntrance Funcation
+  getAllIndianEntrance(){
+    return IndianEntrancePrepDetails
+  }
+
+  // Get All School Services
+  getallSchoolServices(){
+    return schoolServices;
   }
 
 }

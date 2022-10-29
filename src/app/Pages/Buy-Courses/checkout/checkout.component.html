@@ -1,0 +1,99 @@
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+    <!-- =======================
+    Page Banner START -->
+    <section class="py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-light p-4 text-center rounded-3">
+                        <h1 class="m-0">Checkout</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Page Banner END -->
+
+    <!-- =======================
+    Page content START -->
+    <section class="pt-5">
+        <div class="container">
+
+            <div class="row g-4 g-sm-5">
+                <!-- Main content START -->
+                <div class="col-xl-8 mb-4 mb-sm-0">
+                    <!-- Alert -->
+                    <!-- <div class="alert alert-danger alert-dismissible d-flex justify-content-between align-items-center fade show py-2 pe-2"
+                        role="alert">
+                        <div>
+                            <i class="bi bi-exclamation-octagon-fill me-2"></i>
+                            Already have an account? <a href="#" class="text-reset btn-link mb-0 fw-bold">Log in</a>
+                        </div>
+                        <button type="button" class="btn btn-link mb-0 text-end" data-bs-dismiss="alert"
+                            aria-label="Close"><i class="bi bi-x-lg text-dark"></i></button>
+                    </div> -->
+
+                    <!-- Personal info START -->
+                    <div class="card shadow p-4">
+                        <!-- Title -->
+                        <h5 class="mb-0">Personal Details</h5>
+                        
+                        <!-- Form START -->
+                        <form [formGroup]="paymentForm" class="row g-3 mt-0">
+                            <!-- Name -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="yourName" class="form-label">Your name *</label>
+                                <input type="text" class="form-control" formControlName="name" id="yourName" placeholder="Name">
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="emailInput" class="form-label">Email address *</label>
+                                <input type="email" class="form-control" formControlName="email" id="emailInput" placeholder="Email">
+                            </div>
+                            <!-- Number -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="mobileNumber" class="form-label">Mobile number *</label>
+                                <input type="text" class="form-control" formControlName="mobile" id="mobileNumber" placeholder="Mobile number">
+                            </div>
+                            <!-- Country option -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="Country" class="form-label">Country *</label>
+                                <input type="text" class="form-control" formControlName="country" id="Country" placeholder="Country">
+                            </div>
+                            <!-- State option -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="mobileNumber" class="form-label">Select state *</label>
+                                <input type="text" class="form-control" formControlName="state" id="Country" placeholder="State">
+                            </div>
+                            <!-- Postal code -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="postalCode" class="form-label">Postal code *</label>
+                                <input type="text" class="form-control" formControlName="pincode" id="postalCode" placeholder="PIN code">
+                            </div>
+                            <!-- Address -->
+                            <div class="col-md-6 bg-light-input">
+                                <label for="address" class="form-label">Address *</label>
+                                <input type="text" class="form-control" formControlName="address" id="address" placeholder="Address">
+                            </div>
+                            <!-- Button -->
+                            <div class="col-12 text-end">
+                                <button type="submit" (click)="paynow()" class="btn btn-primary mb-0">Proceed to payment</button>
+                            </div>
+                        </form>
+                        <!-- Form END -->
+                
+                    </div>
+                    <!-- Personal info END -->
+                </div>
+                <!-- Main content END -->
+            </div><!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Page content END -->
+
+</main>
+    <!-- **************** MAIN CONTENT END **************** -->

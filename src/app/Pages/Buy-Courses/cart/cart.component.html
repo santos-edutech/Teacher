@@ -1,0 +1,143 @@
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+    <!-- =======================
+    Page Banner START -->
+    <section class="py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-light p-4 text-center rounded-3">
+                        <h1 class="m-0">My cart</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Page Banner END -->
+
+    <!-- =======================
+    Page content START -->
+    <section class="pt-5">
+        <div class="container">
+            <div *ngIf="!items || items?.length < 1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <!-- Image -->
+                            <img src="https://eduport.webestica.com/assets/images/element/cart.svg" class="h-200px h-md-300px mb-3" alt="">
+                            <!-- Subtitle -->
+                            <h2>Your cart is currently empty</h2>
+                            <!-- info -->
+                            <p class="mb-0">Please check out all the available courses and buy some courses that fulfill your needs.</p>
+                            <!-- Button -->
+                            <a routerLink="/shop" class="btn btn-primary mt-4 mb-0">Back to Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 g-sm-5" *ngIf="items?.length > 0">
+                <!-- Main content START -->
+                <div class="col-lg-8 mb-4 mb-sm-0">
+                    <div class="card card-body p-4 shadow">
+                        <!-- Alert -->
+
+                        <div class="table-responsive border-0 rounded-3">
+                            <!-- Table START -->
+                            <table class="table align-middle p-4 mb-0">
+                                <!-- Table head -->
+                                <!-- Table body START -->
+                                <tbody class="border-top-0" *ngFor="let item of items;let i = index">
+                                    <!-- Table item -->
+                                    <tr  id="{{ item.id}}">
+                                        <!-- Course item -->
+                                        <td>
+                                            <div class="d-lg-flex align-items-center">
+                                                <!-- Image -->
+                                                <div class="w-100px w-md-80px mb-2 mb-md-0">
+                                                    <img [src]="item?.image" class="rounded" alt="">
+                                                </div>
+                                                <!-- Title -->
+                                                <h6 class="mb-0 ms-lg-3 mt-2 mt-lg-0">
+                                                    <a href="#">{{ item.menuName }}</a>
+                                                </h6>
+                                            </div>
+                                        </td>
+                                        <!-- <td class="col-sm-2">
+                                            <div class="p-0 d-flex align-items-center justify-content-between">
+                                                <span class="h6">qty</span>
+                                                <input [(ngModel)]="item.qtyTotal" [ngModelOptions]="{standalone: true}"
+                                                    min="1" type="number" value="{{ item.qtyTotal }}" name=""
+                                                    class="form-control ms-2" (change)="changeSubtotal(item ,i)" />
+                                            </div>
+                                        </td> -->
+
+                                        <!-- Amount item -->
+                                        <td class="text-center">
+                                            <h5 class="text-success mb-0" #subTotalWrap>₹{{ item.variationCost}}</h5>
+                                        </td>
+                                        <!-- Action item -->
+                                        <td>
+                                            <button class="btn btn-sm btn-danger-soft px-2 mb-0" (click)="removeFromCart(item)"><i
+                                                    class="fas fa-fw fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main content END -->
+
+                <!-- Right sidebar START -->
+                <div class="col-lg-4">
+                    <!-- Card total START -->
+                    <div class="card card-body p-4 shadow">
+                        <!-- Title -->
+                        <div class="mb-3">
+                            <h4 >Cart Total</h4>
+                            <!-- <span class="">(Include 18% GST)</span> -->
+                        </div>
+
+                        <!-- Price and detail -->
+                        <ul class="list-group list-group-borderless mb-2" >
+                            <li class="list-group-item px-0 d-flex justify-content-between" *ngFor="let item of items">
+                                <span class="h6 fw-light mb-0">{{ item.menuName }}</span>
+                                <span class="h6 fw-light mb-0">₹{{ item.variationCost}}</span>
+                            </li>
+                            <!-- <li class="list-group-item px-0 d-flex justify-content-between">
+                                <span class="h6 fw-light mb-0">Coupon Discount</span>
+                                <span class="text-danger">-$20</span>
+                            </li> -->
+                            <li class="list-group-item px-0 d-flex justify-content-between">
+                                <span class="h5 mb-0">Total Amount<br>
+                                    <span class="fs-6">(Include 18% GST)</span>
+                                </span>
+                                <span class="h5 mb-0">₹{{totalAmount}}</span>
+                            </li>
+                        </ul>
+
+                        <!-- Button -->
+                        <div class="d-grid">
+                            <a routerLink="/checkout" class="btn btn-lg btn-success">Proceed to Checkout</a>
+                        </div>
+
+                        <!-- Content -->
+                        <p class="small mb-0 mt-2 text-center">By completing your purchase, you agree to these <a
+                                href="#"><strong>Terms of Service</strong></a></p>
+
+                    </div>
+                    <!-- Card total END -->
+                </div>
+                <!-- Right sidebar END -->
+
+            </div><!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Page content END -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->

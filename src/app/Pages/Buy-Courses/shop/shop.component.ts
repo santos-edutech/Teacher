@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
 import { DataService } from 'src/app/Services/data.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
+
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.css']
+  styleUrls: ['./shop.component.css'],
+  providers: [PaymentService]
 })
 export class ShopComponent implements OnInit {
 
@@ -17,39 +21,79 @@ export class ShopComponent implements OnInit {
   courseMenuName: any;
   searchText: any;
   courseId: any ;
+  allSegmentList:any;
+  buyCoursesList:any;
+  programList:any;
+
 
   constructor(
-    private router: ActivatedRoute,
+    private router: Router,
     private dataService:DataService,
+    private cartservice : CartService
   ) { }
 
   ngOnInit(): void {
-    this.megaMenuItems = this.dataService.getMegaMenu();
-    this.menuItem = this.megaMenuItems[0]['normalMenuItems'];
-    this.allCoursesSubjects();
+    // this.megaMenuItems = this.dataService.getMegaMenu();
+    // this.menuItem = this.megaMenuItems[0]['normalMenuItems'];
+    this.allSegmentList = this.dataService.getAllBuyCourses();
+    // this.allCoursesSubjects();
+    this.getAllBuyCourse();
   }
 
+  getAllBuyCourse(){
+    this.buyCoursesList = [];
+    for(let segment of this.allSegmentList){
+      this.programList = segment.program;
+      // console.log(this.programList);
+      for(let courseList of this.programList){
+        // console.log(courseList.course);
+        for(let list of courseList.course){
+            this.buyCoursesList.push(list) ;
+            // console.log(this.buyCoursesList);
+        }
+      }
+    }
+  }
 
-  //Select course by category
-  onSelect(val:any) {
-    // console.log(val);
+   // course select function
+   onSelect(val:any,init?:any) {
     if (val) {
-      this.menuItem.map((res:any) => {
-        if(res.name == val){
-          this.courseSubMenuItem = res.subMenu;
+      this.allSegmentList.map((res:any) => {
+        if(res.segment === val){
+          this.programList = res.program;
+          // console.log(this.programList);
+          if(init){
+            this.onSelectSub(this.programList[0]['course']);
+          }
         }
       }
       );
     }
   }
 
-  //Get function for all courses subjects
-  allCoursesSubjects(){
-    this.courseSubMenuItem =[];
-    for(let courses of this.menuItem){
-      for(let subject of courses.subMenu){
-        this.courseSubMenuItem.push(subject);
+  //subject select function
+  onSelectSub(val2:any){
+    if (val2) {
+      this.programList.map((res:any) => {
+        if(res.program_title === val2){
+          console.log(res.program_title);
+          this.buyCoursesList = res.course;
+        }
       }
+      );
+    }
+  }
+
+ 
+  items :any;
+
+   //----- add item to cart
+   addToCart(item:any) {
+    if (!this.cartservice.itemInCart(item)) {
+      item.qtyTotal = 1;
+      this.cartservice.addToCart(item); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.router.navigate(['/cart']);
     }
   }
 

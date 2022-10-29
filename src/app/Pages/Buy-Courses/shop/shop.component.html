@@ -3,11 +3,12 @@
 
     <!-- =======================
     Page Banner START -->
-    <section class="py-0">
+
+    <section class="py-0 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="bg-light p-4 rounded-3 position-relative overflow-hidden">
+                    <div class="p-4 rounded-3 position-relative overflow-hidden">
     
                         <!-- Svg decoration -->
                         <figure class="position-absolute top-0 end-0 mt-5">
@@ -26,17 +27,17 @@
                                 <p class="mb-3">Expand knowledge by reading book Two before narrow not relied on how except moment myself Dejection assurance. </p>
     
                                 <!-- Search -->
-                                <form class="bg-body rounded p-2">
+                                <form class=" rounded p-2">
                                     <div class="input-group">
-                                        <button class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 "></i></button>
-                                        <input class="form-control border-0 me-1" type="text" name="search" [(ngModel)]="searchText" placeholder="Find your course">
+                                        <button class="btn bg-transparent px-2 py-0  position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 "></i></button>
+                                        <input class="form-control border-1 me-1" type="text" name="search" [(ngModel)]="searchText" placeholder="Find your course">
                                     </div>
                                 </form>
                             </div>
     
                             <!-- Image -->
                             <div class="col-md-6 text-center">
-                                <img src="assets/images/book/book-bg.svg" alt="">
+                                <img src="assets/images/book/course.svg" width="100%" alt="" class="">
                             </div>
                         </div> <!-- Row END -->
                     </div>
@@ -59,40 +60,54 @@
                     <div class="row mb-4 align-items-center">
     
                         <!-- Title -->
-                        <div class="col-md-9">
+                        <div class="col-sm-6 col-xl-6 mt-3 mt-lg-0">
                             <h5 class="mb-0">All Listed Books</h5>
                         </div>
-    
-                        <!-- Select option -->
-                        <div class="col-md-3 mt-3 mt-xl-0">
-                            <form class="border-bottom p-2">
+                        
+                          <!-- Select Segment option -->
+                        <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
+                            <form class="border rounded p-2">
                                 <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelect(val.value)' #val>
-                                    <option  value="null">Select category</option>
-                                    <option *ngFor="let item of menuItem; let i=index" [value]="item?.name">
-                                        <ng-container *ngIf="i<6">
-                                            {{ item?.name }}
+                                    <option  value="null">Select Segment</option>
+                                    <option *ngFor="let segmentItem of allSegmentList" [value]="segmentItem?.segment">
+                                        <ng-container>
+                                            {{segmentItem?.segment}}
                                         </ng-container>
                                     </option>
                                 </select>
                             </form>
                         </div>
+    
+                        <!--  Select program  option -->
+                        <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
+                            <form class="border rounded p-2">
+                                <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectSub(val2.value)' #val2>
+                                    <option  value="null"> Select program</option>
+                                    <option *ngFor="let programItem of programList" [value]="programItem?.program_title">
+                                        <ng-container>
+                                            {{programItem?.program_title}}
+                                        </ng-container>
+                                    </option>
+                                </select>
+                            </form>
+                        </div>
+
                     </div>
                     <!-- Search option END -->
                     
     
                     <!-- Book Grid START -->
                     <div class="row g-4">
-    
                         <!-- Card item START -->
-                        <div *ngFor="let subMenuItem of courseSubMenuItem | filter:searchText" class="col-sm-6 col-lg-4 col-xl-3">
+                        <div id="{{ i }}" *ngFor="let list of buyCoursesList; let i = index" class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <div class="position-relative">
                                     <!-- Image -->
-                                    <img src="assets/images/book/01.jpg" class="card-img-top" alt="book image">
+                                    <img [src]="list?.image" class="card-img-top" alt="book image">
                                     <!-- Overlay -->
                                     <div class="card-img-overlay d-flex z-index-0 p-3">
                                         <!-- Card overlay Top -->
-                                        <div class="w-100 mb-auto d-flex justify-content-end">
+                                        <div class="mb-auto d-flex justify-content-end">
                                             <!-- Card format icon -->
                                             <div class="icon-md bg-dark rounded-circle fs-5">
                                                 <a href="#" class="text-white"><i class="bi bi-book"></i></a>
@@ -100,30 +115,30 @@
                                         </div>
                                     </div>
                                 </div>
-    
-                                <!-- Card body -->
-                                <div class="card-body px-3">
-                                    <!-- Title -->
-                                    <h5 class="card-title mb-0" >
-                                        <a [routerLink]="['/shop-product-detail',subMenuItem?.id,courseId]" class="stretched-link">{{subMenuItem.title}}</a>
-                                    </h5>
+                                <div class="card-body">
+                                    <h5 class="card-title text-truncate-2">{{list?.menuName}}</h5>
+                                    <span class="h6">{{list?.subTitle ? list?.subTitle : ''}}</span>
+                                    <p class="card-text text-truncate-2">
+                                        {{list?.details}}
+                                    </p>
                                 </div>
-    
-                                <!-- Card footer -->
-                                <div class="card-footer pt-0 px-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0">{{courseId}}</span>
+
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
                                         <!-- Price -->
-                                        <h5 class="text-success mb-0">₹125</h5>
+                                        <h5 class="mb-0">₹{{list?.variationCost}}</h5>
+                                        <span class="text-decoration-line-through mb-0">₹{{list?.discount}}</span>
+                                        <span class="badge bg-success text-white mb-0 ms-3">20% off</span>
                                     </div>
+                                    <div class="d-grid mx-auto">
+                                        <a (click)="addToCart(list)" class="btn btn-success rounded-0 btn-sm">Add to cart</a>
+                                   </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Card item END -->
-
                     </div>
                     <!-- Book Grid END -->
-
                 </div>
                 <!-- Main content END -->
             </div><!-- Row END -->

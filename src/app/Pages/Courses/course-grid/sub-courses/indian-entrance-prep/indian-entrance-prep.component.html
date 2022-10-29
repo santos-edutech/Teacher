@@ -1,0 +1,211 @@
+<!-- **************** COURSE-GRID CONTENT START **************** -->
+
+<main>
+    <!-- =======================
+    Page Banner START -->
+    <section class="align-items-center d-flex" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;background-color: #444cae;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Title -->
+                    <h1 class="text-white">{{selectedSubMenuCourseTitle}}</h1>
+                    <!-- Breadcrumb -->
+                    <div class="d-flex justify-content-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb breadcrumb-dark breadcrumb-dots mb-0">
+                                <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Page Banner END -->
+    
+    <!-- =======================
+    Page content START -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main content START -->
+                <div class="col-lg-8 col-xl-9">
+
+                    <!-- Search option START -->
+                    <div class="row mb-4 align-items-center">
+                        <!-- Search bar -->
+                        <div class="col-xl-6">
+                            <div class="border rounded p-2">
+                                <div class="input-group input-borderless">
+                                    <input class="form-control me-1" type="text" name="search" [(ngModel)]="searchText" placeholder="Find your course">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search option END -->
+        
+                    <!-- Course Grid START -->
+                    <div class="row g-4">
+                        <!-- Card item START -->
+                        <div *ngFor="let list of allIndianEntrance| filter:searchText" class="col-sm-6 col-xl-4">
+                            <a class="card shadow h-100 text-dark">
+                                <!-- Image -->
+                                <!-- <img [src]="list['apImage']" class="card-img-top" alt="course image"> -->
+                                <!-- Card body -->
+                                <div class="card-body pb-0">
+                                    <!-- Title -->
+                                    <h5 class="card-title overflow-hidden" style="text-overflow: ellipsis;white-space: nowrap;">
+                                        <a [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">{{list?.title}}</a>
+                                    </h5>
+                                    <p class="mb-2 text-truncate-2 border-bottom fw-bold">
+                                        {{list?.apCourseType}}
+                                    </p>
+                                    <!-- <p class="my-2 text-truncate-2">
+                                        Course Description ........
+                                    </p> -->
+                                    <!-- Rating star -->
+                                    <ul class="list-group list-group-borderless mb-3">
+                                        <li *ngFor="let feature of list['PricingAndFeatures']" class="list-group-item h6 fw-light d-flex mb-0" >
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            <!-- <p class="text-truncate-1">{{feature?.features}}</p> -->
+                                            <span class="text-truncate-1">{{feature?.features}}</span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="nav nav-pills nav-tabs-line" id="course-pills-tab" role="tablist">
+                                        <!-- Tab item -->
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link btn btn-sm mb-md-0 active" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-1" type="button" role="tab" aria-controls="course-pills-1" aria-selected="true">1 Year</button>
+                                        </li>
+                                        <!-- Tab item -->
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link btn btn-sm mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button" role="tab" aria-controls="course-pills-2" aria-selected="false">2 Year</button>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <!-- Card footer -->
+                                <div class="card-footer pt-0 pb-3">
+                                    <hr>
+
+                                    <div class="tab-content pt-2" id="course-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="course-pills-1" role="tabpanel" aria-labelledby="course-pills-tab-1">
+                                            <div class="d-flex justify-content-between align-items-center ">
+                                                <span class="h6 fw-light mb-0 fw-bold">{{list?.price}}</span>
+                                                <span class=" fw-light mb-0 text-decoration-line-through">{{list?.discount}}</span>
+                                                <span class="fw-light mb-0" style="color: #2AB2A6;">
+                                                    (20% off)
+                                                </span>
+                                                <a class="" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
+                                                    <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+                                            <div class="d-flex justify-content-between  align-items-center ">
+                                                <span class="h6 fw-light mb-0 fw-bold">{{list?.price2}}</span>
+                                                <span class=" fw-light text-decoration-line-through">{{list?.discount2}}</span>
+                                                <span class="fw-light mb-0" style="color: #2AB2A6;">
+                                                    20% off
+                                                </span>
+                                                <a class="" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
+                                                    <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card item END -->
+                    </div>
+                    <!-- Course Grid END -->
+
+                </div>
+                <!-- Main content END -->
+        
+                <!-- Right sidebar START -->
+                <div class="col-lg-4 col-xl-3">
+                    <!-- Responsive offcanvas body START -->
+                    <nav class="navbar navbar-light navbar-expand-lg mx-0">
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header bg-light">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Advance Filter</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body p-3 p-lg-0">
+                                <form>
+                                    <!-- Category START -->
+                                    <div class="card card-body shadow p-4 mb-4">
+                                        <!-- Title -->
+                                        <h4 class="mb-3">Popular Category</h4>
+                                        <!-- Category group -->
+                                        <div class="col-12">
+                                        </div>
+                                    </div>
+                                    <!-- Category END -->
+            
+                                    <!-- Language START -->
+                                    <div class="card card-body shadow p-4 mb-4">
+                                        <!-- Title -->
+                                        <h4 class="mb-3">Language</h4>
+                                        <ul class="list-inline mb-0 g-3">
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-2">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-2">English</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-3">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-3">Francas</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-4">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-4">Hindi</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-5">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-5">Russian</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-6">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-6">Spanish</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-7">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-7">Bengali</label>
+                                            </li>
+                                            <!-- Item -->
+                                            <li class="list-inline-item mb-2">
+                                                <input type="checkbox" class="btn-check" id="btn-check-8">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-8">Portuguese</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Language END -->
+                                </form><!-- Form End -->
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Responsive offcanvas body END -->
+                </div>
+                <!-- Right sidebar END -->
+            </div><!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Page content END -->
+
+</main>
+
+
+<!-- **************** COURSE-GRID CONTENT END **************** -->
+

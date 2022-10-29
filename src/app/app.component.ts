@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EDUTECHEX';
+
+  loader = true ;
+
+  ngOnInit(){
+    setTimeout(() => {
+      this.loader = false ;
+    }, 1000);
+  }
+
 }

@@ -64,7 +64,7 @@
                                     </div>
                                     <!-- Title -->
                                     <h5 class="card-title overflow-hidden" style="text-overflow: ellipsis;white-space: nowrap;">
-                                        <a [routerLink]="[ '/course-details',couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]" >{{subMenuItem.title}}</a>
+                                        <a [routerLink]="[ subMenuItem?.link,couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]" >{{subMenuItem.title}}</a>
                                     </h5>
                                     <p class="mb-2 text-truncate-2">
                                         {{subMenuItem.details}}
@@ -85,7 +85,7 @@
                                     <div class="d-flex justify-content-between">
                                         <span class="h6 fw-light mb-0"><i class="far fa-clock text-primary me-2"></i>12h 56m</span>
                                         <span class="h6 fw-light mb-0">
-                                            <a [routerLink]="[ '/course-details',couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]">
+                                            <a [routerLink]="[ subMenuItem?.link,couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]">
                                                 <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
                                             </a>
                                         </span>

@@ -26,6 +26,7 @@ export class CourseDetailsComponent implements OnInit {
   selectedSubjectOverviewImage:any;
   selectedSubjectPrice : any;
   selectedSubjectDiscountPrice:any;
+  selectedCourseReviews: any;
 
   constructor(
     private dataService:DataService,
@@ -60,6 +61,7 @@ export class CourseDetailsComponent implements OnInit {
             this.selectedSubjectOverviewImage = subMenuItem.overViewImage;
             this.selectedSubjectPrice = subMenuItem.price;
             this.selectedSubjectDiscountPrice = subMenuItem.discount;
+            this.selectedCourseReviews = subMenuItem.review;
           }
         }
       }

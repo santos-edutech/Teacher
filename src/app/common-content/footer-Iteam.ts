@@ -10,14 +10,14 @@ export const footerItems: Array<Object> =[
                 'name': 'Contact Us',
                 'link': '/contact-us',
             },
-            {
-                'name': 'News and Blogs',
-                'link': '',
-            },
-            {
-                'name': 'Career',
-                'link': '',
-            },
+            // {
+            //     'name': 'News and Blogs',
+            //     'link': '',
+            // },
+            // {
+            //     'name': 'Career',
+            //     'link': '',
+            // },
         ]
     },
     {
@@ -35,12 +35,12 @@ export const footerItems: Array<Object> =[
         },
         {
             'name': 'Ivy League Program',
-            'link': '',
+            'link': '/Ivy-League-course-details',
             
         },
         {
             'name': 'Job Mapping',
-            'link': '',
+            'link': '/core-emerging-sectors',
             
         },
        ]
@@ -50,19 +50,19 @@ export const footerItems: Array<Object> =[
         'items': [
             {
                 'name': 'Pariksa – Assessments',
-                'link': '',
+                'link': '/pariksha',
             },
             {
                 'name': 'Career Navigation',
-                'link': '',
+                'link': '/careers-navigate',
             },
             {
                 'name': 'Internships',
-                'link': '',
+                'link': '/internships',
             },
             {
                 'name': 'Testimonials',
-                'link': '',
+                'link': '/testimonials',
             },
         ]
     },

@@ -69,27 +69,34 @@
     
                 <!-- Card item START -->
                 <div *ngFor="let item of allReviewList" class="col-lg-10 col-xl-6">
-                    <div  class="card shadow p-2">
-                        <div class="row g-0">
-                            <!-- Image -->
-                            <div class="col-md-4">
-                                <img [src]="item['images']" class="rounded-3" alt="...">
+                    <div  class="card shadow p-3">
+                        <div class="text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xl mb-3">
+                                <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
                             </div>
-    
-                            <!-- Card body -->
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <!-- Title -->
-                                    <div class="d-sm-flex justify-content-sm-between mb-2 mb-sm-3">
-                                        <div>
-                                            <h5 class="card-title mb-0"><a href="#">{{item?.name}}</a></h5>
-                                            <!-- <p class="small mb-2 mb-sm-0">Professor at Sigma College</p> -->
-                                        </div>
-                                        <span class="h6 fw-light badge bg-purple bg-opacity-10" style="color:#444cae ;">Class {{item?.class}}</span>
-                                    </div>
-                                    <!-- Content -->
-                                    <p class="mb-3">{{item?.comments}}</p>
-                                </div>
+                            <h6 class="mb-3">{{item?.name}}</h6>
+                            <p>Class {{item?.class}}</p>
+                            <!-- Content -->
+                            <blockquote>
+                                <p>
+                                    <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+                                    {{item?.comments}}
+                                    <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+                                </p>
+                            </blockquote>
+                            <!-- Rating -->
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <!-- Like button -->
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
+                                <label class="btn btn-outline-light btn-sm mb-0" for="btnradio1">
+                                    {{item?.score}}
+                                </label>
+                                <!-- Dislike button -->
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+                                <label class="btn btn-outline-light btn-sm mb-0" for="btnradio2">
+                                    {{item?.universities}}
+                                </label>
                             </div>
                         </div>
                     </div>
