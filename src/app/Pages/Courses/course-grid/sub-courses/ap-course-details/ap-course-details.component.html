@@ -88,7 +88,7 @@
 										<h5 class="mb-3">Course Overview</h5>
 										<div *ngFor="let overview of selectedCourseOverview">
 											<!-- <h6 class="mb-3">{{overview?.title}}</h6> -->
-											<p class="mb-3" style="white-space: pre-wrap">
+											<p class="mb-3" style="white-space: pre-wrap;color:();" ng-style="{'color':($first ?'red':'blue')}">
 												{{overview?.description}}
 											</p>
 											<p class="mb-3 text-dark" style="white-space: pre-wrap">

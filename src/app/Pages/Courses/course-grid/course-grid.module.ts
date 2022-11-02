@@ -17,7 +17,9 @@ import { IndianEntrancePrepComponent } from './sub-courses/indian-entrance-prep/
 import { SchoolServicesComponent } from './sub-courses/school-services/school-services.component';
 import { IndianEntrancePrepDetailsComponent } from './sub-courses/indian-entrance-prep-details/indian-entrance-prep-details.component';
 import { SchoolServicesDetailsComponent } from './sub-courses/school-services-details/school-services-details.component';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import {  AngularFirestoreModule, } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SchoolServicesDetailsComponent } from './sub-courses/school-services-de
     CourseGridRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ]
 })
 export class CourseGridModule { }
