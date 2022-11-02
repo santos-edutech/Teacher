@@ -50,11 +50,11 @@
                     <div class="row g-4">
                         <!-- Card item START -->
                         <div *ngFor="let list of allIndianEntrance| filter:searchText" class="col-sm-6 col-xl-4">
-                            <a class="card shadow h-100 text-dark">
+                            <a class="card shadow h-100 text-dark" style="cursor: pointer;">
                                 <!-- Image -->
                                 <!-- <img [src]="list['apImage']" class="card-img-top" alt="course image"> -->
                                 <!-- Card body -->
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
                                     <!-- Title -->
                                     <h5 class="card-title overflow-hidden" style="text-overflow: ellipsis;white-space: nowrap;">
                                         <a [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">{{list?.title}}</a>
@@ -156,38 +156,29 @@
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
                                                 <input type="checkbox" class="btn-check" id="btn-check-2">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-2">English</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-2">CBSE</label>
                                             </li>
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
                                                 <input type="checkbox" class="btn-check" id="btn-check-3">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-3">Francas</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-3">IGCSE</label>
                                             </li>
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
                                                 <input type="checkbox" class="btn-check" id="btn-check-4">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-4">Hindi</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-4">STATE</label>
                                             </li>
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
                                                 <input type="checkbox" class="btn-check" id="btn-check-5">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-5">Russian</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-5">IB</label>
                                             </li>
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
                                                 <input type="checkbox" class="btn-check" id="btn-check-6">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-6">Spanish</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-6">ICSE</label>
                                             </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-7">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-7">Bengali</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-8">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-8">Portuguese</label>
-                                            </li>
+                                           
                                         </ul>
                                     </div>
                                     <!-- Language END -->

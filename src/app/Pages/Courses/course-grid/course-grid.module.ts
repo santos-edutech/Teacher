@@ -7,7 +7,7 @@ import { TestComponent } from './test/test.component';
 import { CourseGridRoutingModule } from './course-grid Routes/course-grid-routing.module';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApCoursesComponent } from './sub-courses/ap-courses/ap-courses.component';
 import { ApCourseDetailsComponent } from './sub-courses/ap-course-details/ap-course-details.component';
 import { IvyLeagueCourseComponent } from './sub-courses/ivy-league-course/ivy-league-course.component';
@@ -39,6 +39,7 @@ import { SchoolServicesDetailsComponent } from './sub-courses/school-services-de
     SharedModule,
     CourseGridRoutingModule,
     FormsModule, 
+    ReactiveFormsModule,
     Ng2SearchPipeModule
   ]
 })

@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   courseMenuName: any;
   counsellingForm:any = FormGroup;
   userData : AngularFirestoreCollection<any>;
-  isSubmit = true ;
+  submitted = false ;
   display : any;
 
   constructor(private dataService:DataService,public fb: FormBuilder,private db: AngularFirestore,) { }
@@ -28,12 +28,13 @@ export class HomeComponent implements OnInit {
     this.menuItem = this.megaMenuItems[0]['normalMenuItems'];
     // console.log(this.menuItem[0]['menuId']);
     this.getSelectedCourse(this.menuItem[0]['menuId']);
-    this.userData = this.db.collection('counselling');
+    this.userData = this.db.collection('websiteLoadpopupData');
     this.counsellingForm = this.fb.group({
       name:['', [Validators.required]],
       email:['', [Validators.required]],
       phone:['', [Validators.required]],
       city:['', [Validators.required]],
+      date : new Date(),
     });
   }
 
@@ -47,18 +48,39 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onSumbit(){
-    $('#staticBackdrop').modal('hide');
-    this.userData.add(this.counsellingForm.value).then(res =>{
-      this.openModal();
-    });
-    this.isSubmit = true ;
-    setTimeout(()=>{
-      this.onCloseHandled();
-      this.isSubmit = false ;
-      this.counsellingForm.reset();
-    },6000);
+  get f() {
+    return this.counsellingForm.controls;
   }
+
+  onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.counsellingForm.invalid) {
+      return;
+    }
+    $('#staticBackdrop').modal('hide');
+      this.userData.add(this.counsellingForm.value).then(res =>{
+        this.openModal();
+      });
+      setTimeout(()=>{
+        this.onCloseHandled();
+        this.submitted = false ;
+        this.counsellingForm.reset();
+      },6000);
+  }
+
+  // onSumbit(){
+  //   $('#staticBackdrop').modal('hide');
+  //   this.userData.add(this.counsellingForm.value).then(res =>{
+  //     this.openModal();
+  //   });
+  //   this.isSubmit = true ;
+  //   setTimeout(()=>{
+  //     this.onCloseHandled();
+  //     this.isSubmit = false ;
+  //     this.counsellingForm.reset();
+  //   },6000);
+  // }
 
    // Model Open Funcation
    openModal(){

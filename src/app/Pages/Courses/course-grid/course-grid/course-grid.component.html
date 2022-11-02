@@ -75,18 +75,35 @@
                                         <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
                                         <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
                                         <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
-                                        <li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+                                        <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
                                     </ul>
                                 </div>
                                 <!-- Card footer -->
-                                <div class="card-footer pt-0 pb-3">
+                                <!-- <div class="card-footer pt-0 pb-3">
                                     <hr>
                                     <div class="d-flex justify-content-between">
                                         <span class="h6 fw-light mb-0"><i class="far fa-clock text-primary me-2"></i>12h 56m</span>
                                         <span class="h6 fw-light mb-0">
                                             <a [routerLink]="[ subMenuItem?.link,couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]">
                                                 <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div> -->
+                                <div class="card-footer pt-0 pb-3">
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="h6 fw-light mb-0">
+                                            {{subMenuItem?.price}}
+                                            <span class="text-decoration-line-through">{{subMenuItem?.discount}}</span> <br>
+                                            <span class="badge bg-success text-white">20% off</span>
+                                        </span>
+                                        <span class="h6 fw-light mb-0">
+                                            <a
+                                                [routerLink]="[subMenuItem?.link,couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]">
+                                                <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2"
+                                                    style="background-color:#444cae"></i>
                                             </a>
                                         </span>
                                     </div>
@@ -145,45 +162,16 @@
                                     </div>
                                     <!-- Category END -->
             
+                                   
                                     <!-- Language START -->
                                     <div class="card card-body shadow p-4 mb-4">
                                         <!-- Title -->
-                                        <h4 class="mb-3">Language</h4>
-                                        <ul class="list-inline mb-0 g-3">
+                                        <h4 class="mb-3">{{CourseCardheader}}</h4>
+                                        <ul class="list-inline mb-0 g-3" >
                                             <!-- Item -->
-                                            <li class="list-inline-item mb-2">
+                                            <li class="list-inline-item mb-2" *ngFor="let item of curriculum">
                                                 <input type="checkbox" class="btn-check" id="btn-check-2">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-2">English</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-3">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-3">Francas</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-4">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-4">Hindi</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-5">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-5">Russian</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-6">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-6">Spanish</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-7">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-7">Bengali</label>
-                                            </li>
-                                            <!-- Item -->
-                                            <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-8">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-8">Portuguese</label>
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-2">{{item?.items}}</label>
                                             </li>
                                         </ul>
                                     </div>

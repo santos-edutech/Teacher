@@ -99,21 +99,30 @@
                     <h2 class="mt-4 mt-md-0" style="color:#2AB2A6">Let's talk</h2>
                     <p>To request information regarding any course or product, contact us directly or fill out the form and we will get back to your promptly</p>
                         
-                    <form [formGroup]="contactUsForm">
+                    <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
                         <!-- Name -->
                         <div class="mb-4 bg-light-input">
                             <label for="yourName" class="form-label">Your name *</label>
-                            <input type="text" class="form-control form-control-lg" formControlName="name" id="yourName">
+                            <input type="text" class="form-control form-control-lg" formControlName="name" id="yourName" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Name is required</div>
+                            </div>
                         </div>
                         <!-- Email -->
                         <div class="mb-4 bg-light-input">
                             <label for="emailInput" class="form-label">Email address *</label>
-                            <input type="email" class="form-control form-control-lg" formControlName="email" id="emailInput">
+                            <input type="email" class="form-control form-control-lg" formControlName="email" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                            </div>
                         </div>
                          <!-- Phone No -->
                          <div class="mb-4 bg-light-input">
                             <label for="emailInput" class="form-label">Phone No *</label>
-                            <input type="email" class="form-control form-control-lg" formControlName="mobile" id="emailInput">
+                            <input type="email" class="form-control form-control-lg" formControlName="mobile" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobile.errors.required">Phone no is required</div>
+                            </div>
                         </div>
                         <!-- Message -->
                         <div class="mb-4 bg-light-input">
@@ -122,7 +131,7 @@
                         </div>
                         <!-- Button -->
                         <div class="d-grid">
-                            <button class="btn btn-lg mb-0 text-white" (click)="onSumbit()" type="button" style="background-color: #444cae;">Send Message</button>
+                            <button class="btn btn-lg mb-0 text-white" style="background-color: #444cae;">Send Message</button>
                         </div>	
                     </form>
                 </div>
@@ -135,7 +144,7 @@
                             <h4 class="modal-title">Model Title</h4>
                             </div> -->
                             <div class="modal-body text-center text-success">
-                                <h4 *ngIf="isSubmit">{{sumbmitMessage}}</h4>
+                                <h4 *ngIf="submitted">{{sumbmitMessage}}</h4>
                                 <p>Your message has been successfully sent. We will contact you very soon!</p>
                             </div>
                         </div><!-- /.modal-content -->

@@ -1,0 +1,68 @@
+<!-- **************** MAIN CONTENT START **************** -->
+<main>  
+  <!-- =======================
+Categories START -->
+<section>
+    <div class="container">
+        <!-- Title -->
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2>Popular Categories</h2>
+                <p class="mb-0">Navigate your Future with us!</p>
+            </div>
+        </div>
+                <div class="row g-4 mt-5" style="cursor: pointer;">
+                  <!-- Item -->
+                  <!-- <div *ngFor="let item of SelectedCategoryname" class="col-sm-6 col-md-4 col-xl-3">
+                      <div class="card shadow card-body text-center position-relative btn-transition p-4">
+                          Image
+                          <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+                              <img [src]="item?.jobIcon" alt="">
+                          </div>
+                          Title
+                          <h5 class="mb-2"><a class="stretched-link">{{item?.name}}</a></h5>
+                      </div>
+                  </div> -->
+                 
+            <div class="col-sm-6 col-md-4 col-xl-3" [routerLink]="['/abroad-education']">
+                <div class="card card-body bg-success bg-opacity-10 text-center position-relative btn-transition p-4">
+                    <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+                        <img src="assets/images/element/data-science.svg" alt="">
+                    </div>
+                    <h5 class="mb-2"><a class="stretched-link">Abroad Education </a></h5>
+                </div>
+            </div>
+                  <div class="col-sm-6 col-md-4 col-xl-3" [routerLink]="['/indian-education']">
+                      <div class="card bg-orange bg-opacity-10 card-body text-center position-relative btn-transition p-4">
+                          <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+                              <img src="" alt="">
+                          </div>
+                          <h5 class="mb-2"><a class="stretched-link">Education India </a></h5>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl-3" [routerLink]="['/internships']">
+                      <div class="card bg-danger bg-opacity-10 card-body text-center position-relative btn-transition p-4">
+                          <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+                              <img src="" alt="">
+                          </div>
+                          <h5 class="mb-2"><a class="stretched-link">Internships </a></h5>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-xl-3" [routerLink]="['/pariksha']">
+                      <div class="card bg-purple bg-opacity-10 card-body text-center position-relative btn-transition p-4">
+                          <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+                              <img src="" alt="">
+                          </div>
+                          <h5 class="mb-2"><a class="stretched-link">Pariksha </a></h5>
+                      </div>
+                  </div>
+    
+              </div>
+            </div>
+</section>
+<!-- =======================
+Categories END -->
+ 
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->

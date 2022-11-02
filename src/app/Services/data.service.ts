@@ -11,11 +11,13 @@ import { medicineCountries } from '../common-content/medicine-country';
 import { schoolServices } from '../common-content/school-services';
 import { subjectDetails } from '../common-content/subject-details';
 import { testimonials } from '../common-content/testimonials';
+import { allCategories} from '../common-content/allCategory';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  
 
   constructor() { }
 
@@ -75,6 +77,11 @@ export class DataService {
   // Get All School Services
   getallSchoolServices(){
     return schoolServices;
+  }
+
+  //Get All Categories
+  getallCatecories(){
+    return allCategories;
   }
 
 }

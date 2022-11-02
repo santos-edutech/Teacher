@@ -39,22 +39,32 @@ export class FooterComponent implements OnInit {
       email:['', [Validators.required]],
       phone:['', [Validators.required]],
       city:['', [Validators.required]],
+      date: new Date(),
     });
   }
 
-  isSubmit = true ;
+  submitted = false;
 
-  onSumbit(){
+
+ get f() {
+    return this.websiteLoadpopupData.controls;
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.websiteLoadpopupData.invalid) {
+      return;
+    }
     $('#myModal').modal('hide');
-    this.userData.add(this.websiteLoadpopupData.value).then(res =>{
-      this.openModal();
-    });
-    this.isSubmit = true ;
-    setTimeout(()=>{
-      this.onCloseHandled();
-      this.isSubmit = false ;
-      this.websiteLoadpopupData.reset();
-    },6000);
+      this.userData.add(this.websiteLoadpopupData.value).then(res =>{
+        this.openModal();
+      });
+      setTimeout(()=>{
+        this.onCloseHandled();
+        this.submitted = false ;
+        this.websiteLoadpopupData.reset();
+      },6000);
   }
 
 

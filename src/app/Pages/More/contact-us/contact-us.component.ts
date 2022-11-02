@@ -11,7 +11,6 @@ export class ContactUsComponent implements OnInit {
 
   contactUsForm:any = FormGroup;
   userData : AngularFirestoreCollection<any>;
-  isSubmit = true ;
   sumbmitMessage="Thank you for contacting us.";
   display : any;
 
@@ -27,18 +26,28 @@ export class ContactUsComponent implements OnInit {
       email:['', Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
       mobile:['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       message:['', [Validators.required]],
+      date: new Date(),
     });
   }
 
-  onSumbit(){
+  submitted = false;
+
+  get f() {
+    return this.contactUsForm.controls;
+  }
+
+  onSubmit(){
+    this.submitted = true;
+    if (this.contactUsForm.invalid) {
+      return;
+    }
     this.userData.add(this.contactUsForm.value).then(res =>{
       this.openModal();
     });
-    this.isSubmit = true ;
     setTimeout(()=>{
       this.onCloseHandled();
-      this.isSubmit = false ;
       this.contactUsForm.reset();
+      this.submitted = false;
     },6000);
   }
 

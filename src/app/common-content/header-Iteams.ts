@@ -7,6 +7,15 @@ export const megaMenuItems : Array<Object>=[
                 'menuId':'1',
                 'name': 'K12',
                 'link':'/course-grid/',
+                'header':'Curriculum',
+                'curriculum':[
+                    {'items':'CBSE'},
+                    {'items':'IGCSE'},
+                    {'items':'STATE'},
+                    {'items':'IB'},
+                    {'items':'ICSE'},
+                ],
+                
                 'subMenu':[
                     {
                         'id':'1',
@@ -487,6 +496,7 @@ export const megaMenuItems : Array<Object>=[
                     {
                         'id':'5',
                         'title':'Indian Entrance Prep',
+                        'price':'Starting ₹80,000',
                         'link': '/indian-entrance-prep',
                         'image':'assets/images/courses/4by3/Indian Entrance Prep.jpg',
                         'details':''
@@ -532,6 +542,15 @@ export const megaMenuItems : Array<Object>=[
                 'menuId':'2',
                 'name': 'Undergraduate',
                 'link':'/course-grid/',
+                'header':'Stream',
+                'curriculum':[
+                    {'items':'B.Tech'},
+                    {'items':'B.A'},
+                    {'items':'B.Sc'},
+                    {'items':'B.Com'},
+                    {'items':'B.Arch'},
+                   
+                ],
                 'subMenu':[
                     {
                         'id':'1',
@@ -576,6 +595,14 @@ export const megaMenuItems : Array<Object>=[
                 'menuId':'3',
                 'name': 'Postgraduate',
                 'link':'/course-grid/',
+                'header':'Stream',
+                'curriculum':[
+                    {'items':'M.Tech'},
+                    {'items':'M.A'},
+                    {'items':'MBA'},
+                    {'items':'PGDM'},
+                    {'items':'MCA'}
+                ],
                 'subMenu':[
                     {
                         'id':'1',

@@ -65,5 +65,16 @@ export class TopMedicalCountriesComponent implements OnInit {
       }
     }
   }
+  downloadPdf(base64String: string, fileName: string) {
+    const source = `data:application/pdf;base64,${base64String}`;
+    const link = document.createElement("a");
+    link.href = 'assets/PDF/NEET 2022 Syllabus.pdf';
+    link.download = `${fileName}.pdf`
+    link.click();
+  }
+  onClickDownloadPdf(){
+    let base64String = "your-base64-string";
+    this.downloadPdf(base64String,"NEET 2022 Syllabus");
+  }
  
 }

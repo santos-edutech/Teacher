@@ -105,28 +105,28 @@ export const medicineCountries : Array<Object> =[
                 'image1':'assets/images/element/table-2.png',
             },
         ],
-        'examRequirement':[
-            {
-                'title':'',
-                'heading':'Qualifying Marks for NEET',
-                'subtitle':'',
-                'tablesubtitle':[
-                    {'tableData':'Candidates have to be qualified in Physics, Chemistry, Biology/Biotechnology, and English individually in the qualifying examination which is 10+2 or equivalent, as per NEET 2023 eligibility criteria.'},
-                    {'tableData':'Candidates belonging to the Unreserved category must have scored a minimum required percentage of 50% marks in Physics, Chemistry, and Biology/Biotechnology in their Class 12 or HSC examination.'},
-                    {'tableData':'Scheduled Caste/Scheduled Tribes or Other Backward Classes (OBC) candidates should have scored 40% of passing marks in Class 12 in Physics, Chemistry, and Biology/Biotechnology in aggregate in the qualifying examination.'},
-                    {'tableData':'Medical aspirants with locomotor disability of lower limbs must have secured a minimum of 45% marks for General-PH and 40% marks for SC-PH/ST-PH/OBC-PH in aggregate in Physics, Chemistry, and Biology/Biotechnology.'},
+        // 'examRequirement':[
+        //     {
+        //         'title':'',
+        //         'heading':'Qualifying Marks for NEET',
+        //         'subtitle':'',
+        //         'tablesubtitle':[
+        //             {'tableData':'Candidates have to be qualified in Physics, Chemistry, Biology/Biotechnology, and English individually in the qualifying examination which is 10+2 or equivalent, as per NEET 2023 eligibility criteria.'},
+        //             {'tableData':'Candidates belonging to the Unreserved category must have scored a minimum required percentage of 50% marks in Physics, Chemistry, and Biology/Biotechnology in their Class 12 or HSC examination.'},
+        //             {'tableData':'Scheduled Caste/Scheduled Tribes or Other Backward Classes (OBC) candidates should have scored 40% of passing marks in Class 12 in Physics, Chemistry, and Biology/Biotechnology in aggregate in the qualifying examination.'},
+        //             {'tableData':'Medical aspirants with locomotor disability of lower limbs must have secured a minimum of 45% marks for General-PH and 40% marks for SC-PH/ST-PH/OBC-PH in aggregate in Physics, Chemistry, and Biology/Biotechnology.'},
                    
-                ],
-                'table':[
-                    {
+        //         ],
+        //         'table':[
+        //             {
                        
-                        // 'left':'SECTION','right':'QUESTIONS',
-                    },
+        //                 // 'left':'SECTION','right':'QUESTIONS',
+        //             },
                     
                     
-                ],
-            }
-        ],
+        //         ],
+        //     }
+        // ],
         'AllTabs':[
             {'tab1':'Overview'},
             {'tab2':'Syllabus'},
@@ -215,7 +215,7 @@ export const medicineCountries : Array<Object> =[
                 ],
             },
             {
-                'title':'Top Medical Universities in USA',
+                'title':'Top Medical Universities in UK',
                 'university':[
                     {
                         'u_name':'University of Cambridge',

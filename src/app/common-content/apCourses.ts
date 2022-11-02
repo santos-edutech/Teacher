@@ -242,8 +242,8 @@ export const apCourses : Array<Object>=[
         'apImage':'assets/images/courses/4by3/26.jpg',
         'apCourseName':'AP Calculus AB',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 3 months',
@@ -718,8 +718,8 @@ export const apCourses : Array<Object>=[
         'apCourseName':'AP Physics 1',
         'apCourseType':'Algebra-Based',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -745,7 +745,7 @@ export const apCourses : Array<Object>=[
                 'title':'Exam Overview',
                 'image':'',
                 'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
-                'note':'Algebra-Based Exam will test your understanding of the scientific concepts covered in the course units, as well as your ability to use algebra when solving problems related to Newtonian mechanics, energy, and more.' +'\n\n'+'You can use a four-function, scientific, or graphing calculator throughout the exam, and you will be provided with tables of commonly used physics equations and formulas.'+'\n\n'+'Exam Duration 3Hrs',
+                'note':'The AP Physics 1:Algebra-Based Exam will test your understanding of the scientific concepts covered in the course units, as well as your ability to use algebra when solving problems related to Newtonian mechanics, energy, and more.' +'\n\n'+'You can use a four-function, scientific, or graphing calculator throughout the exam, and you will be provided with tables of commonly used physics equations and formulas.'+'\n\n'+'Exam Duration 3Hrs',
             },
         ],
         'faq':[
@@ -932,8 +932,8 @@ export const apCourses : Array<Object>=[
         'apCourseName':'AP Physics 2',
         'apCourseType':'Algebra-Based',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1184,8 +1184,8 @@ export const apCourses : Array<Object>=[
         'apCourseName':'AP Physics C',
         'apCourseType':'Electricity and Magnetism',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1211,7 +1211,7 @@ export const apCourses : Array<Object>=[
                 'title':'Exam Overview',
                 'image':'',
                 'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
-                'note':'The AP Biology Exam will test your understanding of the biological concepts covered in the course units, as well as your ability to utilize the scientific method and analyse data. You are allowed to use a four-function calculator (with square root), scientific, or graphing functions throughout exam.'+'\n\n'+'Exam Duration 3Hrs',
+                'note':'The AP Physics C: Electricity and Magnetism Exam will test your understanding of the scientific concepts covered in the course units, as well as your ability to use calculus when solving problems related to electrostatics, electromagnetism, and more.'+'\n\n'+'You can use a four-function, scientific, or graphing calculator throughout the exam, and you will be provided with tables of commonly used physics equations and formulas. These tables are shared by both Physics C courses.'+'\n\n'+'Exam Duration 1hr 30mins',
             },
         ],
         'faq':[
@@ -1387,8 +1387,8 @@ export const apCourses : Array<Object>=[
         'apCourseName':'AP Physics C',
         'apCourseType':'Mechanics',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1414,7 +1414,7 @@ export const apCourses : Array<Object>=[
                 'title':'Exam Overview',
                 'image':'',
                 'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
-                'note':'The AP Biology Exam will test your understanding of the biological concepts covered in the course units, as well as your ability to utilize the scientific method and analyse data. You are allowed to use a four-function calculator (with square root), scientific, or graphing functions throughout exam.'+'\n\n'+'Exam Duration 3Hrs',
+                'note':'The AP Physics C: Mechanics Exam will test your understanding of the scientific concepts covered in the course units, as well as your ability to use calculus when solving problems related to kinematics, linear momentum, and more.'+'\n\n'+'You can use a four-function, scientific, or graphing calculator throughout the exam, and you will be provided with tables of commonly used physics equations and formulas. These tables are shared by both Physics C courses.'+'\n\n'+'Exam Duration 1hr 30mins',
             },
         ],
         'faq':[
@@ -1603,8 +1603,8 @@ export const apCourses : Array<Object>=[
         'apImage':'assets/images/courses/4by3/26.jpg',
         'apCourseName':'AP Chemistry',
         'link':'',
-        'price':'₹ 50400',
-        'discount':'₹ 65000',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1630,7 +1630,7 @@ export const apCourses : Array<Object>=[
                 'title':'Exam Overview',
                 'image':'',
                 'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
-                'note':'The AP Biology Exam will test your understanding of the biological concepts covered in the course units, as well as your ability to utilize the scientific method and analyse data. You are allowed to use a four-function calculator (with square root), scientific, or graphing functions throughout exam.'+'\n\n'+'Exam Duration 3Hrs',
+                'note':'The AP Chemistry Exam will test your understanding of the scientific concepts covered in the course units, as well as your ability to design and describe chemical experiments.'+'\n\n'+'Starting with the 2023 exam, a scientific or graphing calculator is recommended for use on both sections of the exam.  You will be provided with a periodic table and a formula sheet that lists specific and relevant formulas for use on the exam.' +'\n\n'+'Exam Duration 3hrs 15mins',
             },
         ],
         'faq':[
@@ -1864,6 +1864,438 @@ export const apCourses : Array<Object>=[
                 'time':'12 PM Local',
                 'title':'AP Chemistry Exam',
                 'description':'This is the regularly scheduled date for the AP Chemistry Exam.'
+            }
+        ]
+    },
+    {
+        'apCourseID':'9',
+        'apImage':'assets/images/courses/4by3/26.jpg',
+        'apCourseName':'AP Macroeconomics',
+        'link':'',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
+        'PricingAndFeatures':[
+            {
+                'features':'Program Duration 5 months',
+            },
+            {
+                'features':'100 Hours of Live Classes and Recordings',
+            },
+            {
+                'features':'30 Hours of Live Assessments',
+            },
+            {
+                'features':'Students in Grade 10, 11 and 12',
+            },
+            {
+                'features':'Counselling by Sr. Counsellors',
+            },
+            {
+                'features':'Roadmap for Career and Course Selection',
+            },
+        ],
+         'overView':[
+            {
+                'title':'Exam Overview',
+                'image':'',
+                'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
+                'note':'The AP Macroeconomics Exam will test your understanding of the economic concepts covered in the course, as well as your ability to define economic principles and models; explain given economic outcomes; determine outcomes of specific economic situations; and model economic situations using graphs or visual representations'+'\n\n'+'Starting with the 2023 exam, a four-function calculator is permitted for use on both sections of the exam.'+'\n\n'+'Exam Duration 2hrs 10mins',
+            },
+        ],
+        'faq':[
+            {
+                'questions':'What is tested in the Advanced Placement (AP) Exams?',
+                'answers' : 'Similar to the SAT Subject Tests, there are AP tests that cover a range of subjects from Biology to European History to Music Theory. There are currently over 38 AP test options, though few high schools offer classes in every subject. Want to know the full list? Please get in touch with our expert counselors.'
+            },
+            {
+                'questions':'How are the APs scored?',
+                'answers' : "AP tests are scored on a scale of 1–5. While every college is different, most schools won't accept AP scores for credit unless you score at least a 4 Colleges are generally looking for a 4 (“well-qualified”) or 5 (“extremely qualified”) on the AP exam, but some may grant credit for a 3 (“qualified”). These scores mean you have proven yourself capable of doing the work in an introductory-level college course. Of course, colleges often have different score minimums for different subjects."
+            },
+            {
+                'questions':'When are the AP tests?',
+                'answers' : 'APs are administered every year during a two-week period in May. AP scores are released each year in early July.'
+            },
+            {
+                'questions':'How do I register for AP tests?',
+                'answers' : "AP tests are administered by The College Board, which also administers the SAT. However, not all AP tests are offered at every school. If you have an AP Coordinator at your school, talk to them directly about registration. If your school doesn't have an AP Coordinator, you need to call AP Services no later than March 1 to get the contact information of your closest AP Coordinator. You can find the number for AP services on the College Board website."
+            },
+            {
+                'questions':'Do AP scores make a difference during admission process?',
+                'answers' : "Good AP scores can earn you college credit. Just remember that every school is different. Some won't accept credit unless you score a 5. Some won't accept them at all. Be sure to check with your top schools to understand how they handle AP scores."
+            },
+            {
+                'questions':'How can I prepare for AP exams?',
+                'answers' : "EduTechEx can help you prepare for AP test with the right planning and teaching for every student and every budget"
+            },
+            {
+                'questions':'Are AP exams recognized in countries other than US and Canada?',
+                'answers' : "Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process."
+            },
+        ],
+        'review':[
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"rajesh",
+                "class":"12th",
+                "comments":" I have a dream to study quantum physics at one of the ivy leagues in the US. EduTechEx SAT training program along with their expert counselling played a very important role in making my dream come true."
+            },
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"rakesh",
+                "class":"12th",
+                "comments":"I took SAT training from different players in the market, but my score never crossed 1400. A friend of mine introduced me to EduTechEx, their innovative SAT training program not only helped me score 1580 in SAT but also through their expert counselling I was able to apply to the right universities considering my interest in media studies and journalism."
+            },
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"Bikash",
+                "class":"12th",
+                "comments":"My dream to become an aeronautical engineer date back to my child hood. I was extremely fortunate to be associated with EduTechEx and by taking their SAT program, I formed a solid foundation for my successful ivy league application process."
+            },
+        ],
+        'syllabus':[
+            {
+                'content':[
+                    {
+                        'section': 'Unit 1: Basic Economic Concepts',
+                        'topic':' You’ll start the course with an introduction to economic concepts, principles, and models that will serve as a foundation for studying macroeconomics.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Scarcity'},
+                            {'data':'Opportunity cost and the Production Possibilities Curve'},
+                            {'data':'Comparative advantage and gains from trade'},
+                            {'data':'Supply and demand'},
+                            {'data':'Market equilibrium, disequilibrium, and changes in equilibrium'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 2: Economic Indicators and the Business Cycle',
+                        'topic':' You’ll look at how economic phenomena such as employment and inflation are measured.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'The circular flow and GDP'},
+                            {'data':'Unemployment'},
+                            {'data':'Price indices and inflation'},
+                            {'data':'Real vs. nominal GDP'},
+                            {'data':'Business cycles'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 3: National Income and Price Determination',
+                        'topic':' You’ll explore how changes in aggregate spending and production, economic fluctuations, and policy actions affect national income, unemployment, and inflation.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Aggregate demand'},
+                            {'data':'Short-run and long-run aggregate supply'},
+                            {'data':'Equilibrium and changes in the Aggregate Demand-Aggregate Supply Model'},
+                            {'data':'Fiscal policy'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 4: Financial Sector',
+                        'topic':' You’ll examine the financial sector and explain how monetary policy is implemented and transmitted through the banking system.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Financial assets'},
+                            {'data':'Definition, measurement, and functions of money'},
+                            {'data':'Banking and the expansion of the money supply'},
+                            {'data':'Monetary policy'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 5: Long-Run Consequences of Stabilization Policies',
+                        'topic':'You’ll spend more time exploring the effects of fiscal and monetary policy actions and examine the concept of economic growth.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'The Phillips Curve'},
+                            {'data':'Money growth and inflation'},
+                            {'data':'Government deficits and national debt'},
+                            {'data':'Crowding out'},
+                            {'data':'Economic growth'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 6: Open Economy—International Trade and Finance',
+                        'topic':'You’ll examine the concept of an open economy in which a country interacts with the rest of the world through product and financial markets.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Balance of payments accounts'},
+                            {'data':'Exchange rates and the foreign exchange market'},
+                            {'data':'Effects of changes in policies and economic conditions on the foreign exchange market'},
+                            {'data':'Changes in the foreign exchange market and net exports'},
+                            {'data':'Real interest rates and international capital flows'},
+                        ],
+                    },
+                ]
+            },
+        ],
+        'examPattern':[
+            {
+                'title':'Exam Pattern',
+                'subTitle':'Exam Components',
+                'question':[
+                    {
+                        'section':'Section I: Multiple Choice',
+                        'noOfQus':'60 questions',
+                        'duration':'1hr 30mins',
+                        'scor':'66% of Score',
+                        'sectionDescription':'Questions require the use of economics content knowledge and reasoning across the range of course topics and skills. You’ll be asked to:',
+                        'sectionSubDescriptionOne':'',
+                        // 'content':'The multiple-choice section includes individual, single questions as well as sets of questions that refer to the same diagram or data presentation.'+'\n\n'+'Questions will test your ability to:',
+                        'formatOne':[
+                            {'data':'Define economic principles and models'},
+                            {'data':'Explain given economic outcomes'},
+                            {'data':'Determine the outcomes of specific economic situations'},
+                        ],
+                        'sectionSubDescriptionTwo':'',
+                        'typeQuestions':''
+                    },
+                    {
+                        'section':'Section II: Free Response',
+                        'noOfQus':'3 questions',
+                        'duration':'1hr 45mins',
+                        'scor':'33% of Score',
+                        'sectionDescription':'The 60-minute time limit for this section includes a 10-minute reading period.',
+                        'sectionSubDescriptionOne':'',
+                        // 'content':'The multiple-choice section includes individual, single questions as well as sets of questions that refer to the same diagram or data presentation.'+'\n\n'+'Questions will test your ability to:',
+                        'format':[
+                            {'dataTwo':' 1 long free-response question (50% of section score) '},
+                            {'dataTwo':' 2 short free-response questions (each worth 25% of section score)'},
+                        ],
+                        'sectionSubDescriptionTwo':'You’ll be asked to:',
+                        'typeQuestions':[
+                            {'questionData':'Make assertions about economic concepts, principles, models, outcomes, and/or effects'},
+                            {'questionData':'Explain economic concepts, principles, models, outcomes, and/or effects'},
+                            {'questionData':'Perform numerical analysis and calculations'},
+                            {'questionData':'Create graphs or visual representations'},
+                        ],
+                    },
+                ],
+            },
+        ],
+        'examDate':[
+            {
+                'date':'Thu, May 4, 2023',
+                'time':'8 AM Local',
+                'title':'AP Macroeconomics Exam',
+                'description':'This is the regularly scheduled date for the AP Macroeconomics Exam.'
+            }
+        ]
+    },
+    {
+        'apCourseID':'10',
+        'apImage':'assets/images/courses/4by3/26.jpg',
+        'apCourseName':'AP Microeconomics',
+        'link':'',
+        'price':'₹ 60000',
+        'discount':'₹ 75000',
+        'PricingAndFeatures':[
+            {
+                'features':'Program Duration 5 months',
+            },
+            {
+                'features':'100 Hours of Live Classes and Recordings',
+            },
+            {
+                'features':'30 Hours of Live Assessments',
+            },
+            {
+                'features':'Students in Grade 10, 11 and 12',
+            },
+            {
+                'features':'Counselling by Sr. Counsellors',
+            },
+            {
+                'features':'Roadmap for Career and Course Selection',
+            },
+        ],
+         'overView':[
+            {
+                'title':'Exam Overview',
+                'image':'',
+                'description':'Advanced Placement examinations (AP exams) are exams offered in the United States by the College Board and are taken each May by students. At many colleges and universities, a high enough score will earn the student college credit. In some instances, earning college credit can mean an overall lower college tuition fee. Learn more about why taking AP classes can be a smart choice. AP gives students the chance to tackle college-level work while they’re still in high school—whether they’re learning online or in the classroom. And through taking AP Exams, students can earn college credit and placement. Taking Advanced Placement tests show admissions officers that you’re ready for college-level work.'+'\n\n'+'Taking an AP training from EduTechEx is great prep for doing well in the corresponding AP test. Held every May, AP tests are scored on a scale from 1–5. If your college offers AP credit, a score of a 4 or higher could allow you to earn college credits without paying college tuition. Some students are able to skip the entire first year of college this way, thus cutting the entire cost of their college education by one quarter. AP classes can boost your GPA and strengthen your college application. But the number of advanced courses you choose to take should depend on your academic interests and your schedule.'+'\n\n'+'Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process.'+'\n\n'+'There are currently 38 AP subject exams offered by college board. EduTechEx currently offers excellent online training for AP Biology, AP Calculus AB, AP Calculus BC, AP Chemistry, AP Physics 1: Algebra-Based, AP Physics Algebra-Based, AP Physics C: Electricity & Magnetism, AP Physics C: Mechanics.',
+                'note':'The AP Microeconomics Exam will test your understanding of the economic concepts covered in the course, as well as your ability to define economic principles and models; explain given economic outcomes; determine outcomes of specific economic situations; and model economic situations using graphs or visual representations.'+'\n\n'+'Starting with the 2023 exam, a four-function calculator is permitted for use on both sections of the exam.'+'\n\n'+'Exam Duration 2hrs 10mins',
+            },
+        ],
+        'faq':[
+            {
+                'questions':'What is tested in the Advanced Placement (AP) Exams?',
+                'answers' : 'Similar to the SAT Subject Tests, there are AP tests that cover a range of subjects from Biology to European History to Music Theory. There are currently over 38 AP test options, though few high schools offer classes in every subject. Want to know the full list? Please get in touch with our expert counselors.'
+            },
+            {
+                'questions':'How are the APs scored?',
+                'answers' : "AP tests are scored on a scale of 1–5. While every college is different, most schools won't accept AP scores for credit unless you score at least a 4 Colleges are generally looking for a 4 (“well-qualified”) or 5 (“extremely qualified”) on the AP exam, but some may grant credit for a 3 (“qualified”). These scores mean you have proven yourself capable of doing the work in an introductory-level college course. Of course, colleges often have different score minimums for different subjects."
+            },
+            {
+                'questions':'When are the AP tests?',
+                'answers' : 'APs are administered every year during a two-week period in May. AP scores are released each year in early July.'
+            },
+            {
+                'questions':'How do I register for AP tests?',
+                'answers' : "AP tests are administered by The College Board, which also administers the SAT. However, not all AP tests are offered at every school. If you have an AP Coordinator at your school, talk to them directly about registration. If your school doesn't have an AP Coordinator, you need to call AP Services no later than March 1 to get the contact information of your closest AP Coordinator. You can find the number for AP services on the College Board website."
+            },
+            {
+                'questions':'Do AP scores make a difference during admission process?',
+                'answers' : "Good AP scores can earn you college credit. Just remember that every school is different. Some won't accept credit unless you score a 5. Some won't accept them at all. Be sure to check with your top schools to understand how they handle AP scores."
+            },
+            {
+                'questions':'How can I prepare for AP exams?',
+                'answers' : "EduTechEx can help you prepare for AP test with the right planning and teaching for every student and every budget"
+            },
+            {
+                'questions':'Are AP exams recognized in countries other than US and Canada?',
+                'answers' : "Recognized by universities around the world as a standard of academic excellence, the AP program is both flexible and modular so you can offer AP courses tailored to your school’s unique needs and other academic programs. Nearly all colleges and universities in the United States and Canada — as well as many institutions in UK, Germany, Switzerland, Finland, Netherlands, France, Singapore, South Korea, Japan and more than 100 other countries — grant credit and placement for qualifying AP Exam scores. Most universities also acknowledge course participation, regardless of AP score, favorably in the admission process."
+            },
+        ],
+        'review':[
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"rajesh",
+                "class":"12th",
+                "comments":" I have a dream to study quantum physics at one of the ivy leagues in the US. EduTechEx SAT training program along with their expert counselling played a very important role in making my dream come true."
+            },
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"rakesh",
+                "class":"12th",
+                "comments":"I took SAT training from different players in the market, but my score never crossed 1400. A friend of mine introduced me to EduTechEx, their innovative SAT training program not only helped me score 1580 in SAT but also through their expert counselling I was able to apply to the right universities considering my interest in media studies and journalism."
+            },
+            {
+                "images":"assets/images/instructor/02.jpg",
+                "name":"Bikash",
+                "class":"12th",
+                "comments":"My dream to become an aeronautical engineer date back to my child hood. I was extremely fortunate to be associated with EduTechEx and by taking their SAT program, I formed a solid foundation for my successful ivy league application process."
+            },
+        ],
+        'syllabus':[
+            {
+                'content':[
+                    {
+                        'section': 'Unit 1: Basic Economic Concepts',
+                        'topic':' You’ll study the foundations of microeconomic thinking, including how to evaluate decisions based on constraints and trade-offs and make rational economic choices.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Scarcity'},
+                            {'data':'Resource allocation and economic systems'},
+                            {'data':'The Production Possibilities Curve'},
+                            {'data':'Comparative advantage and gains from trade'},
+                            {'data':'Cost-benefit analysis'},
+                            {'data':'Marginal analysis and consumer choice'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 2: Supply and Demand',
+                        'topic':' You’ll learn the basis for understanding how markets work with an introduction to the supply and demand model.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Demand'},
+                            {'data':'Supply'},
+                            {'data':'Elasticity'},
+                            {'data':'Market equilibrium, disequilibrium, and changes in equilibrium'},
+                            {'data':'The effects of government intervention in markets'},
+                            {'data':'International trade and public policy'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 3: Production, Cost, and the Perfect Competition Model',
+                        'topic':' You’ll explore the factors that drive the behavior of companies and learn about the perfect competition model.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'The production function'},
+                            {'data':'Short- and long-run production costs'},
+                            {'data':'Types of profit'},
+                            {'data':'Profit maximization'},
+                            {'data':'Perfect competition'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 4: Imperfect Competition',
+                        'topic':' You’ll learn how imperfectly competitive markets work and how game theory comes into play in economic models.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Monopoly'},
+                            {'data':'Price discrimination'},
+                            {'data':'Monopolistic competition'},
+                            {'data':'Oligopoly and game theory'},
+                        ],
+                    },
+                    {
+                        'section': 'Unit 5: Factor Markets',
+                        'topic':'You’ll learn how concepts such as supply and demand and marginal decision-making apply in the context of factor markets.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Introduction to factor markets'},
+                            {'data':'Changes in factor demand and factor supply'},
+                            {'data':'Profit-maximizing behavior in perfectly competitive factor markets'},
+                            {'data':'Monopsonistic markets'},
+                            
+                        ],
+                    },
+                    {
+                        'section': 'Unit 6: Market Failure and the Role of Government',
+                        'topic':'You’ll examine the conditions under which markets may fail and the effects of government intervention in markets.',
+                        'sectionDescription':'Topics may include:',
+                        'format':[
+                            {'data':'Socially efficient and inefficient market outcomes'},
+                            {'data':'Externalities'},
+                            {'data':'Public and private goods'},
+                            {'data':'The effects of government intervention in different market structures'},
+                            {'data':'Income and wealth inequality'},
+                        ],
+                    },
+                ]
+            },
+        ],
+        'examPattern':[
+            {
+                'title':'Exam Pattern',
+                'subTitle':'Exam Components',
+                'question':[
+                    {
+                        'section':'Section I: Multiple Choice',
+                        'noOfQus':'60 questions',
+                        'duration':'1hr 30mins',
+                        'scor':'66% of Score',
+                        'sectionDescription':'Questions require the use of economics content knowledge and reasoning across the range of course topics and skills. You’ll be asked to:',
+                        'sectionSubDescriptionOne':'',
+                        // 'content':'The multiple-choice section includes individual, single questions as well as sets of questions that refer to the same diagram or data presentation.'+'\n\n'+'Questions will test your ability to:',
+                        'formatOne':[
+                            {'data':'Define economic principles and models'},
+                            {'data':'Explain given economic outcomes'},
+                            {'data':'Determine the outcomes of specific economic situations'},
+                        ],
+                        'sectionSubDescriptionTwo':'',
+                        'typeQuestions':''
+                    },
+                    {
+                        'section':'Section II: Free Response',
+                        'noOfQus':'3 questions',
+                        'duration':'1hr 45mins',
+                        'scor':'33% of Score',
+                        'sectionDescription':'The 60-minute time limit for this section includes a 10-minute reading period.',
+                        'sectionSubDescriptionOne':'',
+                        // 'content':'The multiple-choice section includes individual, single questions as well as sets of questions that refer to the same diagram or data presentation.'+'\n\n'+'Questions will test your ability to:',
+                        'format':[
+                            {'dataTwo':' 1 long free-response question (50% of section score) '},
+                            {'dataTwo':' 2 short free-response questions (each worth 25% of section score)'},
+                        ],
+                        'sectionSubDescriptionTwo':'You’ll be asked to:',
+                        'typeQuestions':[
+                            {'questionData':'Make assertions about economic concepts, principles, models, outcomes, and/or effects'},
+                            {'questionData':'Explain economic concepts, principles, models, outcomes, and/or effects'},
+                            {'questionData':'Perform numerical analysis and calculations'},
+                            {'questionData':'(On paper and pencil exams)Create graphs or visual representations'},
+                            {'questionData':'(On digital exams) Answer questions about given graphs and visuals'},
+                        ],
+                    },
+                ],
+            },
+        ],
+        'examDate':[
+            {
+                'date':'Fri, May 5, 2023',
+                'time':'12 PM Local',
+                'title':'AP Microeconomics Exam',
+                'description':'This is the regularly scheduled date for the AP Microeconomics Exam.'
             }
         ]
     },
