@@ -22,6 +22,7 @@ export class CheckoutComponent implements OnInit {
   buyCourseName: any;
   productItems:any;
   payAmount:any;
+  submitted = false ;
 
   constructor(
     public fb: FormBuilder,
@@ -33,8 +34,8 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.paymentForm = this.fb.group({
       name:['', [Validators.required]],
-      email:['', [Validators.required]],
-      mobile:['', [Validators.required]],
+      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      mobile:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       country:['', [Validators.required]],
       state:['', [Validators.required]],
       pincode:['', [Validators.required]],
@@ -77,8 +78,10 @@ export class CheckoutComponent implements OnInit {
       "color": "#313d9c"
     }
   };
-
-  paynow() {
+  get f() {
+    return this.paymentForm.controls;
+  }
+  onSubmit() {
     this.buyCourseName =[];
     let parsed = JSON.parse(this.productItems);
     for (let i = 0; i < parsed.length; i++) {

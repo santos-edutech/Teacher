@@ -36,8 +36,10 @@ export class FooterComponent implements OnInit {
     this.userData = this.db.collection('websiteLoadpopupData');
     this.websiteLoadpopupData = this.fb.group({
       name:['', [Validators.required]],
-      email:['', [Validators.required]],
-      phone:['', [Validators.required]],
+      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      // email:['', Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
+      // mobile:['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       city:['', [Validators.required]],
       date: new Date(),
     });
