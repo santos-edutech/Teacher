@@ -35,11 +35,12 @@ export class CheckoutComponent implements OnInit {
     this.paymentForm = this.fb.group({
       name:['', [Validators.required]],
       email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
-      mobile:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       country:['', [Validators.required]],
       state:['', [Validators.required]],
       pincode:['', [Validators.required]],
       address:['', [Validators.required]],
+      date : new Date(),
     });
     this.paymentFormData = this.db.collection('paymentForm');
     this.cartItem = this.cartService.loadCart();
@@ -82,6 +83,11 @@ export class CheckoutComponent implements OnInit {
     return this.paymentForm.controls;
   }
   onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.paymentForm.invalid) {
+      return;
+    }
     this.buyCourseName =[];
     let parsed = JSON.parse(this.productItems);
     for (let i = 0; i < parsed.length; i++) {
