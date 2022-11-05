@@ -273,7 +273,7 @@
                                                 <div class="mb-3 bg-light-input">
                                                     <!-- <label for="textareaBox" class="form-label">Message *</label> -->
                                                     <textarea class="form-control" formControlName="message" id="textareaBox" rows="4" placeholder="Message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
-                                                        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback text-start">
+                                                        <div *ngIf="submitted && f.message.errors" class="invalid-feedback text-start">
                                                             <div *ngIf="f.message.errors.required">Message is required</div>
                                                         </div>
                                                     
