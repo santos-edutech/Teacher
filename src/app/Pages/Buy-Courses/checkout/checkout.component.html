@@ -88,7 +88,7 @@
                                 <label for="postalCode" class="form-label">Postal code *</label>
                                 <input type="text" class="form-control" formControlName="pincode" id="postalCode" placeholder="PIN code" [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }">
                                 <div *ngIf="submitted && f.phone.errors" class="invalid-feedback text-start">
-                                    <div *ngIf="f.pincode.errors.required">State is required</div>
+                                    <div *ngIf="f.pincode.errors.required">PIN is required</div>
                                 </div>
                             </div>
                             <!-- Address -->
@@ -96,7 +96,7 @@
                                 <label for="address" class="form-label">Address *</label>
                                 <input type="text" class="form-control" formControlName="address" id="address" placeholder="Address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
                                 <div *ngIf="submitted && f.phone.errors" class="invalid-feedback text-start">
-                                    <div *ngIf="f.address.errors.required">State is required</div>
+                                    <div *ngIf="f.address.errors.required">Address is required</div>
                                 </div>
                             </div>
                             <!-- Button -->

@@ -250,34 +250,47 @@
 												we will get
 												back to your promptly</p>
 							
-											<form>
-												<!-- Name -->
-												<div class="mb-3 bg-light-input">
-													<!-- <label for="yourName" class="form-label">Your name *</label> -->
-													<input type="text" class="form-control form-control-lg" placeholder="Your name" id="yourName">
-												</div>
-												<!-- Email -->
-												<div class="mb-3 bg-light-input">
-													<!-- <label for="emailInput" class="form-label">Email address *</label> -->
-													<input type="email" class="form-control form-control-lg" placeholder="Email address"
-														id="emailInput">
-												</div>
-												<!-- Phone No -->
-												<div class="mb-3 bg-light-input">
-													<!-- <label for="emailInput" class="form-label">Phone No *</label> -->
-													<input type="email" class="form-control form-control-lg" placeholder="Phone No" id="emailInput">
-												</div>
-												<!-- Message -->
-												<div class="mb-3 bg-light-input">
-													<!-- <label for="textareaBox" class="form-label">Message *</label> -->
-													<textarea class="form-control" id="textareaBox" rows="4" placeholder="Message"></textarea>
-												</div>
-												<!-- Button -->
-												<div class="d-grid">
-													<button class="btn btn-lg mb-0 text-white" type="button" style="background-color: #444cae;">Send
-														Message</button>
-												</div>
-											</form>
+												<form [formGroup]="enrollNowForm" (ngSubmit)="onSubmit()">
+													<!-- Name -->
+													<div class="mb-3 bg-light-input">
+														<!-- <label for="yourName" class="form-label">Your name *</label> -->
+														<input type="text" class="form-control" formControlName="name" id="yourName" placeholder="Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+															<div *ngIf="submitted && f.name.errors" class="invalid-feedback text-start">
+																<div *ngIf="f.name.errors.required">Name is required</div>
+															</div>
+													</div>
+													<!-- Email -->
+													<div class="mb-3 bg-light-input">
+														<!-- <label for="emailInput" class="form-label">Email address *</label> -->
+														<input type="email" class="form-control" formControlName="email" id="emailInput" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+															<div *ngIf="submitted && f.email.errors" class="invalid-feedback text-start">
+																<div *ngIf="f.email.errors.required">Email is required</div>
+															</div>
+													</div>
+													<!-- Phone No -->
+													<div class="mb-3 bg-light-input">
+														<!-- <label for="emailInput" class="form-label">Phone No *</label> -->
+														<input type="text" class="form-control" formControlName="phone" id="phoneNumber" placeholder="Phone number" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+														<div *ngIf="submitted && f.phone.errors" class="invalid-feedback text-start">
+															<div *ngIf="f.phone.errors.required">Phone is required</div>
+														</div>
+													</div>
+													<!-- Message -->
+													<div class="mb-3 bg-light-input">
+														<!-- <label for="textareaBox" class="form-label">Message *</label> -->
+														<textarea class="form-control" formControlName="message" id="textareaBox" rows="4" placeholder="Message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+															<div *ngIf="submitted && f.phone.errors" class="invalid-feedback text-start">
+																<div *ngIf="f.message.errors.required">Message is required</div>
+															</div>
+														
+													</div>
+													<!-- Button -->
+													<div class="d-grid">
+														<!-- <button class="btn btn-lg mb-0 text-white" type="button" style="background-color: #444cae;">Send
+															Message</button> -->
+															<button class="btn mb-0 text-white" style="background-color: #444cae;">Send Message</button>
+													</div>
+												</form>
 										</div>
 									</div>
 								</div>

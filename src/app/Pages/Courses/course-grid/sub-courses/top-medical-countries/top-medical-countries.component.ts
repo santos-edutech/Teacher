@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 // import { saveAs } from 'file-saver';
@@ -23,18 +25,26 @@ export class TopMedicalCountriesComponent implements OnInit {
   selectedCountrySyllabus: any;
   selectedCountryExamRequirement: any;
   selectedCountryAllTabs: any;
-  // selectedCountryExamRequirementTable: any;
-
-  // downloadPdf(){
-  //   let blob = new Blob(['assets/PDF/sample.pdf'] ,{type:'application/pdf;charset=utf-8'});
-  //   saveAs( blob , 'sample.pdf')
-  // }
+  enrollNowForm: any = FormGroup;
+  enrollNowFormData : AngularFirestoreCollection<any>;
+  submitted = false ;
+  
   constructor(
+    public fb: FormBuilder,
+    private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
   ) { }
 
   ngOnInit(): void {
+    this.enrollNowForm = this.fb.group({
+      name:['', [Validators.required]],
+      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      message:['', [Validators.required]],
+      date : new Date(),
+    });
+    this.enrollNowFormData = this.db.collection('enrollNowForm');
     this.countriesDetails = this.dataService.getAllMedicineCountries();
     this.router.params.subscribe(params => {
       this.selectedCountryId = params['countrieID'] ;
@@ -76,5 +86,16 @@ export class TopMedicalCountriesComponent implements OnInit {
     let base64String = "your-base64-string";
     this.downloadPdf(base64String,"NEET 2022 Syllabus");
   }
- 
+  
+  get f() {
+    return this.enrollNowForm.controls;
+  }
+  onSubmit(){
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.enrollNowForm.invalid) {
+      return;
+    }
+    
+  }
 }
