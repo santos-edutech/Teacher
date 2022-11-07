@@ -32,6 +32,16 @@ export class CheckoutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.paymentFormData = this.db.collection('paymentForm');
+    this.cartItem = this.cartService.loadCart();
+    this.productItems = JSON.stringify(this.cartItem);
+    this.buyCourseName =[];
+    let parsed = JSON.parse(this.productItems);
+    for (let i = 0; i < parsed.length; i++) {
+        this.buyCourseName.push(parsed[i].menuName);
+        // console.log(this.options.notes.items);
+    }
+    this.payAmount = localStorage.getItem('cart_amount');
     this.paymentForm = this.fb.group({
       name:['', [Validators.required]],
       email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
@@ -40,12 +50,9 @@ export class CheckoutComponent implements OnInit {
       state:['', [Validators.required]],
       pincode:['', [Validators.required]],
       address:['', [Validators.required]],
+      courses: JSON.stringify(this.buyCourseName),
       date : new Date(),
     });
-    this.paymentFormData = this.db.collection('paymentForm');
-    this.cartItem = this.cartService.loadCart();
-    this.productItems = JSON.stringify(this.cartItem);
-    this.payAmount = localStorage.getItem('cart_amount');
     // console.log(this.payAmount);
   }
 
@@ -88,21 +95,16 @@ export class CheckoutComponent implements OnInit {
     if (this.paymentForm.invalid) {
       return;
     }
-    this.buyCourseName =[];
-    let parsed = JSON.parse(this.productItems);
-    for (let i = 0; i < parsed.length; i++) {
-        this.buyCourseName.push(parsed[i].menuName);
-        this.options.notes.items=JSON.stringify(this.buyCourseName);
-        // console.log(this.options.notes.items);
-    }
+   
     this.paymentFormData.add(this.paymentForm.value).then(res =>{
       // console.log(res);
     });
+    this.options.notes.items=JSON.stringify(this.buyCourseName);
     this.paymentId = '';
     this.error = '';
     this.options.amount = this.payAmount+'00'; //paise
     this.options.prefill.email = this.paymentForm.value['email'];
-    this.options.prefill.contact = this.paymentForm.value['mobile'];
+    this.options.prefill.contact = this.paymentForm.value['phone'];
     var rzp1 = new Razorpay(this.options);
     rzp1.open();
     rzp1.on('payment.failed', function (response: any) {

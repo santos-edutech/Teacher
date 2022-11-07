@@ -116,7 +116,12 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title text-truncate-2">{{list?.menuName}}</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="card-title text-truncate-2">{{list?.menuName}}</h5>
+                                        <!-- <a>viewmore</a> -->
+                                        <!-- <i class="fa-solid fa-ellipsis-vertical"></i> -->
+                                       <a [routerLink]="[list?.link]"><i class='fas fa-ellipsis-v text-dark'  > </i></a> 
+                                    </div>
                                     <span class="h6">{{list?.subTitle ? list?.subTitle : ''}}</span>
                                     <p class="card-text text-truncate-2">
                                         {{list?.details}}

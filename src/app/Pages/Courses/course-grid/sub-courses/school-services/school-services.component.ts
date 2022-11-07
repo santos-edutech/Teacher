@@ -17,6 +17,8 @@ export class SchoolServicesComponent implements OnInit {
   selectedSubMenuCourseTitle :any;
   searchText: any;
   schoolServiceList: any;
+  schoolService: any;
+  
   
   constructor(
     private router: ActivatedRoute,
@@ -33,6 +35,7 @@ export class SchoolServicesComponent implements OnInit {
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
     });
     this.schoolServiceList = this.dataService.getallSchoolServices();
+    this.onSelectSub('State, CBSE, ICSE');
   }
 
   getSelectedSubmenuCourse(MenuId:any,ID:any){
@@ -46,6 +49,23 @@ export class SchoolServicesComponent implements OnInit {
           }
         }
       }
+    }
+  }
+
+  schoolServiceLists:any;
+
+  //subject select function
+  onSelectSub(val2:any){
+    this.schoolServiceLists =[];
+    if (val2) {
+      this.schoolServiceList.map((res:any) => {
+        // console.log(res);
+        if(res.subTitle === val2){
+          // console.log(res);
+          this.schoolServiceLists.push(res);
+        }
+      }
+      );
     }
   }
 

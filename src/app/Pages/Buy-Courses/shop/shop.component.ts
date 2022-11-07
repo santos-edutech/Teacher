@@ -76,7 +76,7 @@ export class ShopComponent implements OnInit {
     if (val2) {
       this.programList.map((res:any) => {
         if(res.program_title === val2){
-          console.log(res.program_title);
+          // console.log(res.program_title);
           this.buyCoursesList = res.course;
         }
       }
