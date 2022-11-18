@@ -144,6 +144,23 @@ export const IndianEntrancePrepDetails : Array<Object>=[
                 ]
             }
         ],
+        'testimonials':[
+            {
+                'image':'',
+                'name':'Nandhan K',
+                'comment':'My goal was to study computer science at IIT Kanpur. EDUTECHEX integrated JEE prep course has helped to strengthen my concepts and do well in JEE Mains and Advanced exams. Thanks to EDUTECHEX for the wonderful training provided',
+            },
+            {
+                'image':'',
+                'name':'Deepak B',
+                'comment':'I was always passionate about doing Mechanical engineering at IIT Madras. EDUTECHEX JEE navigation programs has not only helped me to do well in the JEE exam but also gave me a deep understanding into the specializations offered with the departments',
+            },
+            {
+                'image':'',
+                'name':'Santosh V',
+                'comment':'Doing Aerospace has been my innate interest since my schooling. EDUTECHEX JEE program has helped me to extremely well in the JEE program and helped me join Aerospace Engineering at IIT Kharagpur. Thanks to the excellent training received at EDUTECHEX',
+            }
+        ],
        
     },  
     {
@@ -258,6 +275,23 @@ export const IndianEntrancePrepDetails : Array<Object>=[
                 ]  
             },
         ],
+        'testimonials':[
+            {
+                'image':'',
+                'name':'Rajesh Chandra',
+                'comment':'At EDUTECHEX, I got excellent training for BITSAT program. Teachers are available all the time to help me in any doubts in concepts. The integrated also helped me to do well in curriculum classes',
+            },
+            {
+                'image':'',
+                'name':'Dheeraj Shukla',
+                'comment':'I attribute my success in the BITSAT exam to the well-structured training program at EDUTECHEX. Teachers gave us ample attention and the assessments were scheduled systematically for me to score well in the mock tests and the main exam',
+            },
+            {
+                'image':'',
+                'name':'Sagar Anand',
+                'comment':'Doing Integrated program in Physics at BITS PILANI has been my interest since college. EDUTECHEX BITSAT program has helped me to extremely well in the exam. Thanks to the excellent training received at EDUTECHEX',
+            }
+        ],
        
     },  
     {
@@ -299,24 +333,24 @@ export const IndianEntrancePrepDetails : Array<Object>=[
         ],
         'faq':[
             {
-                'questions':'What is the Eligibility Criteria to take the undergraduate admission in BITS?',
-                'answers':'The candidate should have minimum 75% or more in PCM/PCB in aggregate and minimum 60% or more in individual subjects (PCM/PCB) in 12th class. PCM means only the marks obtained in Physics, Chemistry and Mathematics. PCB means only the marks obtained in Physics, Chemistry and Biology. PCB candidates are eligible to apply only for B.Pharm. Programme.',
+                'questions':'When will CLAT 2023 be conducted?',
+                'answers':'CLAT 2023 will be conducted on December 18, 2022, in offline, pen and paper format.',
             },
             {
-                'questions':'I have taken Physics, Chemistry and Biology in 10+2. Am I eligible to apply for BITSAT?',
-                'answers':'Candidates can write BITSAT-2022 with Physics, Chemistry and Biology in 10+2. However, they will be eligible to apply only for the B. Pharm. program. They will not be eligible for any other first-degree programme of the Institute.',
+                'questions':'I am studying in Class 12, can I apply for CLAT 2023?',
+                'answers':'If you are studying in Class 12 and will appear in the board examination in April-May, you can apply for CLAT 2023.',
             },
             {
-                'questions':'I have taken Physics, Chemistry and Mathematics in 10+2. Am I eligible to apply for Pharm. Programme?',
-                'answers':'Yes, you are eligible to apply for B.Pharm. and any other First-Degree programme of the institute',
+                'questions':' Is the CLAT exam difficult?',
+                'answers':'Yes, CLAT is one of the toughest law entrance exams. However, if one prepares for 6-7 months consistently, one can secure a decent CLAT score.',
             },
             {
-                'questions':'How am I eligible for admission to M.Sc. programmes after 12th?',
-                'answers':'The M.Sc. programmes are 4-year integrated programmes after 12th. There is no intermediate B.Sc. degree awarded.',
+                'questions':'How many candidates appear in the CLAT exam?',
+                'answers':'Around 60,000 candidates appear in the CLAT exam every year. The exam is conducted for admission to both UG and PG courses offered by national law universities.',
             },
             {
-                'questions':'What is a Dual Degree? How is it assigned to a particular student and when?',
-                'answers':'BITS Pilani has created provisions by which, any student who is admitted to a particular M.Sc. program (Physics, Chemistry, Biology, Mathematics, Economics), is accommodated in a dual degree scheme, with a second degree in available B.E. programs. The assignment of the second degree in B.E. for the M.Sc. students is announced generally at the completion of their first year courses. The allotment process to a particular B.E. stream, is purely on the basis of the academic performances of the students in the 1st year at BITS and the number of seats available in that particular programme. If a student is admitted to a second degree programme under dual degree scheme, he/she has to pay the admission fees of the second programme, separately, at the time of such admission is made. The curriculum for such dual degree students are designed in such a way, that the students will complete all the formalities required for both the degrees, normally in five years.',
+                'questions':'How many seats are offered by national law universities through CLAT?',
+                'answers':'The NLUs offer around 2622 seats in 5-year integrated LLB programmes through the CLAT exam. For LLM, the universities offer around 850 seats.',
             },
            
         ],
@@ -354,6 +388,23 @@ export const IndianEntrancePrepDetails : Array<Object>=[
                     },
                 ]  
             },
+        ],
+        'testimonials':[
+            {
+                'image':'',
+                'name':'Bhargava M',
+                'comment':'My goal was to study LAW at Nalsar Hyderabad. EDUTECHEX integrated CLAT prep course has helped to strengthen my concepts and do well in the exams. Thanks to EDUTECHEX for the wonderful training provided',
+            },
+            {
+                'image':'',
+                'name':'Divya Madhuri',
+                'comment':'I was always passionate about doing LAW at NLSIU Bangalore. EDUTECHEX LAW navigation programs has not only helped me to do well in the CLAT exam but also gave me a deep understanding into the specializations offered with the departments',
+            },
+            {
+                'image':'',
+                'name':'Thanesh Malhotra',
+                'comment':'Doing Integrated LAW program has been my innate interest since my schooling. EDUTECHEX CLAT program has helped me to extremely well in CLAT and LSAT and helped me join National Academy of Legal Studies and Research University. Thanks to the excellent training received at EDUTECHEX',
+            }
         ],
     },  
 ];

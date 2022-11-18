@@ -111,22 +111,34 @@
                                 <!-- Content START -->
 								<div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
 									<h2 class="text-success fs-4"> Please register to download the syllabus</h2>
-									<form>
+									<form [formGroup]="syllabusDetails" (ngSubmit)="onClickDownloadPdf()">
 										<!-- Name -->
-									   <div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Name" id="yourName"  >
-									   </div>
+										<div class="mb-4 bg-light-input">
+											<input type="text" class="form-control form-control-lg mx-auto" formControlName="name" id="yourName" placeholder=" Name" [ngClass]="{ 'is-invalid': submitted1 && s.name.errors }">
+											<div *ngIf="submitted1 && s.name.errors" class="invalid-feedback text-start">
+											 <div *ngIf="s.name.errors.required"> Name is required</div>
+										 </div>
+										</div>
 										<!-- Email -->
 										<div class="mb-4 bg-light-input">
-										   <input type="email" class="form-control form-control-lg mx-auto" placeholder="Your Email" id="yourEmail" required="required">
+											<input type="email" class="form-control form-control-lg mx-auto" formControlName="email" id="yourEmail" placeholder=" Email" [ngClass]="{ 'is-invalid': submitted1 && s.email.errors }">
+											<div *ngIf="submitted1 && s.email.errors" class="invalid-feedback text-start">
+											 <div *ngIf="s.email.errors.required"> Email is required</div>
+										</div>
 									   </div>
 										<!-- Phone no -->
 										<div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Phone Number" id="phonono" required="required">
+											<input type="text" class="form-control form-control-lg mx-auto" formControlName="phone" id="yourPhone" placeholder=" Phone" [ngClass]="{ 'is-invalid': submitted1 && s.phone.errors }">
+											<div *ngIf="submitted1 && s.phone.errors" class="invalid-feedback text-start">
+											 <div *ngIf="s.phone.errors.required"> Phone is required</div>
+											 </div>
 									   </div>
 									   <!-- City -->
 									   <div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your City" id="city" required="required">
+										<input type="text" class="form-control form-control-lg mx-auto" formControlName="city" id="yourCity" placeholder=" City" [ngClass]="{ 'is-invalid': submitted1 && s.city.errors }">
+										<div *ngIf="submitted1 && s.city.errors" class="invalid-feedback text-start">
+										 <div *ngIf="s.city.errors.required"> City is required</div>
+									   </div>
 									   </div>
 										<!-- Button -->
 										<!-- <div class="d-grid" *ngFor="let Syllabus of selectedEntranceSyllabus"> 
@@ -134,8 +146,9 @@
 											   style="background-color: #444cae;">Download Syllabus</button>
 									   </div> -->
 									   <div class="d-grid"> 
-										   <button class="btn btn-lg mb-0 text-white" type="button"  (click)="onClickDownloadPdf()"
-											   style="background-color: #444cae;" >Download Syllabus</button>
+										   <!-- <button class="btn btn-lg mb-0 text-white" type="button"  (click)="onClickDownloadPdf()"
+											   style="background-color: #444cae;" >Download Syllabus</button> -->
+											   <button class="btn mb-0 text-white" style="background-color: #444cae;">Download Syllabus</button>
 									   </div>
 								   </form>
 								</div>
@@ -175,7 +188,34 @@
                                     <!-- Accordion END -->
                                 </div>
                                 <div class="tab-pane fade" id="course-pills-5" role="tabpanel" aria-labelledby="course-pills-tab-5">
-                                    cls
+                                    <div class="d-md-flex my-4" *ngFor="let test of selectedEntranceTestimonials;">
+										<!-- Avatar -->
+										<div class="avatar avatar-xl me-4 flex-shrink-0">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg"
+												alt="avatar">
+										</div>
+										<div>
+											<div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+												<h5 class="me-3 mb-0">{{test?.name}}</h5>
+												<!-- Review star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+												</ul>
+											</div>
+											<p class="mb-2">
+												{{test?.comment}}
+											</p>
+										</div>
+									</div>
                                 </div>
                                 <!--Tab Content End -->
                             </div>
@@ -230,10 +270,11 @@
                                     </div>
 
 									<!-- Buttons -->
-									<div class="mt-3 d-sm-flex justify-content-center">
+									<div class="mt-3 d-sm-flex justify-content-between">
 										<a href="#" class="btn btn-outline-success mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal">Enroll
 											Now
 										</a>
+										<a  class="btn btn-outline-success mb-0" routerLink="/shop">Buy Now</a>
 									</div>
 								</div>
 							</div>
@@ -295,86 +336,23 @@
 									</div>
 								</div>
 							</div>
-
-							<!-- Course info START -->
-							<div class="card card-body shadow p-4 mb-4">
-								<!-- Title -->
-								<h4 class="mb-3">This course includes</h4>
-								<ul class="list-group list-group-borderless">
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-book-open text-primary"></i>Lectures</span>
-										<span>30</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-clock text-primary"></i>Duration</span>
-										<span>4h 50m</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-signal text-primary"></i>Skills</span>
-										<span>Beginner</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-globe text-primary"></i>Language</span>
-										<span>English</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-user-clock text-primary"></i>Deadline</span>
-										<span>Nov 30 2021</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-medal text-primary"></i>Certificate</span>
-										<span>Yes</span>
-									</li>
-								</ul>
-							</div>
-							<!-- Course info END -->
-						</div>
-
-						<div class="col-md-6 col-lg-12">
-							<!-- Recently Viewed START -->
-							<div class="card card-body shadow p-4 mb-4">
-								<!-- Title -->
-								<h4 class="mb-3">Recently Viewed</h4>
-								<!-- Course item START -->
-								<div class="row gx-3 mb-3">
-									<!-- Image -->
-									<div class="col-4">
-										<img class="rounded" src="assets/images/courses/4by3/21.jpg" alt="">
-									</div>
-									<!-- Info -->
-									<div class="col-8">
-										<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
-										<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-											<li class="list-group-item px-0 d-flex justify-content-between">
-												<span class="text-success">$130</span>
-												<span class="h6 fw-light">4.5<i class="fas fa-star text-warning ms-1"></i></span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- Course item END -->
-
-								<!-- Course item START -->
-								<div class="row gx-3">
-									<!-- Image -->
-									<div class="col-4">
-										<img class="rounded" src="assets/images/courses/4by3/18.jpg" alt="">
-									</div>
-									<!-- Info -->
-									<div class="col-8">
-										<h6 class="mb-0"><a href="#">The Complete Video Production Bootcamp</a></h6>
-										<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-											<li class="list-group-item px-0 d-flex justify-content-between">
-												<span class="text-success">$150</span>
-												<span class="h6 fw-light">4.0<i class="fas fa-star text-warning ms-1"></i></span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- Course item END -->
-							</div>
-							<!-- Recently Viewed END -->
-						</div>
+							 <!-- Sucess Message Modal -->
+                             <div class="backdrop" [ngStyle]="{'display':display}"></div>
+                             <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                     <div class="modal-content card shadow-lg p-3 mb-5 bg-body rounded">
+                                         <!-- <div class="modal-header">
+                                         <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title">Model Title</h4>
+                                         </div> -->
+                                         <div class="modal-body text-center text-success">
+                                             <!-- <h4 *ngIf="isSubmit">{{sumbmitMessage}}</h4> -->
+                                             <p>Your message has been successfully sent. We will contact you very soon!</p>
+                                         </div>
+                                     </div><!-- /.modal-content -->
+                                 </div><!-- /.modal-dialog -->
+                             </div><!-- /.modal !-->
+						</div>			
 					</div><!-- Row End -->
 				</div>
                 <!-- Right side content end -->
@@ -393,33 +371,47 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
-                 <!-- Name -->
-                <div class="mb-4 bg-light-input">
-                    <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Name" id="yourName" required>
-                </div>
-                 <!-- Email -->
-                 <div class="mb-4 bg-light-input">
-                    <input type="email" class="form-control form-control-lg mx-auto" placeholder="Your Email" id="yourEmail" required>
-                </div>
-                 <!-- Phone no -->
-                 <div class="mb-4 bg-light-input">
-                    <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Phone Number" id="phonono" required>
-                </div>
-                <!-- City -->
-                <div class="mb-4 bg-light-input">
-                    <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your City" id="city" required>
-                </div>
-                 <!-- Button -->
-                 <!-- <div class="d-grid" *ngFor="let Syllabus of selectedEntranceSyllabus"> 
-                    <button class="btn btn-lg mb-0 text-white" type="button" (click)="{{Syllabus?.ExamSyllabus}}"
-                        style="background-color: #444cae;">Download Syllabus</button>
-                </div> -->
-				<div class="d-grid" > 
-                    <button class="btn btn-lg mb-0 text-white" type="button" (click)="onClickDownloadPdf()"
-                        style="background-color: #444cae;">Download Syllabus</button>
-                </div>
-            </form>
+			<h2 class="text-success fs-4"> Please register to download the syllabus</h2>
+			<form [formGroup]="syllabusDetails" (ngSubmit)="onClickDownloadPdf()">
+				<!-- Name -->
+				<div class="mb-4 bg-light-input">
+					<input type="text" class="form-control form-control-lg mx-auto" formControlName="name" id="yourName" placeholder=" Name" [ngClass]="{ 'is-invalid': submitted1 && s.name.errors }">
+					<div *ngIf="submitted1 && s.name.errors" class="invalid-feedback text-start">
+					 <div *ngIf="s.name.errors.required"> Name is required</div>
+				 </div>
+				</div>
+				<!-- Email -->
+				<div class="mb-4 bg-light-input">
+					<input type="email" class="form-control form-control-lg mx-auto" formControlName="email" id="yourEmail" placeholder=" Email" [ngClass]="{ 'is-invalid': submitted1 && s.email.errors }">
+					<div *ngIf="submitted1 && s.email.errors" class="invalid-feedback text-start">
+					 <div *ngIf="s.email.errors.required"> Email is required</div>
+				</div>
+			   </div>
+				<!-- Phone no -->
+				<div class="mb-4 bg-light-input">
+					<input type="text" class="form-control form-control-lg mx-auto" formControlName="phone" id="yourPhone" placeholder=" Phone" [ngClass]="{ 'is-invalid': submitted1 && s.phone.errors }">
+					<div *ngIf="submitted1 && s.phone.errors" class="invalid-feedback text-start">
+					 <div *ngIf="s.phone.errors.required"> Phone is required</div>
+					 </div>
+			   </div>
+			   <!-- City -->
+			   <div class="mb-4 bg-light-input">
+				<input type="text" class="form-control form-control-lg mx-auto" formControlName="city" id="yourCity" placeholder=" City" [ngClass]="{ 'is-invalid': submitted1 && s.city.errors }">
+				<div *ngIf="submitted1 && s.city.errors" class="invalid-feedback text-start">
+				 <div *ngIf="s.city.errors.required"> City is required</div>
+			   </div>
+			   </div>
+				<!-- Button -->
+				<!-- <div class="d-grid" *ngFor="let Syllabus of selectedEntranceSyllabus"> 
+				   <button class="btn btn-lg mb-0 text-white" type="button" (click)="{{Syllabus?.ExamSyllabus}}"
+					   style="background-color: #444cae;">Download Syllabus</button>
+			   </div> -->
+			   <div class="d-grid"> 
+				   <!-- <button class="btn btn-lg mb-0 text-white" type="button"  (click)="onClickDownloadPdf()"
+					   style="background-color: #444cae;" >Download Syllabus</button> -->
+					   <button class="btn mb-0 text-white" style="background-color: #444cae;">Download Syllabus</button>
+			   </div>
+		   </form>
         </div>
         <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

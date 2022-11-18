@@ -101,8 +101,50 @@ export const medicineCountries : Array<Object> =[
         'examPattern':[
             {
                 'title':'Exam Pattern',
-                'image':'assets/images/element/table1.png',
-                'image1':'assets/images/element/table-2.png',
+                'table':[
+                            {    
+                                'left':'Particulars','right':'Details',
+                             },
+                             {    
+                                'left':'Exam Name','right':'National Eligibility cum Entrance Test (NEET)',
+                             },
+                             {    
+                                'left':'Conducting Body','right':'National Testing Agency (NTA)',
+                             },
+                             {    
+                                'left':'Category Type','right':'Undergraduate',
+                             },
+                             {    
+                                'left':'Frequency of NEET Exam','right':'Once in a Year',
+                             },
+                             {    
+                                'left':'Total Number of Questions in NEET','right':'200 Questions',
+                             },
+                             {    
+                                'left':'NEET Total Marks','right':'720 Marks',
+                             },
+                             {    
+                                'left':'Internal Choice in NEET Question Paper','right':'Yes. Candidates can attempt only 10 questions out of 15',
+                             },
+                             {    
+                                'left':'Marking Scheme','right':'+ 4 for a correct answer, -1 for an incorrect answer',
+                             },
+                             {    
+                                'left':'Type of Questions','right':'Multiple Choice Questions (MCQs)',
+                             },
+                             {    
+                                'left':'Exam Mode','right':'Offline (Pen and Paper Test)',
+                             },
+                             {    
+                                'left':'NEET Exam Time Duration','right':'3 hours 20 minutes',
+                             },
+                             {    
+                                'left':'NEET Language options','right':'13 languages: English, Hindi, Assamese, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu, and Urdu.',
+                             },
+                             {    
+                                'left':'NEET UG Courses','right':'MBBS and BDS',
+                             },
+                          ],
             },
         ],
         // 'examRequirement':[
@@ -308,14 +350,14 @@ export const medicineCountries : Array<Object> =[
                     {'tableData':'Decision Analysis. Assesses ability to deal with various forms of information to infer relationships, make informed judgements, and decide on an appropriate response: 32 minutes, 1 scenario full of information and 28 questions (basic calculator provided)'},
                     {'tableData':'Situational Judgement. Measures your responses in situations, and your grasp of medical ethics: 27 minutes and 67 questions on 20 scenarios.'},
                 ],
-                'table':[
-                    {
+                // 'table':[
+                //     {
                        
-                        // 'left':'SECTION','right':'QUESTIONS',
-                    },
+                //         'left':'SECTION','right':'QUESTIONS',
+                //     },
                     
                     
-                ],
+                // ],
             }
         ],
         'AllTabs':[

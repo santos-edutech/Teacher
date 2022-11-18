@@ -27,6 +27,7 @@ export const megaMenuItems : Array<Object>=[
                         'overViewImage':'assets/sat_1.png',
                         'price':'₹ 56,000',
                         'discount':'₹ 70,000',
+                         'qtyTotal': 0 ,
                         'faq':[
                             {
                                 'questions':'How long is the SAT?',
@@ -534,7 +535,7 @@ export const megaMenuItems : Array<Object>=[
                         'title':'After School Services',
                         'link': '/after-school-services',
                         'image':'assets/images/courses/4by3/After School Services.jpg',
-                        'details':''
+                        'details':'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams'
                     },
                 ],
             },

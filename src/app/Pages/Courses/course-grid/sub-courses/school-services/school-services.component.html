@@ -44,35 +44,47 @@
                             </div>
                         </div>
                         <!-- filter -->
-                        <div class="col-sm-6 col-xl-3 mt-3 mt-xl-0">
-                            <form class=" rounded p-2">
-                                <select class="form-select form-select-sm js-choice input-borderless  border-none" (change)='onSelectSub(val2.value)' #val2>
-                                    <option  value="null"> Select program</option>
-                                    <!-- <option *ngFor="let programItem of schoolServiceList" [value]="programItem?.subTitle">
+                        
+                        <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
+                            <form class="border rounded p-2">
+                                <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelect(val.value)' #val>
+                                    <option  value="null">Select Service </option>
+                                    <option *ngFor="let segmentItem of schoolServiceList" [value]="segmentItem?.category">
                                         <ng-container>
-                                            {{programItem?.subTitle}} 
+                                            {{segmentItem?.category}}
                                         </ng-container>
-                                    </option> -->
-                                    <option value="State, CBSE, ICSE"> State, CBSE, ICSE</option>
-                                    <option value="IGCSE, IB"> IGCSE, IB</option>
+                                    </option>
                                 </select>
                             </form>
                         </div>
+
+                        <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
+                            <form class="border rounded p-2">
+                                <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectgrade(val1.value)' #val1>
+                                    <option  value="null">Select Grade </option>
+                                    <option value="9th">9th</option>
+                                    <option value="10th">10th</option>
+                                    <option value="11th">11th</option>
+                                    <option value="12th">12th</option>
+                                </select>
+                            </form>
+                        </div>
+
                     </div>
                     <!-- Search option END -->
         
                     <!-- Course Grid START -->
                     <div class="row g-4">
                         <!-- Card item START -->
-                        <div *ngFor="let list of schoolServiceLists | filter:searchText" class="col-sm-6 col-xl-4">
-                            <a [routerLink]="['/after-school-services-details',list?.serviceID]" class="card shadow h-100 text-dark">
+                        <div *ngFor="let list of schoolCoursesList| filter:searchText" class="col-sm-6 col-xl-4">
+                            <a [routerLink]="['/after-school-services-details',list?.serviceID]" class="card shadow h-100 text-dark" target="_blank">
                                 <!-- Image -->
                                 <!-- <img [src]="list['apImage']" class="card-img-top" alt="course image"> -->
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Title -->
                                     <h5 class="card-title overflow-hidden" style="text-overflow: ellipsis;white-space: nowrap;">
-                                        <a [routerLink]="['/after-school-services-details',list?.serviceID]">{{list?.title}}</a>
+                                        <a [routerLink]="['/after-school-services-details',list?.serviceID]">{{list?.program_title}}</a>
                                     </h5>
                                     <p>{{list?.subTitle}}</p>
                                     <p class="mb-2 text-truncate-2 border-bottom fw-bold">
@@ -83,12 +95,13 @@
                                     </p> -->
                                     <!-- Rating star -->
                                     <ul class="list-group list-group-borderless mb-3">
-                                        <li *ngFor="let feature of list['PricingAndFeatures']"
-                                            class="list-group-item h6 fw-light d-flex mb-0">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <!-- <p class="text-truncate-1">{{feature?.features}}</p> -->
-                                            <span class="text-truncate-1">{{feature?.features}}</span>
-                                        </li>
+                                        <ng-container>
+                                            <li *ngFor="let feature of list['PricingAndFeatures']" class="list-group-item h6 fw-light d-flex mb-0">
+                                                <i class="fas fa-check-circle text-success me-2"></i>
+                                                <!-- <p class="text-truncate-1">{{feature?.features}}</p> -->
+                                                <span class="text-truncate-1">{{feature?.features}}</span>
+                                            </li>
+                                        </ng-container>
                                     </ul>
                         
                                 </div>
@@ -176,10 +189,10 @@
                                             </li>
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">
-                                                <input type="checkbox" class="btn-check" id="btn-check-7">
-                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-7">ICSE</label>
+                                                <input type="checkbox" class="btn-check" id="btn-check-6">
+                                                <label class="btn btn-light btn-primary-soft-check" for="btn-check-6">ICSE</label>
                                             </li>
-
+                                           
                                         </ul>
                                     </div>
                                     <!-- Language END -->

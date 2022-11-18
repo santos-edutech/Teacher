@@ -7,7 +7,9 @@ import { ThankyouComponent } from "../Pages/Buy-Courses/thankyou/thankyou.compon
 import { CareersNavigateComponent } from "../Pages/careers-navigate/careers-navigate.component";
 import { AbroadEducationComponent } from "../Pages/Category/abroad-education/abroad-education.component";
 import { AllCategoriesComponent } from "../Pages/Category/all-categories/all-categories.component";
+import { DetailsRegisterForTestComponent } from "../Pages/Category/details-register-for-test/details-register-for-test.component";
 import { EducationIndiaComponent } from "../Pages/Category/education-india/education-india.component";
+import { RegisterForTestComponent } from "../Pages/Category/register-for-test/register-for-test.component";
 import { CollegesComponent } from "../Pages/Consulting/colleges/colleges.component";
 import { InternshipsComponent } from "../Pages/Consulting/internships/internships.component";
 import { ITComponent } from "../Pages/Consulting/it/it.component";
@@ -139,4 +141,12 @@ export const routes: Routes = [
         path:'cancellation-policy',
         component:CancellationPolicyComponent,
     },
+    {
+        path:'register-for-test',
+        component:RegisterForTestComponent,
+    },
+    {
+        path:'details-register-for-test',
+        component:DetailsRegisterForTestComponent,
+    }
 ];

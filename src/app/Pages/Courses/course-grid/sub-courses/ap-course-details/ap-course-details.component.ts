@@ -4,6 +4,7 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/comp
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 
+declare var $:any;
 @Component({
   selector: 'app-ap-course-details',
   templateUrl: './ap-course-details.component.html',
@@ -84,5 +85,26 @@ export class ApCourseDetailsComponent implements OnInit {
       return;
     }
     
+    $('#exampleModal').modal('hide');
+    this.enrollNowFormData.add(this.enrollNowForm.value).then(res =>{
+      this.openModal();
+    });
+    setTimeout(()=>{
+      this.onCloseHandled();
+      this.submitted = false ;
+      this.enrollNowForm.reset();
+    },6000);
   }
+
+  display : any;
+
+  // Model Open Funcation
+  openModal(){
+   this.display='block';
+ }
+
+ // Model close Funcation
+ onCloseHandled(){
+   this.display='none'
+ }
 }

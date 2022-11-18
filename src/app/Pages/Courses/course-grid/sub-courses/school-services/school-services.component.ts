@@ -15,9 +15,11 @@ export class SchoolServicesComponent implements OnInit {
   courseDetails :any ;
   menuItemList :any ;
   selectedSubMenuCourseTitle :any;
+  selectedSubMenuCourseDetails: any;
   searchText: any;
   schoolServiceList: any;
   schoolService: any;
+  schoolCoursesList: any;
   
   
   constructor(
@@ -35,7 +37,21 @@ export class SchoolServicesComponent implements OnInit {
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
     });
     this.schoolServiceList = this.dataService.getallSchoolServices();
-    this.onSelectSub('State, CBSE, ICSE');
+    this.getallSchoolService();
+  }
+  
+  programList:any;
+  cat:any;
+  getallSchoolService(){
+    this.schoolCoursesList = [];
+    for(let list of this.schoolServiceList){
+      this.cat=list.category
+      this.programList = list.program;
+      // console.log(this.programList);
+      for(let programItems of this.programList){
+        this.schoolCoursesList.push(programItems);
+      }
+    }
   }
 
   getSelectedSubmenuCourse(MenuId:any,ID:any){
@@ -46,27 +62,40 @@ export class SchoolServicesComponent implements OnInit {
         for(let subMenuItem of this.menuItemList){
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
+            this.selectedSubMenuCourseDetails =subMenuItem.details;
           }
         }
       }
     }
   }
 
-  schoolServiceLists:any;
-
-  //subject select function
-  onSelectSub(val2:any){
-    this.schoolServiceLists =[];
-    if (val2) {
-      this.schoolServiceList.map((res:any) => {
-        // console.log(res);
-        if(res.subTitle === val2){
-          // console.log(res);
-          this.schoolServiceLists.push(res);
-        }
+ // course select function
+ onSelect(val:any) {
+  if (val) {
+    this.schoolServiceList.map((res:any) => {
+      if(res.category === val ){
+        this.schoolCoursesList = res.program;
       }
-      );
-    }
+    });
   }
+}
+
+programs:any;
+onSelectgrade(val1:any){
+  // console.log(val1);
+  this.schoolCoursesList = [];
+  if(val1){
+    this.schoolServiceList.map((res:any) => {
+      this.programs = res.program ;
+      this.programs.map((data:any) => {
+        // console.log(data);
+        if(data.grade === val1){
+          this.schoolCoursesList.push(data);
+          console.log(this.schoolCoursesList);
+        }
+      });
+    });
+  }
+}
 
 }

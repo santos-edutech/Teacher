@@ -13,7 +13,7 @@
                     <p>{{selectedSubMenuCourseDetails}}</p>
                     <!-- Content -->
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-star text-warning me-2"></i>4.5/5.0</li>
+                        <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-star text-warning me-2"></i>5.0/5.0</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-user-graduate text-orange me-2"></i>12k Enrolled</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-signal text-success me-2"></i>All levels</li>
                         <li class="list-inline-item h6 mb-0"><i class="fas fa-globe text-info me-2"></i>English</li>
@@ -226,8 +226,9 @@
                                     </div>
     
                                     <!-- Buttons -->
-                                    <div class="mt-3 d-sm-flex justify-content-center">
+                                    <div class="mt-3 d-sm-flex justify-content-between">
                                         <a href="#" class="btn btn-outline-success mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal">Enroll Now</a>
+                                        <a  class="btn btn-outline-success mb-0" routerLink="/shop">Buy Now</a>
                                     </div>
 
                                 </div>
@@ -289,6 +290,22 @@
                                     </div>
                                 </div>
                             </div>
+                             <!-- Sucess Message Modal -->
+                             <div class="backdrop" [ngStyle]="{'display':display}"></div>
+                             <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                     <div class="modal-content card shadow-lg p-3 mb-5 bg-body rounded">
+                                         <!-- <div class="modal-header">
+                                         <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title">Model Title</h4>
+                                         </div> -->
+                                         <div class="modal-body text-center text-success">
+                                             <!-- <h4 *ngIf="isSubmit">{{sumbmitMessage}}</h4> -->
+                                             <p>Your message has been successfully sent. We will contact you very soon!</p>
+                                         </div>
+                                     </div><!-- /.modal-content -->
+                                 </div><!-- /.modal-dialog -->
+                             </div><!-- /.modal !-->
     
                             <!-- Course info START -->
                             <div class="card card-body shadow p-4 mb-4">

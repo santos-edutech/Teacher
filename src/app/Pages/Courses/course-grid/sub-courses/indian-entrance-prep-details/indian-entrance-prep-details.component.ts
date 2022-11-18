@@ -4,6 +4,7 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/comp
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 
+declare var $:any;
 @Component({
   selector: 'app-indian-entrance-prep-details',
   templateUrl: './indian-entrance-prep-details.component.html',
@@ -23,11 +24,17 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
   selectedEntranceDiscountPrice2: any;
   selectedEntranceSyllabus: any;
   enrollNowForm: any = FormGroup;
+  syllabusDetails:any = FormGroup;
+  syllabusDetailsData : AngularFirestoreCollection<any>;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  submitted1 = false ;
+  selectedEntranceTestimonials: any;
+  
 
   constructor(
     public fb: FormBuilder,
+    // public vb: FormBuilder,
     private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
@@ -42,6 +49,16 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
       date : new Date(),
     });
     this.enrollNowFormData = this.db.collection('enrollNowForm');
+
+    this.syllabusDetails = this.fb.group({
+      name:['', [Validators.required]],
+      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      city:['', [Validators.required]],
+      date : new Date(),
+    });
+    this.syllabusDetailsData = this.db.collection('syllabusDetails');
+
     this.indianEntrance = this.dataService.getAllIndianEntrance();
     this.router.params.subscribe(params => {
       this.selectedEntrance = params['entranceID'];
@@ -63,6 +80,7 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
         this.selectedEntranceDiscountPrice = entrance.discount;
         this.selectedEntranceDiscountPrice2 = entrance.discount2;
         this.selectedEntranceSyllabus = entrance.ExamSyllabus;
+        this.selectedEntranceTestimonials = entrance.testimonials;
       }
     }
   }
@@ -90,6 +108,11 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
     link.click();
   }
   onClickDownloadPdf(){
+    this.submitted1 = true;
+    // stop here if form is invalid
+    if (this.syllabusDetails.invalid) {
+      return;
+    }
     // console.log(this.selectedEntrance);
     if(this.selectedEntrance == 1){
       let base64String = "your-base64-string";
@@ -106,12 +129,34 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
   get f() {
     return this.enrollNowForm.controls;
   }
+  get s() {
+    return this.syllabusDetails.controls;
+  }
   onSubmit(){
     this.submitted = true;
     // stop here if form is invalid
     if (this.enrollNowForm.invalid) {
       return;
     }
-    
+    $('#exampleModal').modal('hide');
+    this.enrollNowFormData.add(this.enrollNowForm.value).then(res =>{
+      this.openModal();
+    });
+    setTimeout(()=>{
+      this.onCloseHandled();
+      this.submitted = false ;
+      this.enrollNowForm.reset();
+    },6000);
   }
+  display : any;
+
+  // Model Open Funcation
+  openModal(){
+   this.display='block';
+ }
+
+ // Model close Funcation
+ onCloseHandled(){
+   this.display='none'
+ }
 }

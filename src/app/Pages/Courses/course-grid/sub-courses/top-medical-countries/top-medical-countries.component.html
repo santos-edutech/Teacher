@@ -13,7 +13,7 @@
                     <!-- Content -->
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
-                                class="fas fa-star text-warning me-2"></i>4.5/5.0</li>
+                                class="fas fa-star text-warning me-2"></i>5.0/5.0</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
                                 class="fas fa-user-graduate text-orange me-2"></i>12k Enrolled</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i
@@ -124,10 +124,21 @@
                                                 <div [id]="'collapse-1'+i" class="accordion-collapse collapse"
                                                     [ngClass]="{ 'show': i == 0 }"
                                                     [attr.aria-labelledby]="'heading-1'+i"
-                                                    data-bs-parent="#accordionExample2">
+                                                    data-bs-parent="#accordionExample2" >
 
-                                                    <img [src]="content?.image" class="mt-2" alt="">
-                                                    <img [src]="content?.image1" class="mt-1" alt="">
+                                                    <!-- <img [src]="content?.image" class="mt-2" alt="">
+                                                    <img [src]="content?.image1" class="mt-1" alt=""> -->
+                                                    <table class="table  table-sm "
+                                                    *ngFor="let tableData of content.table">
+                                                    
+                                                    <tbody>
+                                                        <tr class="">
+                                                            <th scope="row">{{tableData?.left}}</th>
+                                                            <td width="50%" style="white-space: pre-wrap">
+                                                                {{tableData?.right}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
 
                                                     <p>{{content?.note}}</p>
 
@@ -146,22 +157,34 @@
                                     aria-labelledby="course-pills-tab-2">
                                     <div class="d-grid mx-auto col-11">
                                         <h2 class="text-success fs-4"> Please register to download the syllabus</h2>
-									<form>
+									<form [formGroup]="syllabusDetails" (ngSubmit)="onClickDownloadPdf()">
 										<!-- Name -->
-									   <div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Name" id="yourName" required>
-									   </div>
+                                        <div class="mb-4 bg-light-input">
+                                            <input type="text" class="form-control form-control-lg mx-auto" formControlName="name" id="yourName" placeholder=" Name" [ngClass]="{ 'is-invalid': submitted1 && s.name.errors }">
+                                            <div *ngIf="submitted1 && s.name.errors" class="invalid-feedback text-start">
+                                             <div *ngIf="s.name.errors.required"> Name is required</div>
+                                         </div>
+                                        </div>
 										<!-- Email -->
 										<div class="mb-4 bg-light-input">
-										   <input type="email" class="form-control form-control-lg mx-auto" placeholder="Your Email" id="yourEmail" required>
+                                            <input type="email" class="form-control form-control-lg mx-auto" formControlName="email" id="yourEmail" placeholder=" Email" [ngClass]="{ 'is-invalid': submitted1 && s.email.errors }">
+                                            <div *ngIf="submitted1 && s.email.errors" class="invalid-feedback text-start">
+                                             <div *ngIf="s.email.errors.required"> Email is required</div>
+                                        </div>
 									   </div>
 										<!-- Phone no -->
 										<div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your Phone Number" id="phonono" required>
+                                            <input type="text" class="form-control form-control-lg mx-auto" formControlName="phone" id="yourPhone" placeholder=" Phone" [ngClass]="{ 'is-invalid': submitted1 && s.phone.errors }">
+                                            <div *ngIf="submitted1 && s.phone.errors" class="invalid-feedback text-start">
+                                             <div *ngIf="s.phone.errors.required"> Phone is required</div>
+                                             </div>
 									   </div>
 									   <!-- City -->
 									   <div class="mb-4 bg-light-input">
-										   <input type="text" class="form-control form-control-lg mx-auto" placeholder="Your City" id="city" required>
+                                        <input type="text" class="form-control form-control-lg mx-auto" formControlName="city" id="yourCity" placeholder=" City" [ngClass]="{ 'is-invalid': submitted1 && s.city.errors }">
+                                        <div *ngIf="submitted1 && s.city.errors" class="invalid-feedback text-start">
+                                         <div *ngIf="s.city.errors.required"> City is required</div>
+									   </div>
 									   </div>
 										<!-- Button -->
 										<!-- <div class="d-grid" *ngFor="let Syllabus of selectedEntranceSyllabus"> 
@@ -169,8 +192,9 @@
 											   style="background-color: #444cae;">Download Syllabus</button>
 									   </div> -->
 									   <div class="d-grid"> 
-										   <button class="btn btn-lg mb-0 text-white" type="button"  (click)="onClickDownloadPdf()"
-											   style="background-color: #444cae;" >Download Syllabus</button>
+										   <!-- <button class="btn btn-lg mb-0 text-white" type="button"  (click)="onClickDownloadPdf()"
+											   style="background-color: #444cae;" >Download Syllabus</button> -->
+                                               <button class="btn mb-0 text-white" style="background-color: #444cae;">Download Syllabus</button>
 									   </div>
 								   </form>
                                        
@@ -196,7 +220,7 @@
                                                     <p class="fw-light mt-0">
                                                         {{contentexam?.title}}
                                                     </p>
-                                                    <h4 class="fw-light mt-0">
+                                                    <h4 class="fw-bold mt-0">
                                                         {{contentexam?.heading}}
                                                     </h4>
                                                     <p class="fw-light m-3">
@@ -342,19 +366,8 @@
                             <!-- Video START -->
                             <div class="card shadow p-2 mb-4 z-index-9">
                                 <div class="overflow-hidden rounded-3">
-                                    <img src="assets/images/courses/4by3/01.jpg" class="card-img" alt="course image">
-                                    <!-- Overlay -->
-                                    <div class="bg-overlay bg-dark opacity-6"></div>
-                                    <div class="card-img-overlay d-flex align-items-start flex-column p-3">
-                                        <!-- Video button and link -->
-                                        <div class="m-auto">
-                                            <a href="https://www.youtube.com/embed/tXHviS-4ygo"
-                                                class="btn btn-lg text-danger btn-round btn-white-shadow mb-0"
-                                                data-glightbox="" data-gallery="course-video">
-                                                <i class="fas fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <iframe width="100%" height="245" src="https://www.youtube.com/embed/SCStu4ndaNE?autoplay=1&mute=1&loop=1">
+                                    </iframe>
                                 </div>
 
                                 <!-- Card body -->
@@ -447,123 +460,22 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Course info START -->
-                            <div class="card card-body shadow p-4 mb-4">
-                                <!-- Title -->
-                                <h4 class="mb-3">This course includes</h4>
-                                <ul class="list-group list-group-borderless">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-book-open text-primary"></i>Lectures</span>
-                                        <span>30</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-clock text-primary"></i>Duration</span>
-                                        <span>4h 50m</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-signal text-primary"></i>Skills</span>
-                                        <span>Beginner</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-globe text-primary"></i>Language</span>
-                                        <span>English</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-user-clock text-primary"></i>Deadline</span>
-                                        <span>Nov 30 2021</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="h6 fw-light mb-0"><i
-                                                class="fas fa-fw fa-medal text-primary"></i>Certificate</span>
-                                        <span>Yes</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Course info END -->
-                        </div>
-
-                        <div class="col-md-6 col-lg-12">
-                            <!-- Recently Viewed START -->
-                            <div class="card card-body shadow p-4 mb-4">
-                                <!-- Title -->
-                                <h4 class="mb-3">Recently Viewed</h4>
-                                <!-- Course item START -->
-                                <div class="row gx-3 mb-3">
-                                    <!-- Image -->
-                                    <div class="col-4">
-                                        <img class="rounded" src="assets/images/courses/4by3/21.jpg" alt="">
-                                    </div>
-                                    <!-- Info -->
-                                    <div class="col-8">
-                                        <h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
-                                        <ul
-                                            class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-                                            <li class="list-group-item px-0 d-flex justify-content-between">
-                                                <span class="text-success">$130</span>
-                                                <span class="h6 fw-light">4.5<i
-                                                        class="fas fa-star text-warning ms-1"></i></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Course item END -->
-
-                                <!-- Course item START -->
-                                <div class="row gx-3">
-                                    <!-- Image -->
-                                    <div class="col-4">
-                                        <img class="rounded" src="assets/images/courses/4by3/18.jpg" alt="">
-                                    </div>
-                                    <!-- Info -->
-                                    <div class="col-8">
-                                        <h6 class="mb-0"><a href="#">The Complete Video Production Bootcamp</a></h6>
-                                        <ul
-                                            class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-                                            <li class="list-group-item px-0 d-flex justify-content-between">
-                                                <span class="text-success">$150</span>
-                                                <span class="h6 fw-light">4.0<i
-                                                        class="fas fa-star text-warning ms-1"></i></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Course item END -->
-                            </div>
-                            <!-- Recently Viewed END -->
-
-                            <!-- Tags START -->
-                            <div class="card card-body shadow p-4">
-                                <h4 class="mb-3">Popular Tags</h4>
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">blog</a>
-                                    </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">business</a> </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">theme</a>
-                                    </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">bootstrap</a> </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">data
-                                            science</a> </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">web
-                                            development</a> </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">tips</a>
-                                    </li>
-                                    <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm"
-                                            href="#">machine
-                                            learning</a> </li>
-                                </ul>
-                            </div>
-                            <!-- Tags END -->
+                             <!-- Sucess Message Modal -->
+                             <div class="backdrop" [ngStyle]="{'display':display}"></div>
+                             <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                     <div class="modal-content card shadow-lg p-3 mb-5 bg-body rounded">
+                                         <!-- <div class="modal-header">
+                                         <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title">Model Title</h4>
+                                         </div> -->
+                                         <div class="modal-body text-center text-success">
+                                             <!-- <h4 *ngIf="isSubmit">{{sumbmitMessage}}</h4> -->
+                                             <p>Your message has been successfully sent. We will contact you very soon!</p>
+                                         </div>
+                                     </div><!-- /.modal-content -->
+                                 </div><!-- /.modal-dialog -->
+                             </div><!-- /.modal !-->
                         </div>
                     </div><!-- Row End -->
                 </div>

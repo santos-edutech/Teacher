@@ -41,6 +41,9 @@ import { TermsAndConditionsComponent } from './Pages/footer-pages/terms-and-cond
 import { PrivacyPolicyComponent } from './Pages/footer-pages/privacy-policy/privacy-policy.component';
 import { CancellationPolicyComponent } from './Pages/footer-pages/cancellation-policy/cancellation-policy.component';
 import { HomeModule } from './Pages/Home/home.module';
+import { RegisterForTestComponent } from './Pages/Category/register-for-test/register-for-test.component';
+import { DetailsRegisterForTestComponent } from './Pages/Category/details-register-for-test/details-register-for-test.component';
+
 
 
 @NgModule({
@@ -75,6 +78,8 @@ import { HomeModule } from './Pages/Home/home.module';
     TermsAndConditionsComponent,
     PrivacyPolicyComponent,
     CancellationPolicyComponent,
+    RegisterForTestComponent,
+    DetailsRegisterForTestComponent,
   ],
   imports: [
     BrowserModule,

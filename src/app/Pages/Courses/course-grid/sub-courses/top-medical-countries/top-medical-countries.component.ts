@@ -4,6 +4,7 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/comp
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 // import { saveAs } from 'file-saver';
+declare var $:any;
 @Component({
   selector: 'app-top-medical-countries',
   templateUrl: './top-medical-countries.component.html',
@@ -26,8 +27,13 @@ export class TopMedicalCountriesComponent implements OnInit {
   selectedCountryExamRequirement: any;
   selectedCountryAllTabs: any;
   enrollNowForm: any = FormGroup;
+  syllabusDetails:any = FormGroup;
+  syllabusDetailsData : AngularFirestoreCollection<any>;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  submitted1 = false ;
+
+  
   
   constructor(
     public fb: FormBuilder,
@@ -45,6 +51,16 @@ export class TopMedicalCountriesComponent implements OnInit {
       date : new Date(),
     });
     this.enrollNowFormData = this.db.collection('enrollNowForm');
+
+
+    this.syllabusDetails = this.fb.group({
+      name:['', [Validators.required]],
+      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      city:['', [Validators.required]],
+      date : new Date(),
+    });
+    this.syllabusDetailsData = this.db.collection('syllabusDetails');
     this.countriesDetails = this.dataService.getAllMedicineCountries();
     this.router.params.subscribe(params => {
       this.selectedCountryId = params['countrieID'] ;
@@ -83,6 +99,11 @@ export class TopMedicalCountriesComponent implements OnInit {
     link.click();
   }
   onClickDownloadPdf(){
+    this.submitted1 = true;
+    // stop here if form is invalid
+    if (this.syllabusDetails.invalid) {
+      return;
+    }
     let base64String = "your-base64-string";
     this.downloadPdf(base64String,"NEET 2022 Syllabus");
   }
@@ -90,12 +111,36 @@ export class TopMedicalCountriesComponent implements OnInit {
   get f() {
     return this.enrollNowForm.controls;
   }
+
+  get s() {
+    return this.syllabusDetails.controls;
+  }
   onSubmit(){
     this.submitted = true;
     // stop here if form is invalid
     if (this.enrollNowForm.invalid) {
       return;
     }
-    
+    $('#exampleModal').modal('hide');
+    this.enrollNowFormData.add(this.enrollNowForm.value).then(res =>{
+      this.openModal();
+    });
+    setTimeout(()=>{
+      this.onCloseHandled();
+      this.submitted = false ;
+      this.enrollNowForm.reset();
+    },6000);
   }
+  
+  display : any;
+
+  // Model Open Funcation
+  openModal(){
+   this.display='block';
+ }
+
+ // Model close Funcation
+ onCloseHandled(){
+   this.display='none'
+ }
 }

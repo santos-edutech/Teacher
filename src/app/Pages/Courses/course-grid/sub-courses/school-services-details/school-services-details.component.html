@@ -10,10 +10,11 @@
                 <div class="col-lg-8">
                     <!-- Title -->
                     <h2>{{selectedSchoolServiceTitle}}</h2>
+					<p>{{selectedSubMenuCourseDetails}}</p>
 					<p>{{selectedSchoolServiceSubTitle}}</p>
                     <!-- Content -->
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-star text-warning me-2"></i>4.5/5.0</li>
+                        <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-star text-warning me-2"></i>5.0/5.0</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-user-graduate text-orange me-2"></i>12k Enrolled</li>
                         <li class="list-inline-item h6 me-3 mb-1 mb-sm-0"><i class="fas fa-signal text-success me-2"></i>All levels</li>
                         <li class="list-inline-item h6 mb-0"><i class="fas fa-globe text-info me-2"></i>English</li>
@@ -44,7 +45,7 @@
 								</li>
 								<!-- Tab item -->
 								<li class="nav-item" role="presentation">
-									<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button" role="tab" aria-controls="course-pills-2" aria-selected="false">Syllabus</button>
+									<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button" role="tab" aria-controls="course-pills-2" aria-selected="false">Subjects-Syllabus</button>
 								</li>
 								<!-- Tab item -->
 								<li class="nav-item" role="presentation">
@@ -94,8 +95,32 @@
 										</div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
-                                    hello
+								<div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+                                    <!-- <div *ngFor="let item of selectedSchoolServiceSyllabus" class="d-grid mx-auto col-11"> -->
+                                        <!-- <p>{{item?.subject}}</p> -->
+										<!-- Course accordion START -->
+										<div class="accordion accordion-icon accordion-bg-light mx-2" id="accordionExample2">
+											<!-- Item -->
+											<div class="accordion-item mb-3" *ngFor="let content of selectedSchoolServiceSyllabus; let i = index">
+												<h6 class="accordion-header font-base" [id]="'heading-1'+i">
+													<button class="accordion-button fw-bold rounded-0 d-inline-block"
+														[ngClass]="{'collapsed': i != 0}" type="button" data-bs-toggle="collapse"
+														[attr.data-bs-target]="'#collapse-1'+i" aria-expanded="true"
+														[attr.aria-controls]="'collapse-1'+i">
+														{{content?.subject}}
+													</button>
+												</h6>
+												<!-- Body -->
+												<div [id]="'collapse-1'+i" class="accordion-collapse collapse" [ngClass]="{ 'show': i == 0 }"
+													[attr.aria-labelledby]="'heading-1'+i" data-bs-parent="#accordionExample2">
+													<p class="my-3 mx-3" style="white-space: pre-wrap">
+														{{content?.details}}
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- Course accordion END -->
+									<!-- </div> -->
                                 </div>
                                 <div class="tab-pane fade" id="course-pills-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
                                     <ul class="list-group list-group-borderless mb-3 ps-4">
@@ -132,7 +157,37 @@
 									  <!-- Accordion END -->
                                 </div>
                                 <div class="tab-pane fade" id="course-pills-5" role="tabpanel" aria-labelledby="course-pills-tab-5">
-                                    cls
+                                    <div class="d-md-flex my-4" *ngFor="let test of selectedSchoolServiceTestimonials;">
+										<!-- Avatar -->
+										<div class="avatar avatar-xl me-4 flex-shrink-0">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg"
+												alt="avatar">
+										</div>
+										<div>
+											<div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+												<h5 class="me-3 mb-0">{{test?.name}}</h5>
+												<!-- Review star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fas fa-star text-warning"></i></li>
+												</ul>
+											</div>
+											<p class="mb-2" style="white-space: pre-line">
+												{{test?.comment}}
+											</p>
+											<p class="fw-bold">
+												{{test?.studied}}
+											</p>
+										</div>
+									</div>
                                 </div>
                                 <!--Tab Content End -->
                             </div>
@@ -168,11 +223,11 @@
 									<div class="d-flex justify-content-evenly align-items-center">
 										<!-- Price and time -->
 										<div>
-											<!-- <div class="d-flex align-items-center justify-content-evenly">
-												<h3 class="fw-bold mb-0 me-2">{{selectedCoursePrice}}</h3>
-												<span class="text-decoration-line-through mb-0 me-2">{{selectedCourseDiscount}}</span>
+											<div class="d-flex align-items-center justify-content-evenly">
+												<h3 class="fw-bold mb-0 me-2">Starting {{selectedSubjectPrice}}</h3>
+												<!-- <span class="text-decoration-line-through mb-0 me-2">{{selectedSubjectDiscountPrice}}</span> -->
 												<span class="badge bg-primary text-white mb-0 ms-3">20% off</span>
-											</div> -->
+											</div>
 										</div>
 
 									</div>
@@ -243,85 +298,22 @@
 									</div>
 								</div>
 							</div>
-
-							<!-- Course info START -->
-							<div class="card card-body shadow p-4 mb-4">
-								<!-- Title -->
-								<h4 class="mb-3">This course includes</h4>
-								<ul class="list-group list-group-borderless">
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-book-open text-primary"></i>Lectures</span>
-										<span>30</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-clock text-primary"></i>Duration</span>
-										<span>4h 50m</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-signal text-primary"></i>Skills</span>
-										<span>Beginner</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-globe text-primary"></i>Language</span>
-										<span>English</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-user-clock text-primary"></i>Deadline</span>
-										<span>Nov 30 2021</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-light mb-0"><i class="fas fa-fw fa-medal text-primary"></i>Certificate</span>
-										<span>Yes</span>
-									</li>
-								</ul>
-							</div>
-							<!-- Course info END -->
-						</div>
-
-						<div class="col-md-6 col-lg-12">
-							<!-- Recently Viewed START -->
-							<div class="card card-body shadow p-4 mb-4">
-								<!-- Title -->
-								<h4 class="mb-3">Recently Viewed</h4>
-								<!-- Course item START -->
-								<div class="row gx-3 mb-3">
-									<!-- Image -->
-									<div class="col-4">
-										<img class="rounded" src="assets/images/courses/4by3/21.jpg" alt="">
-									</div>
-									<!-- Info -->
-									<div class="col-8">
-										<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
-										<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-											<li class="list-group-item px-0 d-flex justify-content-between">
-												<span class="text-success">$130</span>
-												<span class="h6 fw-light">4.5<i class="fas fa-star text-warning ms-1"></i></span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- Course item END -->
-
-								<!-- Course item START -->
-								<div class="row gx-3">
-									<!-- Image -->
-									<div class="col-4">
-										<img class="rounded" src="assets/images/courses/4by3/18.jpg" alt="">
-									</div>
-									<!-- Info -->
-									<div class="col-8">
-										<h6 class="mb-0"><a href="#">The Complete Video Production Bootcamp</a></h6>
-										<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-											<li class="list-group-item px-0 d-flex justify-content-between">
-												<span class="text-success">$150</span>
-												<span class="h6 fw-light">4.0<i class="fas fa-star text-warning ms-1"></i></span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- Course item END -->
-							</div>
-							<!-- Recently Viewed END -->
+							 <!-- Sucess Message Modal -->
+                             <div class="backdrop" [ngStyle]="{'display':display}"></div>
+                             <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                     <div class="modal-content card shadow-lg p-3 mb-5 bg-body rounded">
+                                         <!-- <div class="modal-header">
+                                         <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                                         <h4 class="modal-title">Model Title</h4>
+                                         </div> -->
+                                         <div class="modal-body text-center text-success">
+                                             <!-- <h4 *ngIf="isSubmit">{{sumbmitMessage}}</h4> -->
+                                             <p>Your message has been successfully sent. We will contact you very soon!</p>
+                                         </div>
+                                     </div><!-- /.modal-content -->
+                                 </div><!-- /.modal-dialog -->
+                             </div><!-- /.modal !-->
 						</div>
 					</div><!-- Row End -->
 				</div>

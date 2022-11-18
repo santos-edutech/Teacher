@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import {  ActivatedRoute, Router, RouterEvent } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 
+declare var $:any;
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.css']
+  styleUrls: ['./course-details.component.css'],
+  providers: [PaymentService]
 })
 export class CourseDetailsComponent implements OnInit {
   selectedCourseId: any;
@@ -38,6 +42,8 @@ export class CourseDetailsComponent implements OnInit {
     private db: AngularFirestore,
     private dataService:DataService,
     private router: ActivatedRoute,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -66,7 +72,9 @@ export class CourseDetailsComponent implements OnInit {
         // console.log(menuItems);
       if(menuItems.menuId == MenuId){
         this.menuItemList = menuItems.subMenu;
+       
         for(let subMenuItem of this.menuItemList){
+          // console.log(subMenuItem);
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
             this.selectedSubMenuCourseDetails = subMenuItem.details;
@@ -93,7 +101,38 @@ export class CourseDetailsComponent implements OnInit {
     if (this.enrollNowForm.invalid) {
       return;
     }
-    
+    $('#exampleModal').modal('hide');
+      this.enrollNowFormData.add(this.enrollNowForm.value).then(res =>{
+        this.openModal();
+      });
+      setTimeout(()=>{
+        this.onCloseHandled();
+        this.submitted = false ;
+        this.enrollNowForm.reset();
+      },6000);
+  }
+
+  display : any;
+
+   // Model Open Funcation
+   openModal(){
+    this.display='block';
+  }
+
+  // Model close Funcation
+  onCloseHandled(){
+    this.display='none'
+  }
+
+  items:any;
+  //----- add item to cart
+   addToCart(item:any) {
+    if (!this.cartservice.itemInCart(item)) {
+      item.qtyTotal = 1;
+      this.cartservice.addToCart(item); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }
   }
 
 }

@@ -4,6 +4,7 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/comp
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 
+declare var $:any;
 @Component({
   selector: 'app-school-services-details',
   templateUrl: './school-services-details.component.html',
@@ -14,12 +15,18 @@ export class SchoolServicesDetailsComponent implements OnInit {
   selectedSchoolService: any;
   selectedSchoolServiceTitle: any;
   selectedSchoolServiceSubTitle: any;
+  selectedSubMenuCourseDetails: any;
   selectedSchoolServiceFuture: any;
   selectedSchoolServiceOverview: any;
   selectedSchoolServiceFaqs: any;
+  selectedSchoolServiceTestimonials: any;
+  selectedSchoolServiceSyllabus: any;
   enrollNowForm: any = FormGroup;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  allSchoolServices :any ;
+  selectedSubjectPrice: any;
+  selectedSubjectDiscountPrice: any;
 
   constructor( 
     public fb: FormBuilder,
@@ -37,7 +44,8 @@ export class SchoolServicesDetailsComponent implements OnInit {
       date : new Date(),
     });
     this.enrollNowFormData = this.db.collection('enrollNowForm');
-    this.schoolServices = this.dataService.getallSchoolServices();
+    this.allSchoolServices = this.dataService.getallSchoolServices();
+    // console.log(this.schoolServices);
     this.router.params.subscribe(params => {
       this.selectedSchoolService = params['serviceID'];
       // console.log(this.selectedCourse);
@@ -46,15 +54,25 @@ export class SchoolServicesDetailsComponent implements OnInit {
   }
 
   getSelectedSchoolService(ID:any){
-    for(let service of this.schoolServices){
+    this.schoolServices = [];
+    for(let serviceList of this.allSchoolServices){
+      // console.log(serviceList.program);
+      for(let service of serviceList.program){
       if(service.serviceID == ID){
-        this.selectedSchoolServiceTitle = service.title;
+        this.selectedSchoolServiceTitle = service.program_title;
         this.selectedSchoolServiceSubTitle = service.subTitle;
+        this.selectedSubMenuCourseDetails = service.details;
         this.selectedSchoolServiceFuture = service.PricingAndFeatures;
         this.selectedSchoolServiceOverview = service.overview;
         this.selectedSchoolServiceFaqs = service.faq;
+        this.selectedSchoolServiceTestimonials = service.testimonials;
+        this.selectedSchoolServiceSyllabus = service.syllabus;
+        this.selectedSubjectPrice = service.price;
+        this.selectedSubjectDiscountPrice = service.discount;
       }
     }
+    }
+    
   }
 
   get f() {
@@ -66,7 +84,25 @@ export class SchoolServicesDetailsComponent implements OnInit {
     if (this.enrollNowForm.invalid) {
       return;
     }
-    
+    $('#exampleModal').modal('hide');
+    this.enrollNowFormData.add(this.enrollNowForm.value).then(res =>{
+      this.openModal();
+    });
+    setTimeout(()=>{
+      this.onCloseHandled();
+      this.submitted = false ;
+      this.enrollNowForm.reset();
+    },6000);
   }
+  display : any;
 
+  // Model Open Funcation
+  openModal(){
+   this.display='block';
+ }
+
+ // Model close Funcation
+ onCloseHandled(){
+   this.display='none'
+ }
 }

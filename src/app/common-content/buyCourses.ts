@@ -8,6 +8,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "0",
+                        uniqId:'100',
                         menuName: "SAT General",
                         image :"assets/images/courses/4by3/SAT.jpg",
                         variationCost: "60000",

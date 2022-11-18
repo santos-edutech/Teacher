@@ -6,6 +6,7 @@ export const apCourses : Array<Object>=[
         'link':'',
         'price':'₹ 60000',
         'discount':'₹ 75000',
+        'qtyTotal':0,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',

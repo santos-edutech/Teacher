@@ -51,7 +51,7 @@
                     <div class="row g-4">
                         <!-- Card item START -->
                         <div *ngFor="let courses of apCourses | filter:searchText" class="col-sm-6 col-xl-4">
-                            <a [routerLink]="['/ap-course-details',courses?.apCourseID]" class="card shadow h-100 text-dark">
+                            <a [routerLink]="['/ap-course-details',courses?.apCourseID]" class="card shadow h-100 text-dark" target="_blank">
                                 <!-- Image -->
                                 <!-- <img [src]="courses['apImage']" class="card-img-top" alt="course image"> -->
                                 <!-- Card body -->

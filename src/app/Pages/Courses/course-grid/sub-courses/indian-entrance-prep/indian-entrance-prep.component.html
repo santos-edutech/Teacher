@@ -50,11 +50,11 @@
                     <div class="row g-4">
                         <!-- Card item START -->
                         <div *ngFor="let list of allIndianEntrance| filter:searchText" class="col-sm-6 col-xl-4">
-                            <a class="card shadow h-100 text-dark" style="cursor: pointer;">
+                            <a class="card shadow h-100 text-dark" style="cursor: pointer;" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]" target="_blank">
                                 <!-- Image -->
                                 <!-- <img [src]="list['apImage']" class="card-img-top" alt="course image"> -->
                                 <!-- Card body -->
-                                <div class="card-body pb-0" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
+                                <div class="card-body pb-0" >
                                     <!-- Title -->
                                     <h5 class="card-title overflow-hidden" style="text-overflow: ellipsis;white-space: nowrap;">
                                         <a [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">{{list?.title}}</a>
@@ -99,7 +99,7 @@
                                                 <span class="fw-light mb-0" style="color: #2AB2A6;">
                                                     (20% off)
                                                 </span>
-                                                <a class="" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
+                                                <a class="" >
                                                     <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
                                                 </a>
                                             </div>
@@ -111,7 +111,7 @@
                                                 <span class="fw-light mb-0" style="color: #2AB2A6;">
                                                     20% off
                                                 </span>
-                                                <a class="" [routerLink]="['/indian-entrance-prep-details',list?.entranceID]">
+                                                <a class="" >
                                                     <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2" style="background-color:#444cae"></i>
                                                 </a>
                                             </div>
@@ -151,7 +151,7 @@
                                     <!-- Language START -->
                                     <div class="card card-body shadow p-4 mb-4">
                                         <!-- Title -->
-                                        <h4 class="mb-3">Language</h4>
+                                        <h4 class="mb-3">Curriculum</h4>
                                         <ul class="list-inline mb-0 g-3">
                                             <!-- Item -->
                                             <li class="list-inline-item mb-2">

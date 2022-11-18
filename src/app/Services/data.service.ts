@@ -12,6 +12,7 @@ import { schoolServices } from '../common-content/school-services';
 import { subjectDetails } from '../common-content/subject-details';
 import { testimonials } from '../common-content/testimonials';
 import { allCategories} from '../common-content/allCategory';
+import { allRegTest } from '../common-content/register-for-test';
 
 @Injectable({
   providedIn: 'root'
@@ -82,6 +83,11 @@ export class DataService {
   //Get All Categories
   getallCatecories(){
     return allCategories;
+  }
+
+  //Get All Register for Test
+  getallRegTest(){
+    return allRegTest;
   }
 
 }
