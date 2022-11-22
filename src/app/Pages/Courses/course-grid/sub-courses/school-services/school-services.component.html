@@ -44,11 +44,23 @@
                             </div>
                         </div>
                         <!-- filter -->
-                        
+                          <!-- filter grade -->
+                          <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
+                            <form class="border rounded p-2">
+                                <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectgrade(val1.value)' #val1>
+                                    <option  value="null" >Select Grade </option>
+                                    <option value="9th">9th</option>
+                                    <option value="10th">10th</option>
+                                    <option value="11th">11th</option>
+                                    <option value="12th">12th</option>
+                                </select>
+                            </form>
+                        </div>
+                        <!-- filter Cicurriculum -->
                         <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
                             <form class="border rounded p-2">
                                 <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelect(val.value)' #val>
-                                    <option  value="null">Select Service </option>
+                                    <option  value="null">Select Curriculum</option>
                                     <option *ngFor="let segmentItem of schoolServiceList" [value]="segmentItem?.category">
                                         <ng-container>
                                             {{segmentItem?.category}}
@@ -57,19 +69,6 @@
                                 </select>
                             </form>
                         </div>
-
-                        <div class="col-sm-6 col-xl-3 mt-3 mt-lg-0">
-                            <form class="border rounded p-2">
-                                <select class="form-select form-select-sm js-choice input-borderless" (change)='onSelectgrade(val1.value)' #val1>
-                                    <option  value="null">Select Grade </option>
-                                    <option value="9th">9th</option>
-                                    <option value="10th">10th</option>
-                                    <option value="11th">11th</option>
-                                    <option value="12th">12th</option>
-                                </select>
-                            </form>
-                        </div>
-
                     </div>
                     <!-- Search option END -->
         
@@ -158,6 +157,13 @@
                                         <h4 class="mb-3">Popular Category</h4>
                                         <!-- Category group -->
                                         <div class="col-12">
+                                            <ng-container *ngFor="let item of menuItemList; let i=index">
+                                                <div *ngIf="item?.title !== selectedSubMenuCourseTitle"></div>
+                                                <div class="d-flex justify-content-between align-items-center " *ngIf="i<7">
+                                                    <a>{{item?.title}}</a>
+                                                    <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                </div>
+                                            </ng-container>
                                         </div>
                                     </div>
                                     <!-- Category END -->

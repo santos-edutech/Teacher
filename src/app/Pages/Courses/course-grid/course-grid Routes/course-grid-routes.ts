@@ -3,6 +3,7 @@ import { CourseDetailsComponent } from "../course-details/course-details.compone
 import { CourseGridComponent } from "../course-grid/course-grid.component";
 import { ApCourseDetailsComponent } from "../sub-courses/ap-course-details/ap-course-details.component";
 import { ApCoursesComponent } from "../sub-courses/ap-courses/ap-courses.component";
+import { CareerNavigationDetailsComponent } from "../sub-courses/career-navigation-details/career-navigation-details.component";
 import { IndianEntrancePrepDetailsComponent } from "../sub-courses/indian-entrance-prep-details/indian-entrance-prep-details.component";
 import { IndianEntrancePrepComponent } from "../sub-courses/indian-entrance-prep/indian-entrance-prep.component";
 import { IvyLeagueCourseComponent } from "../sub-courses/ivy-league-course/ivy-league-course.component";
@@ -58,6 +59,10 @@ export const courseGridRoutes: Routes = [
         {
           path:'after-school-services-details/:serviceID',
           component:SchoolServicesDetailsComponent,
+        },
+        {
+          path:'career-navigation-details/:menuId/:name/:id/:name',
+          component:CareerNavigationDetailsComponent,
         },
       ],
     },

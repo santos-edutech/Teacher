@@ -144,6 +144,13 @@
                                         <h4 class="mb-3">Popular Category</h4>
                                         <!-- Category group -->
                                         <div class="col-12">
+                                            <ng-container *ngFor="let item of menuItemList; let i=index">
+                                                <div *ngIf="item?.title !== selectedSubMenuCourseTitle"></div>
+                                                <div class="d-flex justify-content-between align-items-center " *ngIf="i<7">
+                                                    <a>{{item?.title}}</a>
+                                                    <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                </div>
+                                            </ng-container>
                                         </div>
                                     </div>
                                     <!-- Category END -->

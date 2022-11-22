@@ -20,6 +20,7 @@ import { SchoolServicesDetailsComponent } from './sub-courses/school-services-de
 import { AngularFireModule } from '@angular/fire/compat';
 import {  AngularFirestoreModule, } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment.prod';
+import { CareerNavigationDetailsComponent } from './sub-courses/career-navigation-details/career-navigation-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { environment } from 'src/environments/environment.prod';
     IndianEntrancePrepComponent,
     SchoolServicesComponent,
     IndianEntrancePrepDetailsComponent,
-    SchoolServicesDetailsComponent
+    SchoolServicesDetailsComponent,
+    CareerNavigationDetailsComponent
   ],
   imports: [
     CommonModule,

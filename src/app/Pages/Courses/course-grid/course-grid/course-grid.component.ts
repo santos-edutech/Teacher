@@ -20,6 +20,7 @@ export class CourseGridComponent implements OnInit {
   menuItem: any;
   curriculum: any;
   CourseCardheader: any;
+  courseCardTitle: any;
   constructor(
     private router: ActivatedRoute,
     private dataService:DataService,
@@ -50,6 +51,7 @@ export class CourseGridComponent implements OnInit {
           this.courseSubMenuItem = element.subMenu;
           this.curriculum = element.curriculum;
           this.CourseCardheader = element.header;
+          this.courseCardTitle = element.title
 
           // console.log(this.courseSubMenuItem);
         }

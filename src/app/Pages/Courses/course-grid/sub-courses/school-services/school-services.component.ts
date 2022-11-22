@@ -71,10 +71,13 @@ export class SchoolServicesComponent implements OnInit {
 
  // course select function
  onSelect(val:any) {
+  this.schoolCoursesList = [];
   if (val) {
-    this.schoolServiceList.map((res:any) => {
-      if(res.category === val ){
-        this.schoolCoursesList = res.program;
+    this.programs.map((res:any) => { 
+      console.log(res.subTitle);
+      if(res.subTitle === val){
+        this.schoolCoursesList.push(res);
+        // console.log(res);
       }
     });
   }
@@ -91,7 +94,7 @@ onSelectgrade(val1:any){
         // console.log(data);
         if(data.grade === val1){
           this.schoolCoursesList.push(data);
-          console.log(this.schoolCoursesList);
+          // console.log(this.schoolCoursesList);
         }
       });
     });

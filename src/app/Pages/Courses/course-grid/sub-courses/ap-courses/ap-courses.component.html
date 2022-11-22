@@ -118,12 +118,30 @@
                             </div>
                             <div class="offcanvas-body p-3 p-lg-0">
                                 <form>
-                                    <!-- Category START -->
+                                     <!-- Category START -->
                                     <div class="card card-body shadow p-4 mb-4">
                                         <!-- Title -->
                                         <h4 class="mb-3">Popular Category</h4>
                                         <!-- Category group -->
                                         <div class="col-12">
+                                            <!-- Checkbox -->
+                                           <!-- <ng-container *ngFor="let item of menuItem; let i=index">
+                                            <div class="" *ngFor="let content of menuItem">
+                                                <div *ngIf="item?.menuId !== selectedCourseId" class="d-flex justify-content-between align-items-center">
+                                                    <div *ngIf="i<6" class="my-1">
+                                                        <a  class="" style="cursor: pointer;">{{item?.name}}</a> 
+                                                    </div>
+                                                    <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span>
+                                                </div>
+                                            </div>
+                                           </ng-container> -->
+                                        <ng-container *ngFor="let item of menuItemList; let i=index">
+                                            <div *ngIf="item?.title !== selectedSubMenuCourseTitle"></div>
+                                            <div class="d-flex justify-content-between align-items-center " >
+                                                <a>{{item?.title}}</a>
+                                                <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                            </div>
+                                        </ng-container>
                                         </div>
                                     </div>
                                     <!-- Category END -->

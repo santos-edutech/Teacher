@@ -505,9 +505,181 @@ export const megaMenuItems : Array<Object>=[
                     {
                         'id':'6',
                         'title':'Career Navigation',
-                        'link': '/course-details/',
+                        'link': '/career-navigation-details/',
                         'image':'assets/images/courses/4by3/Career Counselling.jpg',
-                        'details':''
+                        'details':'For Grade 6 to 12th students from all International (IB, Cambridge IGCSE) and Indian (CBSE, State, ICSE) based curriculums',
+                        'faq':[
+                            {
+                                'questions':'What is Career Navigation?',
+                                'answers' : 'Career Navigation is the process of holistic guidance and roadmap given to students to make a transition from school to a university degree based on the student’s passion and interest'
+                            },
+                            {
+                                'questions':'How is Career Navigation done?',
+                                'answers' : 'EDUTECHEX follow a four-step process for career navigation which includes psychometric assessment followed by professional counselling, with curated curriculum and future roadmap with key milestones'
+                            },
+                            {
+                                'questions':'What are the different streams student can choose after 10th?',
+                                'answers' : ''
+                            },
+                            {
+                                'questions':'What are career options for students to study in India after 12th?',
+                                'answers' : ' '
+                            },
+                            {
+                                'questions':'What are the career options for students to study abroad after 12th?',
+                                'answers' : ''
+                            },
+                            
+                        ],
+                        'overView':'We provide a systematic effort to cover every aspect that goes into education and career planning. From choosing the right combination of subjects, to identifying the right sources of information, learning and future planning. We provide 1-1 counselling sessions and encourage student and their guardians to get involved in the debriefing and selection process to make well-informed decisions together.'+'\n\n'+'Students in the age group of 11-15 years (Grade 6-10) undergo a transformative experience within their schools and communities. It is therefore crucial to understand or get deepened insights into the student’s personality to suggest the right blend of general, technical, and creative courses their career navigation. Students in this age group confidence level increases with better understanding of the concepts in school and they start taking ownership of learning by collaboration with teachers when a scientific roadmap is given to them.',
+                        'overViewContent':[
+                            {
+                                'headTitle':'',
+                                'headSubTitle':'For Students aged 11-15yrs',
+                                'card':[
+                                    {
+                                        'cardItem':'Undergo a Transformative Experiance within their Schools and Communities',
+                                    },
+                                    {
+                                        'cardItem':'Deepen their understanding of concepts and increase their confidence ',
+                                    },
+                                    {
+                                        'cardItem':'Start taking ownership of their learning by collaborating with teachers',
+                                    }
+                                ],
+                               
+                            },
+                        ],
+                            'overViewContentCard': [
+                                {
+                                    'headTitle':'For Grade 11 and 12 students there is a focused emphasis on introducing and preparing students for higher education entrances through holistic career mapping based on their passionate fields. At this critical juncture, students are expected to develop excellent breadth and depth of knowledge and are expected to do well in competitive exams associated with their career interests. The selection of right career domain is important to prepare the student for university level study in specialized disciplines ',
+                                    'headSubTitle':'For Students aged 16-18yrs',
+                                    'card':[
+                                        {
+                                            'cardItem':'Develop excellent breadth and depth of knoweldge',
+                                        },
+                                        {
+                                            'cardItem':'Do well in the competitive exams associated with their careers interests',
+                                        },
+                                        {
+                                            'cardItem':'Prepare for University-level study in specialised disciplines',
+                                        }
+                                    ],
+                                    
+                                },
+                                
+                            ],
+                            'overViewContentDescription':[
+                                {
+                                    'title':'Counselling is Offered only buy our certified specialised Senior Counsellors and through inhouse tech assistance. What we offer',
+                                    'description':[
+                                        {
+                                            'desc':'Psychometrics Assessments'
+                                        },
+                                        {
+                                            'desc':'Courses Curation'
+                                        },
+                                        {
+                                            'desc':'Career Mapping'
+                                        },
+                                        {
+                                            'desc':'Personalised Mentoring by Industry Experts'
+                                        },
+                                        {
+                                            'desc':'Future Career Forecasting & Guidence'
+                                        },
+                                        {
+                                            'desc':'Real-time Monitoring untill the goal is achieved'
+                                        },
+                                    ],
+                                  
+                                }
+                            ],
+                        'syllabus':[
+                            {
+                                'modelDescription':'',
+                                'content':[
+                                    {
+                                        'section':'Psychometric Assessment',
+                                        'sectionContent':'A thorough assessment on various factors that determine students’ strengths, weaknesses and skills.',
+                                    },
+                                    {
+                                        'section':'Professional Counselling',
+                                        'sectionContent':'A one-on-one counselling session with our professional advisors to guide students on identifying their passions.',
+                                    },
+                                    {
+                                        'section':'Curated Curriculum',
+                                        'sectionContent':'Curate a robust curriculum from our general and creative programs that will help upskill students in their selected domain.',
+                                    },
+                                    {
+                                        'section':'Future Roadmap ',
+                                        'sectionContent':"Equip students with the right knowledge and tools needed to convert their passion into a sustainable and successful career.",
+                                    },
+                                ]
+                            },
+                        ],
+                        'PricingAndFeatures':[
+                            {
+                                'features':'Program Duration min. 1 year to max. 3 years ',
+                            },
+                            {
+                                'features':'For Grade 6 to Grade 12 Students ',
+                            },
+                            {
+                                'features':'IB, IGCSE, CBSE, ICSE, State Curriculum Students',
+                            },
+                            {
+                                'features':'Counselling from Certified Expert Counsellors ',
+                            },
+                            {
+                                'features':'Roadmap provided with realistic Milestones ',
+                            },
+                            {
+                                'features':'Customized Navigation for Every Student ',
+                            },
+                            {
+                                'features':'Access to in house Psychometric Assessments  ',
+                            },
+                            {
+                                'features':'Mapping Passion and Potential to Course, University and Country',
+                            },
+                            {
+                                'features':'Advisory on School, Curriculum and Stream Selection  ',
+                            },
+                            {
+                                'features':'Roadmap for Career and Course Selection ',
+                            },
+                            {
+                                'features':'Webinars, Seminars, Workshops from Industry Experts ',
+                            },
+                        ],
+                        // 'review':[
+                        //     {
+                        //         "images":"assets/images/instructor/01.jpg",
+                        //         "name":"Sarayu Nadiva",
+                        //         "class":"12th",
+                        //         "score":"SAT Score : (1550/1600)",
+                        //         "universities":"Yale and Cornell",
+                        //         "comments":"I have a dream to study quantum physics at one of the ivy leagues in the US. EduTechEx SAT training program along with their expert counselling played a very important role in making my dream come true."
+                        //     },
+                        //     {
+                        //         "images":"assets/images/instructor/01.jpg",
+                        //         "name":"Simha Davalekar",
+                        //         "class":"12th",
+                        //         "score":"SAT Score : (1600/1600)",
+                        //         "universities":"MIT and Iowa",
+                        //         "comments":"My dream to become an aeronautical engineer date back to my child hood. I was extremely fortunate to be associated with EduTechEx and by taking their SAT program, I formed a solid foundation for my successful ivy league application process."
+                        //     },
+                        //     {
+                        //         "images":"assets/images/instructor/01.jpg",
+                        //         "name":"Sureya Khan",
+                        //         "class":"12th",
+                        //         "score":"SAT Score : (1580/1600)",
+                        //         "universities":"Columbian & Penn State",
+                        //         "comments":"I took SAT training from different players in the market, but my score never crossed 1400. A friend of mine introduced me to EduTechEx, their innovative SAT training program not only helped me score 1580 in SAT but also through their expert counselling I was able to apply to the right universities considering my interest in media studies and journalism."
+                        //     },
+                        // ],
+                        
                     },
                     // {
                     //     'id':'7',
