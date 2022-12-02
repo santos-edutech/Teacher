@@ -1,12 +1,13 @@
 export const apCourses : Array<Object>=[
     {
         'apCourseID':'1',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'101',
+        'apImage':'assets/images/courses/4by3/Ap.jpg',
         'apCourseName':'AP Biology',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
-        'qtyTotal':0,
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -240,11 +241,13 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'2',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'102',
+        'apImage':'assets/images/courses/4by3/Ap.jpg',
         'apCourseName':'AP Calculus AB',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 3 months',
@@ -477,11 +480,13 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'3',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'103',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Calculus BC',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -715,12 +720,14 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'4',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'104',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Physics 1',
         'apCourseType':'Algebra-Based',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -929,12 +936,14 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'5',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'105',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Physics 2',
         'apCourseType':'Algebra-Based',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1181,12 +1190,14 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'6',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'106',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Physics C',
         'apCourseType':'Electricity and Magnetism',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1384,12 +1395,14 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'7',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'107',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Physics C',
         'apCourseType':'Mechanics',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1601,11 +1614,13 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'8',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'108',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Chemistry',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -1870,11 +1885,13 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'9',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'109',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Macroeconomics',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',
@@ -2084,11 +2101,13 @@ export const apCourses : Array<Object>=[
     },
     {
         'apCourseID':'10',
-        'apImage':'assets/images/courses/4by3/26.jpg',
+        'uniqueID':'110',
+        'apImage':'assets/images/courses/4by3/Ap.jpg/',
         'apCourseName':'AP Microeconomics',
         'link':'',
-        'price':'₹ 60000',
+        'price':' 60000',
         'discount':'₹ 75000',
+        'qtyTotal': 0 ,
         'PricingAndFeatures':[
             {
                 'features':'Program Duration 5 months',

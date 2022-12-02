@@ -1,14 +1,16 @@
 export const medicineCountries : Array<Object> =[
     {
         "countrieID":"1",
+        "uniqueID":"401",
         "flag":"https://img.icons8.com/color/200/000000/india.png",
         "countries":"India",
         'link':'/top-medical-countries',
         'title':'NEET – Medical Program in India',
-        'price':'₹ 80,000',
+        'price':' 80000',
         'discount':'₹ 1,00,000',
         'price2':'₹ 1,60,000',
         'discount2':'₹ 2,00,000',
+        'qtyTotal': 0,
         'faq':[
           {
               'questions':'Who is eligible to appear in NEET UG?',
@@ -185,14 +187,16 @@ export const medicineCountries : Array<Object> =[
       },
       {
         "countrieID":"2",
+        "uniqueID":"402",
         "flag":"assets/images/flags/uk.svg",
         "countries":"UK",
         'link':'/top-medical-countries',
         'title':'Medical Program – United Kingdom',
-        'price':'₹ 1,00,000',
+        'price':'₹ 100000',
         'discount':'₹ 1,20,000',
         'price2':'₹ 1,60,000',
         'discount2':'₹ 2,00,000',
+        'qtyTotal': 0,
         'PricingAndFeatures':[
           {
               'features':'Program Duration 1 year, 2 years ',
@@ -375,14 +379,16 @@ export const medicineCountries : Array<Object> =[
       },
       {
         "countrieID":"3",
+        "uniqueID":"403",
         "flag":"assets/images/flags/us.svg",
         "countries":"USA",
         'link':'/top-medical-countries',
         'title':'Medical Program – United States of America',
-        'price':'₹ 1,00,000',
+        'price':'₹ 100000',
         'discount':'₹ 1,20,000',
         'price2':'₹ 1,60,000',
         'discount2':'₹ 2,00,000',
+        'qtyTotal': 0,
         'PricingAndFeatures':[
           {
               'features':'Program Duration 1 year, 2 years ',

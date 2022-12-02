@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 
 declare var $:any;
 @Component({
   selector: 'app-ivy-league-course',
   templateUrl: './ivy-league-course.component.html',
-  styleUrls: ['./ivy-league-course.component.css']
+  styleUrls: ['./ivy-league-course.component.css'],
+  providers: [PaymentService]
 })
 export class IvyLeagueCourseComponent implements OnInit {
   selectedCourseId: any;
@@ -34,6 +37,8 @@ export class IvyLeagueCourseComponent implements OnInit {
   enrollNowForm: any = FormGroup;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  selectedCourseUId: any;
+  selectedSubjectImage: any;
 
 
   constructor(
@@ -41,6 +46,8 @@ export class IvyLeagueCourseComponent implements OnInit {
     private db: AngularFirestore,
     private dataService:DataService,
     private router: ActivatedRoute,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -61,6 +68,7 @@ export class IvyLeagueCourseComponent implements OnInit {
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
     });
     this.courseDetails = this.dataService.geSubjectDetails();
+    this.buyCourse();
   }
 
   getSelectedSubmenuCourse(MenuId:any,ID:any){
@@ -81,6 +89,9 @@ export class IvyLeagueCourseComponent implements OnInit {
             this.selectedSubjectDiscountPrice = subMenuItem.discount;
             this.selectedCourseReviews = subMenuItem.review;
             this.selecetdCourseOverviewContent = subMenuItem.overViewContent;
+            this.selectedCourseUId = subMenuItem.uniqueID;
+            this.selectedSubjectImage = subMenuItem.image;
+            // console.log(this.selectedCourseUId);
           }
         }
       }
@@ -118,4 +129,32 @@ export class IvyLeagueCourseComponent implements OnInit {
  onCloseHandled(){
    this.display='none'
  }
+
+ courseItems : any = FormGroup;
+
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selectedCourseUId,
+      menuName : this.selectedSubMenuCourseTitle,
+      variationCost : this.selectedSubjectPrice,
+      qtyTotal: 0,
+      image : this.selectedSubjectImage, 
+    });
+    // console.log(this.selectedCourseUId);
+  }
+
+  items:any;
+  xyz :any ;
+  //----- add item to cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
+      this.routs.navigate(['/cart']);
+    }
+  }
 }

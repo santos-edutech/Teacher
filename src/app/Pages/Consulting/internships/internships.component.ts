@@ -8,23 +8,44 @@ import { DataService } from 'src/app/Services/data.service';
 })
 export class InternshipsComponent implements OnInit {
 
-  allJobItems: any ;
-  allJobList:any ;
-  jobList : any ;
+  allInternshipItems: any ;
+  InternshipList : any ;
+  allInternshipList: any;
+  internshipListMenuId: any;
+  InternshipListName: any;
+  InternshipListItem: any;
+  internshipAllList: any;
 
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
-    this.allJobItems=this.dataService.getAllJobs();
-    this.getJobs();
+    this.allInternshipItems=this.dataService.getAllInternships();
+    // console.log(this.allInternshipItems);
+    this.getInternship();
+    this.getSelectedInternship(1);
   }
 
-  getJobs(){
-    this.jobList=[];
-    for(let jobLists of this.allJobItems){
-      this.allJobList = jobLists.jobs;
-      for(let list of this.allJobList){
-        this.jobList.push(list);
+  getInternship(){
+    this.InternshipList=[];
+    for(let jobLists of this.allInternshipItems){
+      // console.log(jobLists);
+      this.allInternshipList = jobLists.item;
+      for(let item of this.allInternshipList){
+        this.InternshipList.push(item);
+        // console.log(this.InternshipList);
+      }
+    }
+  }
+
+  getSelectedInternship(ID:any){
+    for(let data of this.allInternshipItems){
+      // console.log(data);
+      if(data.MenuId == ID){
+        console.log(data.MenuId);
+        this.internshipAllList = data.item;
+        this.InternshipListName = data.title;
+        
+        // console.log( this.internshipAllList);
       }
     }
   }

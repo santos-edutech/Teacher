@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 
 declare var $:any;
 @Component({
   selector: 'app-ap-course-details',
   templateUrl: './ap-course-details.component.html',
-  styleUrls: ['./ap-course-details.component.css']
+  styleUrls: ['./ap-course-details.component.css'],
+  providers: [PaymentService]
 })
 
 
@@ -29,6 +32,8 @@ export class ApCourseDetailsComponent implements OnInit {
   enrollNowForm: any = FormGroup;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  selectedCourseImage: any;
+  selectedCourseUId: any;
 
   
 
@@ -37,6 +42,8 @@ export class ApCourseDetailsComponent implements OnInit {
     private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -53,15 +60,17 @@ export class ApCourseDetailsComponent implements OnInit {
       this.selectedCourse = params['apCourseID'];
       // console.log(this.selectedCourse);
       this.getSelectedCourseDetails(this.selectedCourse);
+      this.buyCourse();
     });
   }
 
   getSelectedCourseDetails(ID:any){
     for(let courses of this.apCourses){
-      // console.log(courses);
+      // this.selectedCourseUId = courses;
       if(courses.apCourseID === ID){
         this.selectedCourseName = courses.apCourseName;
         this.selectedCourseType = courses.apCourseType;
+        this.selectedCourseImage = courses.apImage
         this.selectedCoursePrice = courses.price;
         this.selectedCourseDiscount = courses.discount;
         this.selectedCourseOverview = courses.overView;
@@ -71,6 +80,8 @@ export class ApCourseDetailsComponent implements OnInit {
         this.selectedCourseFaqs = courses.faq;
         this.selectedCourseReviews = courses.review;
         this.selectedCourseExamDate = courses.examDate;
+        this.selectedCourseUId = courses.uniqueID;
+       
       }
     }
   }
@@ -107,4 +118,33 @@ export class ApCourseDetailsComponent implements OnInit {
  onCloseHandled(){
    this.display='none'
  }
+
+ courseItems : any = FormGroup;
+
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selectedCourseUId,
+      menuName : this.selectedCourseName,
+      variationCost : this.selectedCoursePrice,
+      qtyTotal: 0,
+      image : this.selectedCourseImage, 
+    });
+    // console.log(this.selectedCourseUId);
+  }
+
+  items:any;
+  xyz :any ;
+  //----- add item to cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
+      this.routs.navigate(['/cart']);
+    }
+  }
+
 }

@@ -53,6 +53,7 @@
                                     <option value="10th">10th</option>
                                     <option value="11th">11th</option>
                                     <option value="12th">12th</option>
+                                    <!-- <option value="All">All</option> -->
                                 </select>
                             </form>
                         </div>
@@ -66,6 +67,7 @@
                                             {{segmentItem?.category}}
                                         </ng-container>
                                     </option>
+                                    <!-- <option (click)="resetFilter()">Clear</option> -->
                                 </select>
                             </form>
                         </div>
@@ -158,10 +160,12 @@
                                         <!-- Category group -->
                                         <div class="col-12">
                                             <ng-container *ngFor="let item of menuItemList; let i=index">
-                                                <div *ngIf="item?.title !== selectedSubMenuCourseTitle"></div>
-                                                <div class="d-flex justify-content-between align-items-center " *ngIf="i<7">
-                                                    <a>{{item?.title}}</a>
-                                                    <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                <div *ngIf="item?.id !== selecetdSubCourseId">
+                                                    <div class="d-flex justify-content-between align-items-center " >
+                                                        <a (click)="getSelectedSubmenuCourse(item.menuId,item.id)" style="cursor: pointer;">{{item?.title}}</a>
+                                                        {{item.length}}
+                                                        <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                    </div>
                                                 </div>
                                             </ng-container>
                                         </div>

@@ -8,9 +8,12 @@ import { IndianEntrancePrepDetailsComponent } from "../sub-courses/indian-entran
 import { IndianEntrancePrepComponent } from "../sub-courses/indian-entrance-prep/indian-entrance-prep.component";
 import { IvyLeagueCourseComponent } from "../sub-courses/ivy-league-course/ivy-league-course.component";
 import { MedicalProgramComponent } from "../sub-courses/medical-program/medical-program.component";
+import { AbroadPhdProgramComponent } from "../sub-courses/post-graduate/abroad-phd-program/abroad-phd-program.component";
 import { SchoolServicesDetailsComponent } from "../sub-courses/school-services-details/school-services-details.component";
 import { SchoolServicesComponent } from "../sub-courses/school-services/school-services.component";
 import { TopMedicalCountriesComponent } from "../sub-courses/top-medical-countries/top-medical-countries.component";
+import { AbroadMastersPlacementComponent } from "../sub-courses/under-graduate/abroad-masters-placement/abroad-masters-placement.component";
+import { AbroadTransferProgramComponent } from "../sub-courses/under-graduate/abroad-transfer-program/abroad-transfer-program.component";
 
 export const courseGridRoutes: Routes = [
     {
@@ -63,6 +66,18 @@ export const courseGridRoutes: Routes = [
         {
           path:'career-navigation-details/:menuId/:name/:id/:name',
           component:CareerNavigationDetailsComponent,
+        },
+        {
+          path:'abroad-transfer-program/:menuId/:name/:id/:name',
+          component:AbroadTransferProgramComponent,
+        },
+        {
+          path:'abroad-masters-placement/:menuId/:name/:id/:name',
+          component:AbroadMastersPlacementComponent,
+        },
+        {
+          path:'abroad-p.hd-program/:menuId/:name/:id/:name',
+          component:AbroadPhdProgramComponent,
         },
       ],
     },

@@ -1,10 +1,13 @@
 export const IndianEntrancePrepDetails : Array<Object>=[
     {
         'entranceID':'1',
+        'uniqueID':'201',
         'title':'JEE Mains & Advanced Program',
-        'price':'₹ 80,000',
+        'image' :'assets/images/courses/4by3/Indian Entrance Prep.jpg',
+        'price':' 80000',
         'discount':'₹ 1,00,000',
         'price2':'₹ 1,60,000',
+        'qtyTotal': 0 ,
         'discount2':'₹ 2,00,000',
         'PricingAndFeatures':[
             {
@@ -165,9 +168,12 @@ export const IndianEntrancePrepDetails : Array<Object>=[
     },  
     {
         'entranceID':'2',
+        'uniqueID':'202',
         'title':'BITSAT Program',
-        'price':'₹ 80,000',
+        'image' :'assets/images/courses/4by3/Indian Entrance Prep.jpg',
+        'price':' 80000',
         'discount':'₹ 1,00,000',
+        'qtyTotal': 0 ,
         'price2':'₹ 1,60,000',
         'discount2':'₹ 2,00,000',
         'overview':'BITSAT is a computer based online test for admissions to Integrated First Degree programmes of BITS Pilani at Pilani Campus, K. K. Birla Goa Campus and Hyderabad Campus.'+'\n\n'+"The Birla Institute of Technology and Science (BITS) Pilani, recognized as an “Institution of Eminence” by Ministry of Education, Government of India, is India’s leading Institute of Higher Education and a deemed to be university, with an illustrious legacy, modern campuses and eminent alumni in leadership positions across the world. The Institute's commitment to excellence, adherence to merit, transparency, innovation, and enterprise have characterized its steady march to eminence. Admissions to all the Integrated First Degree programmes of BITS Pilani for its Campuses at Pilani, Goa, and Hyderabad for the academic year 2022-23 will be made on the basis of a Computer based Online Test conducted by BITS Pilani. This test will be referred to as ‘BITS Admission Test – 2022’, in short as BITSAT.",
@@ -296,9 +302,12 @@ export const IndianEntrancePrepDetails : Array<Object>=[
     },  
     {
         'entranceID':'3',
+        'uniqueID':'203',
         'title':'CLAT Program',
-        'price':'₹ 80,000',
+        'image' :'assets/images/courses/4by3/Indian Entrance Prep.jpg',
+        'price':' 80000',
         'discount':'₹ 1,00,000',
+        'qtyTotal': 0 ,
         'price2':'₹ 1,60,000',
         'discount2':'₹ 2,00,000',
         'overview':'The Common Law Admission Test (CLAT) is a national level entrance exam for admissions to undergraduate (UG) and postgraduate (PG)law programmes offered by 22 National Law Universities in India.'+'\n'+'CLAT is organized by the Consortium of National Law Universities, comprising representative universities.'+'\n'+'Several affiliate universities and organisations also use the CLAT exam for admissions and recruitment respectively.'+'\n'+'All admissions to the 5-year integrated Ll.B. and Ll.M. programmes that commence in the Academic Year 2023-2024 shall be through the CLAT 2023.',

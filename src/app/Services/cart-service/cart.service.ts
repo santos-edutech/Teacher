@@ -45,7 +45,7 @@ export class CartService {
   }
 
   itemInCart(item:any): boolean {
-    return this.items.findIndex((o:any) => o.id === item.id) > -1;
+    return this.items.findIndex((o:any) => o.uniqueID === item.uniqueID) > -1;
   }
 
 }

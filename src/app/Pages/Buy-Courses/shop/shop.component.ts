@@ -70,9 +70,20 @@ export class ShopComponent implements OnInit {
       );
     }
   }
-
+  buyCoursesLists: any;
   //subject select function
   onSelectSub(val2:any){
+    this.buyCoursesLists = [];
+    // if(val2 === "All"){
+    //   this.allSegmentList.map((res:any) => {
+    //     this.programList = res.program;
+    //     this.programList.map((data:any) => {
+    //       this.buyCoursesList = data.course;
+    //       this.buyCoursesLists = data.course;
+    //       console.log( this.buyCoursesList);
+    //     })
+    //   });
+    // }
     if (val2) {
       this.programList.map((res:any) => {
         if(res.program_title === val2){
@@ -93,6 +104,9 @@ export class ShopComponent implements OnInit {
       item.qtyTotal = 1;
       this.cartservice.addToCart(item); //add items in cart
       this.items = [...this.cartservice.getItems()];
+      this.router.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
       this.router.navigate(['/cart']);
     }
   }

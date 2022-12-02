@@ -49,24 +49,27 @@ export class ApCoursesComponent implements OnInit {
     // console.log(this.apCourses);
   }
 
+
+  menuId:any;
   getSelectedSubmenuCourse(MenuId:any,ID:any){
+    this.selecetdSubCourseId = ID;
     for(let menuItems of this.menuItem){
         // console.log(menuItems);
       if(menuItems.menuId == MenuId){
         this.menuItemList = menuItems.subMenu;
-        console.log(this.menuItemList.title);
+        this.menuId =menuItems.menuId;
+        console.log(this.menuId);
         for(let subMenuItem of this.menuItemList){
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
-            console.log(this.selectedSubMenuCourseTitle);
-            // this.selectedSubMenuCourseDetails = subMenuItem.details;
-            // this.selectedSubjectOverview = subMenuItem.overView;
-            // this.selectedSubjectFaqs = subMenuItem.faq ;
-            // this.selectedSubjectPriceAndFeatures = subMenuItem.PricingAndFeatures;
-            // this.selectedSubjectSyllabus = subMenuItem.syllabus;
-            // this.selectedSubjectOverviewImage = subMenuItem.overViewImage;
-            // this.selectedSubjectPrice = subMenuItem.price;
-            // this.selectedSubjectDiscountPrice = subMenuItem.discount;
+            this.selectedSubMenuCourseDetails = subMenuItem.details;
+            this.selectedSubjectOverview = subMenuItem.overView;
+            this.selectedSubjectFaqs = subMenuItem.faq ;
+            this.selectedSubjectPriceAndFeatures = subMenuItem.PricingAndFeatures;
+            this.selectedSubjectSyllabus = subMenuItem.syllabus;
+            this.selectedSubjectOverviewImage = subMenuItem.overViewImage;
+            this.selectedSubjectPrice = subMenuItem.price;
+            this.selectedSubjectDiscountPrice = subMenuItem.discount;
           }
         }
       }

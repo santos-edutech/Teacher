@@ -21,6 +21,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import {  AngularFirestoreModule, } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment.prod';
 import { CareerNavigationDetailsComponent } from './sub-courses/career-navigation-details/career-navigation-details.component';
+import { AbroadTransferProgramComponent } from './sub-courses/under-graduate/abroad-transfer-program/abroad-transfer-program.component';
+import { AbroadMastersPlacementComponent } from './sub-courses/under-graduate/abroad-masters-placement/abroad-masters-placement.component';
+import { AbroadPhdProgramComponent } from './sub-courses/post-graduate/abroad-phd-program/abroad-phd-program.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { CareerNavigationDetailsComponent } from './sub-courses/career-navigatio
     SchoolServicesComponent,
     IndianEntrancePrepDetailsComponent,
     SchoolServicesDetailsComponent,
-    CareerNavigationDetailsComponent
+    CareerNavigationDetailsComponent,
+    AbroadTransferProgramComponent,
+    AbroadMastersPlacementComponent,
+    AbroadPhdProgramComponent
   ],
   imports: [
     CommonModule,

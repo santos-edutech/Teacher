@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 
 declare var $:any;
 @Component({
   selector: 'app-indian-entrance-prep-details',
   templateUrl: './indian-entrance-prep-details.component.html',
-  styleUrls: ['./indian-entrance-prep-details.component.css']
+  styleUrls: ['./indian-entrance-prep-details.component.css'],
+  providers: [PaymentService]
 })
 export class IndianEntrancePrepDetailsComponent implements OnInit {
   indianEntrance: any;
@@ -30,6 +33,8 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
   submitted = false ;
   submitted1 = false ;
   selectedEntranceTestimonials: any;
+  selectedEntranceImage: any;
+  selectedEntranceUId: any;
   
 
   constructor(
@@ -38,6 +43,8 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
     private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -64,6 +71,7 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
       this.selectedEntrance = params['entranceID'];
       // console.log(this.selectedCourse);
       this.getSelectedEntranceDetails(this.selectedEntrance);
+      this.buyCourse();
     });
   }
 
@@ -71,6 +79,7 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
     for(let entrance of this.indianEntrance){
       if(entrance.entranceID === ID){
         this.selectedEntranceTitle = entrance.title;
+        this.selectedEntranceImage = entrance.image;
         this.selectedEntranceFaqs = entrance.faq;
         this.selectedEntranceOverview = entrance.overview;
         this.selectedEntrancePricingAndFeatures = entrance.PricingAndFeatures;
@@ -81,6 +90,7 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
         this.selectedEntranceDiscountPrice2 = entrance.discount2;
         this.selectedEntranceSyllabus = entrance.ExamSyllabus;
         this.selectedEntranceTestimonials = entrance.testimonials;
+        this.selectedEntranceUId = entrance.uniqueID
       }
     }
   }
@@ -159,4 +169,30 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
  onCloseHandled(){
    this.display='none'
  }
+ courseItems : any = FormGroup;
+
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selectedEntranceUId,
+      menuName : this.selectedEntranceTitle,
+      variationCost : this.selectedEntrancePrice,
+      qtyTotal: 0,
+      image : this.selectedEntranceImage,
+    });
+    console.log(this.selectedEntranceUId);
+  }
+
+ items:any;
+  //----- add item to cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1 ;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
+      this.routs.navigate(['/cart']);
+    }
+  }
 }

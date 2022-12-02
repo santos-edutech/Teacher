@@ -35,7 +35,7 @@
                     </figure>
 
                     <!-- Title -->
-                    <h1>Blogs</h1>
+                    <h1>News/Blogs</h1>
                     <!-- Breadcrumb -->
                     <div class="d-flex justify-content-center position-relative">
                         <nav aria-label="breadcrumb">
@@ -56,246 +56,63 @@
     Page content START -->
     <section class="position-relative pt-0 pt-lg-5">
         <div class="container">
-            <div class="row g-4">
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/02.jpg" class="card-img" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-danger text-white">Student life</a>
+             <!-- Tabs START -->
+             <ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab"
+             role="tablist">
+             <!-- Tab item -->
+             <ng-container *ngFor="let items of newsblogList; let i=index">
+                 <li *ngIf="i<7" class="nav-item me-2 me-sm-5">
+                     <a class="nav-link mb-2 mb-md-0" [ngClass]="{ 'active': i == 0 }" id="course-pills-tab-1"
+                         data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                         aria-controls="course-pills-tabs-1" aria-selected="false"
+                         (click)="getSelectedInternship(items.id)">{{items?.title}}</a>
+                 </li>
+             </ng-container>
+         </ul>
+
+         
+         <!-- Tabs END -->
+
+          <!-- Tabs content START -->
+          <div class="tab-content" id="course-pills-tabContent">
+            <!-- Content START -->
+            <div class="tab-pane fade show active" id="course-pills-tabs-1" role="tabpanel"
+                aria-labelledby="course-pills-tab-1">
+                <div class="row g-4" >
+                    <ng-container>
+                        <!-- Card item START -->
+                        <div class="card" style="width: 18rem;">
+                            <div class="overflow-hidden rounded-3">
+                                <img src="assets/images/event/02.jpg" class="card-img" alt="course image">
+                                <!-- Overlay -->
+                                <div class="bg-overlay bg-dark opacity-4"></div>
+                                <div class="card-img-overlay d-flex align-items-start p-3">
+                                    <!-- badge -->
+                                    <!-- <a href="#" class="badge bg-danger text-white">Student life</a> -->
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Student Loan Survey: Many Owe $50K-plus</a></h5>
-                            <p class="text-truncate-2">Affronting imprudence do he he everything. Offered chiefly
-                                farther of my no colonel shyness. Such on help ye some door if in. Laughter proposal
-                                laughing any son law consider. Needed except up piqued an.</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Frances Guerrero</a></h6>
-                                <span class="small">30M Ago</span>
+    
+                            <div class="card-body">
+                              <h5 class="card-title">{{newsblogTitle}}</h5>
+                              <p class="card-text text-truncate-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a  [attr.href]="newsblogLink" class="btn btn-primary" target="_blank">Go somewhere</a>
+                              <div class="d-flex justify-content-between">
+                                <!-- <h6 class="mb-0"><a href="#">Frances Guerrero</a></h6>
+                                <span class="small">30M Ago</span> -->
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/08.jpg" class="card-img" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-success text-white">Student life</a>
                             </div>
-                        </div>
+                          </div>
+                        <!-- Card item END -->
+                    </ng-container>
 
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">How to make a college list</a></h5>
-                            <p class="text-truncate-2">Prospective students should start broadly and then narrow their
-                                list down to colleges that best fit their needs, experts say. Yet remarkably appearance
-                                get him his projection.</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Louis Crawford</a></h6>
-                                <span class="small">12H Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
+                </div> <!-- Row END -->
+            </div>
+            <!-- Content END -->
+        </div>
+        <!-- Tabs content END -->
 
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/09.jpg" class="card-img" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-purple text-white">Travel</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Never underestimate the influence of Eduport</a></h5>
-                            <p class="text-truncate-2">Prospective students should start broadly and then narrow their
-                                list</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Joan Wallace</a></h6>
-                                <span class="small">5D Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/03.jpg" class="card-img-top" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-danger text-white">Research</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Covid-19 and the college experienced</a></h5>
-                            <p class="text-truncate-2">Rooms oh fully taken by worse do. Points afraid but may end law.
-                                Points afraid but may end law.</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Amanda Reed</a></h6>
-                                <span class="small">July 21, 2021</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/07.jpg" class="card-img-top" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-success text-white">Research</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Best Pinterest Boards for learning about business</a>
-                            </h5>
-                            <p class="text-truncate-2">Fully taken by worse do. Points afraid but may end law. Points
-                                afraid but may end law.</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Samuel Bishop</a></h6>
-                                <span class="small">40D ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/04.jpg" class="card-img-top" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-primary text-white">Sports</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">The Olympics are over, now what?</a></h5>
-                            <p class="text-truncate-2">Rooms oh fully taken by worse do. Points afraid but may end law.
-                                Points afraid but may end law.</p>
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Carolyn Ortiz</a></h6>
-                                <span class="small">Aug 31, 2021</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/05.jpg" class="card-imgp" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-info text-white">Student story</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Campus Support for First-Year Students</a></h5>
-                            <p class="text-truncate-2">Prospective students should start broadly and then narrow their
-                                list</p>
-
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Lori Stevens</a></h6>
-                                <span class="small">3M Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card bg-transparent">
-                        <div class="overflow-hidden rounded-3">
-                            <img src="assets/images/event/06.jpg" class="card-imgp" alt="course image">
-                            <!-- Overlay -->
-                            <div class="bg-overlay bg-dark opacity-4"></div>
-                            <div class="card-img-overlay d-flex align-items-start p-3">
-                                <!-- badge -->
-                                <a href="#" class="badge bg-orange text-white">Marketing</a>
-                            </div>
-                        </div>
-
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="#">Bad habits that people in the industry need to quit</a>
-                            </h5>
-                            <p class="text-truncate-2">Prospective students should start broadly and then narrow their
-                                list</p>
-
-                            <!-- Info -->
-                            <div class="d-flex justify-content-between">
-                                <h6 class="mb-0"><a href="#">Louis Crawford</a></h6>
-                                <span class="small">10D Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-            </div> <!-- Row end -->
+        
+             <!-- Row end -->
         </div>
     </section>
     <!-- =======================

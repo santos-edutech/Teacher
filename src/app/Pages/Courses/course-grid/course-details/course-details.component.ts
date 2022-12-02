@@ -32,10 +32,12 @@ export class CourseDetailsComponent implements OnInit {
   selectedSubjectOverviewImage:any;
   selectedSubjectPrice : any;
   selectedSubjectDiscountPrice:any;
+  selectedSubMenuCourseImage:any;
   selectedCourseReviews: any;
   enrollNowForm: any = FormGroup;
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
+  selecetdSubCourseUID: any;
 
   constructor(
     public fb: FormBuilder,
@@ -65,6 +67,7 @@ export class CourseDetailsComponent implements OnInit {
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
     });
     this.courseDetails = this.dataService.geSubjectDetails();
+    this.buyCourse();
   }
 
   getSelectedSubmenuCourse(MenuId:any,ID:any){
@@ -77,6 +80,7 @@ export class CourseDetailsComponent implements OnInit {
           // console.log(subMenuItem);
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
+            this.selectedSubMenuCourseImage = subMenuItem.image;
             this.selectedSubMenuCourseDetails = subMenuItem.details;
             this.selectedSubjectOverview = subMenuItem.overView;
             this.selectedSubjectFaqs = subMenuItem.faq ;
@@ -86,6 +90,7 @@ export class CourseDetailsComponent implements OnInit {
             this.selectedSubjectPrice = subMenuItem.price;
             this.selectedSubjectDiscountPrice = subMenuItem.discount;
             this.selectedCourseReviews = subMenuItem.review;
+            this.selecetdSubCourseUID = subMenuItem.uniqueID;
           }
         }
       }
@@ -124,13 +129,29 @@ export class CourseDetailsComponent implements OnInit {
     this.display='none'
   }
 
+  courseItems : any = FormGroup;
+
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selecetdSubCourseUID,
+      menuName : this.selectedSubMenuCourseTitle,
+      variationCost : this.selectedSubjectPrice,
+      qtyTotal: 0,
+      image : this.selectedSubMenuCourseImage,
+    });
+  }
+
+
   items:any;
   //----- add item to cart
-   addToCart(item:any) {
-    if (!this.cartservice.itemInCart(item)) {
-      item.qtyTotal = 1;
-      this.cartservice.addToCart(item); //add items in cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
       this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
       this.routs.navigate(['/cart']);
     }
   }

@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 // import { saveAs } from 'file-saver';
 declare var $:any;
 @Component({
   selector: 'app-top-medical-countries',
   templateUrl: './top-medical-countries.component.html',
-  styleUrls: ['./top-medical-countries.component.css']
+  styleUrls: ['./top-medical-countries.component.css'],
+  providers: [PaymentService]
 })
 export class TopMedicalCountriesComponent implements OnInit {
   selectedCountryId: any;
@@ -32,6 +35,8 @@ export class TopMedicalCountriesComponent implements OnInit {
   enrollNowFormData : AngularFirestoreCollection<any>;
   submitted = false ;
   submitted1 = false ;
+  selectedCountryUId: any;
+  selectedCountryImage: any;
 
   
   
@@ -40,6 +45,8 @@ export class TopMedicalCountriesComponent implements OnInit {
     private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -66,6 +73,7 @@ export class TopMedicalCountriesComponent implements OnInit {
       this.selectedCountryId = params['countrieID'] ;
     //  console.log(this.selectedCountryId);
     this.countryDetailsById(this.selectedCountryId);
+    this.buyCourse();
     });
    
   }
@@ -88,6 +96,8 @@ export class TopMedicalCountriesComponent implements OnInit {
         this.selectedCountryExamRequirement = details.examRequirement;
         this.selectedCountryAllTabs = details.AllTabs;
         // this.selectedCountryExamRequirementTable = details.table;
+        this.selectedCountryUId = details.uniqueID;
+        this.selectedCountryImage = details.flag;
       }
     }
   }
@@ -142,5 +152,32 @@ export class TopMedicalCountriesComponent implements OnInit {
  // Model close Funcation
  onCloseHandled(){
    this.display='none'
+ }
+
+ courseItems : any = FormGroup;
+
+ buyCourse(){
+   this.courseItems = this.fb.group({
+     uniqueID : this.selectedCountryUId,
+     menuName : this.selectedCountryTitle,
+     variationCost : this.selectedCountryCoursePrice,
+     qtyTotal: 0,
+     image : this.selectedCountryImage,
+   });
+ }
+
+
+ items:any;
+ //----- add item to cart
+  addToCart() {
+   if (!this.cartservice.itemInCart(this.courseItems.value)) {
+     this.courseItems.value.qtyTotal = 1;
+     this.cartservice.addToCart(this.courseItems.value); //add items in cart
+     this.items = [...this.cartservice.getItems()];
+     this.routs.navigate(['/cart']);
+   }else{
+     alert("Already in cart");
+     this.routs.navigate(['/cart']);
+   }
  }
 }

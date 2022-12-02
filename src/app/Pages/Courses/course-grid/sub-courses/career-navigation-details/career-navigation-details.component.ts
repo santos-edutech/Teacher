@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
+import { PaymentService } from 'src/app/Services/payment-services/payment.service';
 
 declare var $:any;
 @Component({
   selector: 'app-career-navigation-details',
   templateUrl: './career-navigation-details.component.html',
-  styleUrls: ['./career-navigation-details.component.css']
+  styleUrls: ['./career-navigation-details.component.css'],
+  providers: [PaymentService]
 })
 export class CareerNavigationDetailsComponent implements OnInit {
 
@@ -37,6 +40,8 @@ export class CareerNavigationDetailsComponent implements OnInit {
   submitted = false ;
   selecetdCourseOverviewContentCard: any;
   selecetdCourseOverviewContentDes: any;
+  selecetdCourseOverviewUId: any;
+  selecetdCourseOverviewImage: any;
 
 
   constructor(
@@ -44,6 +49,8 @@ export class CareerNavigationDetailsComponent implements OnInit {
     private db: AngularFirestore,
     private dataService:DataService,
     private router: ActivatedRoute,
+    private cartservice : CartService,
+    private routs: Router,
   ) { }
 
   ngOnInit(): void {
@@ -62,6 +69,7 @@ export class CareerNavigationDetailsComponent implements OnInit {
       this.selecetdSubCourseId = params ['id'];
       // console.log(this.selectedCourseId);
       this.getSelectedSubmenuCourse(this.selectedCourseId,this.selecetdSubCourseId);
+      this.buyCourse();
     });
     this.courseDetails = this.dataService.geSubjectDetails();
   }
@@ -86,6 +94,8 @@ export class CareerNavigationDetailsComponent implements OnInit {
             this.selecetdCourseOverviewContent = subMenuItem.overViewContent;
             this.selecetdCourseOverviewContentCard = subMenuItem.overViewContentCard;
             this.selecetdCourseOverviewContentDes = subMenuItem.overViewContentDescription;
+            this.selecetdCourseOverviewUId = subMenuItem.uniqueID;
+            this.selecetdCourseOverviewImage = subMenuItem.image;
           }
         }
       }
@@ -123,5 +133,30 @@ export class CareerNavigationDetailsComponent implements OnInit {
  onCloseHandled(){
    this.display='none'
  }
+ courseItems : any = FormGroup;
 
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selecetdCourseOverviewUId,
+      menuName : this.selectedSubMenuCourseTitle,
+      variationCost : this.selectedSubjectPrice,
+      qtyTotal: 0,
+      image : this.selecetdCourseOverviewImage,
+    });
+    // console.log(this.selectedEntranceUId);
+  }
+
+ items:any;
+  //----- add item to cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1 ;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
+      this.routs.navigate(['/cart']);
+    }
+  }
 }

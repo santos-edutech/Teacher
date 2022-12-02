@@ -130,6 +130,57 @@ export const allCourseForBuy =[
                 ],
             },
             {
+                'program_title':'Ivy League Bachelors Program',
+                'course':[
+                    {
+                        id: "0",
+                        uniqueID:'301',
+                        menuName: "Ivy League Bachelors Program",
+                        image :"assets/images/courses/4by3/Ivy.jpg",
+                        variationCost: "50000",
+                        discount : "65000",
+                        details:'A foundation course is a programme that will prepare you for an undergraduate degree at university.',
+                        qtyTotal: 0,
+                        link:'/Ivy-League-course-details/1/K12/3/%20Ivy%20League%20Bachelors%20Program/'
+                    },
+                ],
+            },
+            {
+                'program_title':'Medical Program',
+                'course':[
+                    {
+                        id: "1",
+                        menuName: "NEET – Medical Program in India",
+                        image :"assets/images/flags/india.svg",
+                        variationCost: "80000",
+                        discount : "100000",
+                        details:'NEET – UG is the single examination conducted for the aspirant’s seeking admission in country’s top medical colleges to courses such as MBBS and BDS.',
+                        qtyTotal: 0 ,
+                        link:'/top-medical-countries/1'
+                    },
+                    {
+                        id: "2",
+                        menuName: "Medical Program – United Kingdom",
+                        image :"assets/images/flags/uk.svg",
+                        variationCost: "100000",
+                        discount : "120000",
+                        details:'Medicine is one of the most competitive courses in the UK to gain entry to, but every year thousands of international students are accepted into medical school across the country.',
+                        qtyTotal: 0 ,
+                        link:'/top-medical-countries/2'
+                    },
+                    {
+                        id: "3",
+                        menuName: "Medical Program – United States of America",
+                        image :"assets/images/flags/us.svg",
+                        variationCost: "100000",
+                        discount : "120000",
+                        details:'The MBBS curriculum in the USA is challenging, and therefore, rewarding for the graduates.',
+                        qtyTotal: 0,
+                        link:'/top-medical-countries/3'
+                    },
+                ],
+            },
+            {
                 'program_title':'Indian Entrance Prep',
                 'course':[
                     {
@@ -164,17 +215,165 @@ export const allCourseForBuy =[
                     },
                 ],
             },
+            {
+                'program_title':'Career Navigation',
+                'course':[
+                    {
+                        id: "1",
+                        menuName: "Career Navigation",
+                        image :"assets/images/courses/4by3/Career Counselling.jpg",
+                        variationCost: "1500",
+                        discount : "3000",
+                        details:'For Grade 6 to 12th students from all International (IB, Cambridge IGCSE) and Indian (CBSE, State, ICSE) based curriculums',
+                        qtyTotal: 0,
+                        link:'/career-navigation-details/1/K12/6/Career%20Navigation'
+                    }
+                ],
+            },
+            {
+                'program_title':'After School Services',
+                'course':[
+                    {
+                        id: "1",
+                        menuName: "Grade 9 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "80000",
+                        discount : "100000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams.',
+                        qtyTotal: 0 ,
+                        link:'/after-school-services-details/1'
+                    },
+                    {
+                        id: "2",
+                        menuName: "Grade 9 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "104000",
+                        discount : "130000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0 ,
+                        link:'/after-school-services-details/2'
+                    },
+                    {
+                        id: "3",
+                        menuName: "Grade 10 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "80000",
+                        discount : "100000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0,
+                        link:'/after-school-services-details/3'
+                    },
+                    {
+                        id: "4",
+                        menuName: "Grade 10 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "104000",
+                        discount : "130000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0 ,
+                        link:'/after-school-services-details/4'
+                    },
+                    {
+                        id: "5",
+                        menuName: "Grade 11 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "80000",
+                        discount : "100000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0,
+                        link:'/after-school-services-details/5'
+                    },
+                    {
+                        id: "6",
+                        menuName: "Grade 11 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "104000",
+                        discount : "130000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0 ,
+                        link:'/after-school-services-details/6'
+                    },
+                    {
+                        id: "7",
+                        menuName: "Grade 12 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "80000",
+                        discount : "100000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0,
+                        link:'/after-school-services-details/7'
+                    },
+                    {
+                        id: "8",
+                        menuName: "Grade 12 After School Program",
+                        image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
+                        variationCost: "104000",
+                        discount : "130000",
+                        details:'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
+                        qtyTotal: 0 ,
+                        link:'/after-school-services-details/8'
+                    },
+                ],
+            },
         ]
    },
-//    {
-//         'segment_id':'2',
-//         'segment':"Undergraduate",
-//         'program':[]
-//    },
-//    {
-//         'segment_id':'3',
-//         'segment':"Postgraduate",
-//         'program':[]
-//    }
+   {
+        'segment_id':'2',
+        'segment':"Undergraduate",
+        'program':[
+            {
+                'program_title':'Abroad Masters Placement',
+                'course':[
+                    {
+                        id:"1",
+                        menuName:"Abroad Masters Placement",
+                        image:"assets/images/courses/Abroad Masters Placement.jpg",
+                        variationCost:"80000",
+                        discount:"100000",
+                        details:"Abroad Masters program enables students who are about to and have completed UG degrees to get admitted into the top universities around the world aligned with their passion.",
+                        qtyTotal:"0",
+                        link:"/abroad-masters-placement/2/Undergraduate/1/Abroad%20Masters%20Placement/"
+                    },
+                    
+                ],
+            },
+            {
+                'program_title':'Abroad Transfers Program',
+                'course':[
+                    {
+                        id:"2",
+                        menuName:"Abroad Transfers Program",
+                        image:"assets/images/courses/Abroad Masters Placement.jpg",
+                        variationCost:"160000",
+                        discount:"200000",
+                        details:"Abroad Exchange program enables students who are in the first year of their undergraduate courses to get admitted into the top universities around the world.",
+                        qtyTotal:"0",
+                        link:"/abroad-transfer-program/2/Undergraduate/2/Abroad%20Transfers%20Program/"
+                    },
+                ],
+            }
+        ]
+   },
+   {
+        'segment_id':'3',
+        'segment':"Postgraduate",
+        'program':[
+            {
+                'program_title':'Abroad Ph.D. Program',
+                'course':[
+                    {
+                        id:"1",
+                        menuName:"Abroad Ph.D. Program",
+                        image:"assets/images/courses/Abroad Ph.D. Program.jpg",
+                        variationCost:"80000",
+                        discount:"100000",
+                        details:"Abroad Ph.D. program enables students and working professionals who have completed their UG and PG and motivated to pursue doctoral research in some of the cutting edge technological, innovative and creative areas.",
+                        qtyTotal:"0",
+                        link:"/abroad-p.hd-program/3/Postgraduate/1/Abroad%20Ph.D.%20Program/"
+                    },
+                ],
+            }
+        ]
+   },
 
 ];

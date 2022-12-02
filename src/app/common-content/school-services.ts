@@ -4,12 +4,13 @@ export const schoolServices: Array<Object> = [
         'program': [
             {
                 'serviceID': '1',
+                'uniqueID':'701',
                 'program_title': 'Grade 9 After School Program',
                 'grade': '9th',
                 'subTitle': 'State, CBSE, ICSE',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Grade 9 is an important phase in students school life as they step into the world of extensive learning. In this program we offer online and offline learning programs through which students can learn and excel at Mathematics, Science and English Subjects. To guide the students along the teaching process we have a large pool of highly qualified, talented, and experienced teachers for Mathematics, Science and English. Our program is designed to provide students to gain deeper insights into the complex topics taught in School',
-                'price': '80,000',
+                'price': '80000',
                 'discount': '1,00,000',
                 'PricingAndFeatures': [
                     {
@@ -105,12 +106,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '3',
+                'uniqueID':'703',
                 'program_title': 'Grade 10 After School Program',
                 'grade': '10th',
                 'subTitle': 'State, CBSE, ICSE',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Class 10 is an important year for every student as it is their channel towards doing well in Board exams. Given the significant competition, Grade 10 after school sessions help students in their journey for knowledge and excellence. Choosing the right tutoring classes for Class 10 trains students minds and boosts their knowledge about the most dreaded concepts and subjects. With the help of proper 10th Class sessions conducted by well-trained teachers blended with personalized learning makes it easier for students to understand core concepts well and score high in their exams. ',
-                'price': '80,000',
+                'price': '80000',
                 'discount': '1,00,000',
                 'syllabus': [
                     {
@@ -204,12 +206,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '5',
+                'uniqueID':'705',
                 'program_title': 'Grade 11 After School Program',
                 'grade': '11th',
                 'subTitle': 'State, CBSE, ICSE',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Class 11 is a important year for every student as it is their channel towards doing well in Board exams and start preparing for competitive exams. Given the significant competition, Grade 11 after school sessions help students in their journey for knowledge and excellence. Choosing the right tutoring classes for Class 11 trains students minds and boosts their knowledge about the most dreaded concepts and subjects and immensely help for competitive exams prep. With the help of proper Class sessions conducted by well-trained teachers blended with personalized learning makes it easier for students to understand core concepts well and score high in their exams.',
-                'price': '80,000',
+                'price': '80000',
                 'discount': '1,00,000',
                 'syllabus': [
                     {
@@ -303,12 +306,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '7',
+                'uniqueID':'707',
                 'program_title': 'Grade 12 After School Program',
                 'grade': '12th',
                 'subTitle': 'State, CBSE, ICSE',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Class 12 is a important year for every student as it is their channel towards doing well in Board exams and start preparing for competitive exams. Given the significant competition, Grade 12 after school sessions help students in their journey for knowledge and excellence. Choosing the right tutoring classes for Class 12 trains students minds and boosts their knowledge about the most dreaded concepts and subjects and immensely help for competitive exams prep. With the help of proper  Class sessions conducted by well-trained teachers blended with personalized learning makes it easier for students to understand core concepts well and score high in their exams. ',
-                'price': '80,000',
+                'price': '80000',
                 'discount': '1,00,000',
                 'syllabus': [
                     {
@@ -408,12 +412,13 @@ export const schoolServices: Array<Object> = [
         'program': [
             {
                 'serviceID': '2',
+                'uniqueID':'702',
                 'program_title': 'Grade 9 After School Program',
                 'grade': '9th',
                 'subTitle': 'IGCSE, IB',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Cambridge IGCSE is the world’s most popular international qualification for 14- to 16-year-olds. It is recognised by leading universities and employers worldwide and is an international passport to progression and success. Cambridge IGCSE helps improve performance by developing skills in creative thinking, enquiry and problem solving. It is the perfect springboard to advanced study. The subject offered are to ensure the breadth of learning and the future requirements are met for any course selected at Higher Secondary level.' + '\n\n' + 'MYP in IB is a five-year programme, which can be implemented in a partnership between schools, or in several abbreviated (two, three or four year) formats. Students who complete the MYP are well-prepared to undertake the IB Diploma Programme (DP) or Career-related Programme (CP).' + '\n\n' + 'Grade 9 is an important phase in students school life either in IGCSE or MYP as they step into the world of extensive learning. In this program we offer online and offline learning programs through which students can learn and excel at Mathematics, Science and English Subjects. To guide the students along the teaching process we have a large pool of highly qualified, talented, and experienced teachers for Mathematics, Science and English. Our program is designed to provide students to gain deeper insights into the complex topics taught in School.',
-                'price': '1,04,000',
+                'price': '104000',
                 'discount': '1,30,000',
                 'syllabus': [
                     {
@@ -510,12 +515,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '4',
+                'uniqueID':'704',
                 'program_title': 'Grade 10 After School Program',
                 'grade': '10th',
                 'subTitle': 'IGCSE, IB',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'Cambridge IGCSE is the world’s most popular international qualification for 14- to 16-year-olds. It is recognised by leading universities and employers worldwide and is an international passport to progression and success. Cambridge IGCSE helps improve performance by developing skills in creative thinking, enquiry and problem solving. It is the perfect springboard to advanced study. The subject offered are to ensure the breadth of learning and the future requirements are met for any course selected at Higher Secondary level.' + '\n\n' + 'MYP in IB is a five-year programme, which can be implemented in a partnership between schools, or in several abbreviated (two, three or four year) formats. Students who complete the MYP are well-prepared to undertake the IB Diploma Programme (DP) or Career-related Programme (CP).' + '\n\n' + 'Grade 10 is an important phase in students school life either in IGCSE or MYP as they step into the world of extensive learning. In this program we offer online and offline learning programs through which students can learn and excel at Mathematics, Science and English Subjects. To guide the students along the teaching process we have a large pool of highly qualified, talented, and experienced teachers for Mathematics, Science and English. Our program is designed to provide students to gain deeper insights into the complex topics taught in School.',
-                'price': '1,04,000',
+                'price': '104000',
                 'discount': '1,30,000',
                 'syllabus': [
                     {
@@ -612,12 +618,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '6',
+                'uniqueID':'706',
                 'program_title': 'Grade 11 After School Program',
                 'grade': '11th',
                 'subTitle': 'IGCSE, IB',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'The Cambridge International AS & A Level Program is a two-year course taken by learners in Grades 11 and 12. The AS/A Levels is a highly specialised program and a student will normally take four subjects, although occasionally exceptional students take five. The program enables students to develop in-depth knowledge & deep understanding, strong reasoning abilities and critical thinking skills. Due to these reasons, the program is very well recognised and accepted by universities around the world including leading universities in India.' + '\n\n' + 'The IBDP (International Baccalaureate Diploma Programme) is a high-quality two-year IB course offered to students aged 16 to 19 from all over the world. The IBDP aims to develop students physically, intellectually, emotionally, and ethically, and it culminates in the award of a worldwide recognized Diploma. Widely regarded as one of the best pre-university courses in the world, the IB Diploma Programme aims to develop students who have excellent breadth and depth of knowledge – students who flourish intellectually, emotionally, physically, and ethically.' + '\n\n' + 'Grades 11 and 12 are important years for students because it sets the base for all important topics that will be covered in the next class. It is important to study sincerely in Class 11 not only to score high marks but also to prepare for competitive exams. Students should utilize the Class 11 academic year to build their basics strong. Doing, so will help them to face the board exam confidently next year. To guide the students along the teaching process we have a large pool of highly qualified, talented, and experienced teachers for Mathematics, Science and English. Our program is designed to provide students to gain deeper insights into the complex topics taught in School.',
-                'price': '1,04,000',
+                'price': '104000',
                 'discount': '1,30,000',
                 'syllabus': [
                     {
@@ -714,12 +721,13 @@ export const schoolServices: Array<Object> = [
             },
             {
                 'serviceID': '8',
+                'uniqueID':'708',
                 'program_title': 'Grade 12 After School Program',
                 'grade': '12th',
                 'subTitle': 'IGCSE, IB',
                 'details': 'Our After School Programs are meticulously designed for students to excel in Math, Science and English providing a strong foundation for competitive exams',
                 'overview': 'The Cambridge International AS & A Level Program is a two-year course taken by learners in Grades 11 and 12. The AS/A Levels is a highly specialised program and a student will normally take four subjects, although occasionally exceptional students take five. The program enables students to develop in-depth knowledge & deep understanding, strong reasoning abilities and critical thinking skills. Due to these reasons, the program is very well recognised and accepted by universities around the world including leading universities in India.' + '\n\n' + 'The IBDP (International Baccalaureate Diploma Programme) is a high-quality two-year IB course offered to students aged 16 to 19 from all over the world. The IBDP aims to develop students physically, intellectually, emotionally, and ethically, and it culminates in the award of a worldwide recognized Diploma. Widely regarded as one of the best pre-university courses in the world, the IB Diploma Programme aims to develop students who have excellent breadth and depth of knowledge – students who flourish intellectually, emotionally, physically, and ethically.' + '\n\n' + 'Grades 11 and 12 are important years for students because it sets the base for all important topics that will be covered in the next class. It is important to study sincerely in Class 11 not only to score high marks but also to prepare for competitive exams. Students should utilize the Class 11 academic year to build their basics strong. Doing, so will help them to face the board exam confidently next year. To guide the students along the teaching process we have a large pool of highly qualified, talented, and experienced teachers for Mathematics, Science and English. Our program is designed to provide students to gain deeper insights into the complex topics taught in School.',
-                'price': '1,04,000',
+                'price': '104000',
                 'discount': '1,30,000',
                 'syllabus': [
                     {

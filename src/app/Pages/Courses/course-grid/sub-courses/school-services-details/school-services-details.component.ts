@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
+import { CartService } from 'src/app/Services/cart-service/cart.service';
 
 declare var $:any;
 @Component({
@@ -27,12 +28,15 @@ export class SchoolServicesDetailsComponent implements OnInit {
   allSchoolServices :any ;
   selectedSubjectPrice: any;
   selectedSubjectDiscountPrice: any;
+  selectedSchoolUId: any;
 
   constructor( 
     public fb: FormBuilder,
     private db: AngularFirestore,
     private router: ActivatedRoute,
     private dataService:DataService,
+    private cartservice : CartService,
+    private routs: Router,
     ) { }
 
   ngOnInit(): void {
@@ -50,6 +54,7 @@ export class SchoolServicesDetailsComponent implements OnInit {
       this.selectedSchoolService = params['serviceID'];
       // console.log(this.selectedCourse);
       this.getSelectedSchoolService(this.selectedSchoolService);
+      this. buyCourse();
     });
   }
 
@@ -69,6 +74,7 @@ export class SchoolServicesDetailsComponent implements OnInit {
         this.selectedSchoolServiceSyllabus = service.syllabus;
         this.selectedSubjectPrice = service.price;
         this.selectedSubjectDiscountPrice = service.discount;
+        this.selectedSchoolUId = service.uniqueID;
       }
     }
     }
@@ -105,4 +111,31 @@ export class SchoolServicesDetailsComponent implements OnInit {
  onCloseHandled(){
    this.display='none'
  }
+
+ courseItems : any = FormGroup;
+
+  buyCourse(){
+    this.courseItems = this.fb.group({
+      uniqueID : this.selectedSchoolUId,
+      menuName : this.selectedSchoolServiceTitle,
+      variationCost : this.selectedSubjectPrice,
+      qtyTotal: 0,
+      // image : this.selecetdCourseOverviewImage,
+    });
+    // console.log(this.selectedEntranceUId);
+  }
+
+ items:any;
+  //----- add item to cart
+   addToCart() {
+    if (!this.cartservice.itemInCart(this.courseItems.value)) {
+      this.courseItems.value.qtyTotal = 1 ;
+      this.cartservice.addToCart(this.courseItems.value); //add items in cart
+      this.items = [...this.cartservice.getItems()];
+      this.routs.navigate(['/cart']);
+    }else{
+      alert("Already in cart");
+      this.routs.navigate(['/cart']);
+    }
+  }
 }

@@ -53,6 +53,7 @@ export class CartComponent implements OnInit {
     this.cartService.clearCart(items);
     this.items = [...this.cartService.getItems()];
   }
+  
 
   totalAmount:any;
 
@@ -62,5 +63,6 @@ export class CartComponent implements OnInit {
     this.totalAmount = this.total();
     localStorage.setItem('cart_amount',this.totalAmount);
   }
+  
 
 }
