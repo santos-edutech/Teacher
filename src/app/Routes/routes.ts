@@ -20,6 +20,7 @@ import { CancellationPolicyComponent } from "../Pages/footer-pages/cancellation-
 import { PrivacyPolicyComponent } from "../Pages/footer-pages/privacy-policy/privacy-policy.component";
 import { TermsAndConditionsComponent } from "../Pages/footer-pages/terms-and-conditions/terms-and-conditions.component";
 import { AboutUsComponent } from "../Pages/More/about-us/about-us.component";
+import { BlogsDetailsComponent } from "../Pages/More/blogs-details/blogs-details.component";
 import { BlogsComponent } from "../Pages/More/blogs/blogs.component";
 import { ContactUsComponent } from "../Pages/More/contact-us/contact-us.component";
 import { FaqComponent } from "../Pages/More/faq/faq.component";
@@ -96,6 +97,10 @@ export const routes: Routes = [
     {
         path:'blogs',
         component:BlogsComponent
+    },
+    {
+        path:'blogs-details/:MenuId',
+        component:BlogsDetailsComponent,
     },
     {
         path:'careers-navigate',

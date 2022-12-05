@@ -20,7 +20,7 @@ import { NewsBlog } from '../common-content/newes-blog';
   providedIn: 'root'
 })
 export class DataService {
-  
+ 
 
   constructor() { }
 

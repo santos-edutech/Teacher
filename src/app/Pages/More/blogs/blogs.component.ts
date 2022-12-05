@@ -12,6 +12,11 @@ export class BlogsComponent implements OnInit {
   allNewsblog: any;
   newsblogTitle: any;
   newsblogLink: any;
+  newsblogImage: any;
+  newsblogDesc: any;
+  newsblogSubTitle: any;
+  newsblogId: any;
+  newsblogDetails: any;
 
   constructor(private dataService:DataService) { }
 
@@ -37,9 +42,14 @@ export class BlogsComponent implements OnInit {
   getSelectedInternship(ID:any){
     for(let data of this.newsblogList){
       if(data.id == ID){
+        this.newsblogId = data.id;
         this.newsblogTitle = data.title;
+        this.newsblogSubTitle = data.subtitle;
         this.newsblogLink = data.link;
-        // console.log(this.newsblogLink);
+        this.newsblogImage = data.image;
+        this.newsblogDesc = data.desc;
+        this.newsblogDetails = data.details;
+        // console.log(this.newsblogId);
       }
     }
   }

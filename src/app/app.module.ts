@@ -43,6 +43,7 @@ import { CancellationPolicyComponent } from './Pages/footer-pages/cancellation-p
 import { HomeModule } from './Pages/Home/home.module';
 import { RegisterForTestComponent } from './Pages/Category/register-for-test/register-for-test.component';
 import { DetailsRegisterForTestComponent } from './Pages/Category/details-register-for-test/details-register-for-test.component';
+import { BlogsDetailsComponent } from './Pages/More/blogs-details/blogs-details.component';
 
 
 
@@ -80,6 +81,7 @@ import { DetailsRegisterForTestComponent } from './Pages/Category/details-regist
     CancellationPolicyComponent,
     RegisterForTestComponent,
     DetailsRegisterForTestComponent,
+    BlogsDetailsComponent,
   ],
   imports: [
     BrowserModule,

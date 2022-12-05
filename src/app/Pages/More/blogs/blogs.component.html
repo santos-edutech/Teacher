@@ -81,21 +81,23 @@
                 <div class="row g-4" >
                     <ng-container>
                         <!-- Card item START -->
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem;cursor: pointer;" [routerLink]="['/blogs-details',newsblogId]" >
                             <div class="overflow-hidden rounded-3">
-                                <img src="assets/images/event/02.jpg" class="card-img" alt="course image">
+                                <a  class="">
+                                    <img [src]="newsblogImage" class="card-img" alt="course image" >
+                                </a>
                                 <!-- Overlay -->
                                 <div class="bg-overlay bg-dark opacity-4"></div>
                                 <div class="card-img-overlay d-flex align-items-start p-3">
                                     <!-- badge -->
-                                    <!-- <a href="#" class="badge bg-danger text-white">Student life</a> -->
+                                    <a class="badge bg-danger text-white">{{newsblogTitle}}</a>
                                 </div>
                             </div>
     
                             <div class="card-body">
-                              <h5 class="card-title">{{newsblogTitle}}</h5>
-                              <p class="card-text text-truncate-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a  [attr.href]="newsblogLink" class="btn btn-primary" target="_blank">Go somewhere</a>
+                              <h5 class="card-title text-truncate-2">{{newsblogSubTitle}}</h5>
+                              <p class="card-text text-truncate-2">{{newsblogDesc}}</p>
+                              <!-- <a  [attr.href]="newsblogLink" class="btn btn-primary" target="_blank">Go somewhere</a> -->
                               <div class="d-flex justify-content-between">
                                 <!-- <h6 class="mb-0"><a href="#">Frances Guerrero</a></h6>
                                 <span class="small">30M Ago</span> -->

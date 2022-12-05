@@ -139,8 +139,8 @@
                                             <div *ngIf="item?.id !== selecetdSubCourseId">
                                                 <div class="d-flex justify-content-between align-items-center " >
                                                     <a (click)="getSelectedSubmenuCourse(item.menuId,item.id)" style="cursor: pointer;">{{item?.title}}</a>
-                                                    {{item.length}}
-                                                    <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                    <!-- {{item.length}} -->
+                                                    <span *ngIf="i<10" class="small">({{item?.menuId?.length}})</span>
                                                 </div>
                                             </div>
                                         </ng-container>

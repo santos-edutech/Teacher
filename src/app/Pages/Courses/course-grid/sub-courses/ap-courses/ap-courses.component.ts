@@ -58,7 +58,7 @@ export class ApCoursesComponent implements OnInit {
       if(menuItems.menuId == MenuId){
         this.menuItemList = menuItems.subMenu;
         this.menuId =menuItems.menuId;
-        console.log(this.menuId);
+        // console.log(this.menuId);
         for(let subMenuItem of this.menuItemList){
           if(subMenuItem.id == ID){
             this.selectedSubMenuCourseTitle =subMenuItem.title;
