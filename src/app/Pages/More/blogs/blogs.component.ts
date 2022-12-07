@@ -17,14 +17,14 @@ export class BlogsComponent implements OnInit {
   newsblogSubTitle: any;
   newsblogId: any;
   newsblogDetails: any;
+  AllBlogsNews: any;
+  blogNewsId: any;
 
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
     this.allBlogsNews = this.dataService.getNewsBlogs();
-    // console.log(this.allBlogsNews) ;
     this.getAllNewsBlogs();
-    this.getSelectedInternship(1);
   }
 
   getAllNewsBlogs(){
@@ -39,19 +39,15 @@ export class BlogsComponent implements OnInit {
     }
   }
 
-  getSelectedInternship(ID:any){
-    for(let data of this.newsblogList){
-      if(data.id == ID){
-        this.newsblogId = data.id;
-        this.newsblogTitle = data.title;
-        this.newsblogSubTitle = data.subtitle;
-        this.newsblogLink = data.link;
-        this.newsblogImage = data.image;
-        this.newsblogDesc = data.desc;
-        this.newsblogDetails = data.details;
-        // console.log(this.newsblogId);
+  getNewsBlogsById(ID:any){
+    for(let data of this.allBlogsNews){
+      // console.log(data);
+      if(data.MenuId == ID){
+        // console.log(data.items);
+        this.newsblogList = data.items;
       }
     }
   }
+  
 
 }

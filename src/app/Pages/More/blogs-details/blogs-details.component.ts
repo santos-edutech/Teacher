@@ -15,6 +15,7 @@ export class BlogsDetailsComponent implements OnInit {
   selectednewsblogDesc: any;
   selectednewsblogDetails: any;
   selectednewsblogWriter: any;
+  selectednewsblogImage: any;
 
 
   constructor(
@@ -37,6 +38,7 @@ export class BlogsDetailsComponent implements OnInit {
         for(let news of blogs.items){
           this.selectednewsblogTitle = news.title;
           this.selectednewsblogSubTitle = news.subtitle;
+          this.selectednewsblogImage = news.image;
           this.selectednewsblogDesc = news.desc;
           this.selectednewsblogDetails = news.details;
           this.selectednewsblogWriter = news.writer;

@@ -52,24 +52,23 @@ export class ApCoursesComponent implements OnInit {
 
   menuId:any;
   getSelectedSubmenuCourse(MenuId:any,ID:any){
-    this.selecetdSubCourseId = ID;
-    for(let menuItems of this.menuItem){
-        // console.log(menuItems);
-      if(menuItems.menuId == MenuId){
-        this.menuItemList = menuItems.subMenu;
-        this.menuId =menuItems.menuId;
-        // console.log(this.menuId);
-        for(let subMenuItem of this.menuItemList){
-          if(subMenuItem.id == ID){
-            this.selectedSubMenuCourseTitle =subMenuItem.title;
-            this.selectedSubMenuCourseDetails = subMenuItem.details;
-            this.selectedSubjectOverview = subMenuItem.overView;
-            this.selectedSubjectFaqs = subMenuItem.faq ;
-            this.selectedSubjectPriceAndFeatures = subMenuItem.PricingAndFeatures;
-            this.selectedSubjectSyllabus = subMenuItem.syllabus;
-            this.selectedSubjectOverviewImage = subMenuItem.overViewImage;
-            this.selectedSubjectPrice = subMenuItem.price;
-            this.selectedSubjectDiscountPrice = subMenuItem.discount;
+      this.selecetdSubCourseId = ID;
+      for(let menuItems of this.menuItem){
+          // console.log(menuItems);
+        if(menuItems.menuId === MenuId){
+          this.menuItemList = menuItems.subMenu;
+        // console.log(this.menuItemList);
+        for(let itm of this.menuItemList){
+          // console.log(itm);
+          if(itm.id === ID){
+            console.log(itm);
+          var  objectLenght = Object.keys(itm).length;
+          // var  objectLenght =  Object.keys(itm).filter((v:any) => v.length)
+          console.log(objectLenght);
+          this.selecetdSubCourseId = itm.id;
+          this.selectedSubMenuCourseTitle = itm.title;
+          this.selectedSubMenuCourseDetails = itm.details;
+          
           }
         }
       }

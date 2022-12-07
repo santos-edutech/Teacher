@@ -1,5 +1,4 @@
 export const NewsBlog : Array<object> = [
-   
     {
         'MenuId':'1',
         'name':'Campus Life',
@@ -8,9 +7,10 @@ export const NewsBlog : Array<object> = [
                 'id':'1',
                 'title':'Campus Life',
                 'subtitle':'The USA is the most popular destination for studying abroad.',
-                'image':'assets/images/news/campus.jpg',
+                'image':'assets/images/news/campus.png',
                 'desc':'Over 1.1 million international students enrolled in the last academic year, choosing to broaden their education and life experience in the “land of the free”. In fact, nearly 5% of students in US higher education are international students – it’s a massive community and growing.'+'\n\n'+'If you’re one of the many people considering to study in the USA, you’ll probably be wondering what exactly student life in the USA is like. Well, help is at hand! From sororities to sports, socialising and student jobs, here are some of the things you can look forward to as an international student in America…',
                 'link':'/blogs-details',
+                'color':'red',
                 'details':[
                     {
                         'question':'Accommodation and campus life',
@@ -50,9 +50,10 @@ export const NewsBlog : Array<object> = [
                 'id':'2',
                 'title':'Travel',
                 'subtitle':'HOW TO BOOK THE CHEAPEST FLIGHT POSSIBLE TO ANYWHERE',
-                'image':'assets/images/news/travel.webp',
+                'image':'assets/images/news/travel.png',
                 'desc':'We have all experienced the tiresome, repeated searching when trying to book the cheapest possible flights to any given destination.With endless search engines and continually fluctuating prices, the approach to frugal flight booking is overwhelming. Here is some key tips that will save you time, frustration and most importantly money when booking your next flight.',
                 'link':'/blogs-details ',
+                'color':'green',
                 'details':[
                     {
                         'question':'KEEP YOUR SEARCHES TOP SECRET',
@@ -129,9 +130,10 @@ export const NewsBlog : Array<object> = [
                 'id':'3',
                 'title':'Universities',
                 'subtitle':'IVY LEAGUE RANKINGS INDICATE HOW SCHOOLS ARE VIEWED OVERALL, BUT SCHOOLS PROVIDE DIFFERENT OPPORTUNITIES THAT MIGHT BE BEST FOR YOUR CHILD',
-                'image':'assets/images/news/university.jpg',
+                'image':'assets/images/news/university.png',
                 'desc':'Ivy League rankings are released annually by major publications to the delight of students, alumni and university staff whose schools moved up and to the chagrin of those whose schools moved down.'+'\n\n'+'Current and former students often use these rankings for bragging rights, and many journalists, media members, and educators downplay their significance, citing issues with methodology and bias. However, the pushback does not deter high-achieving college applicants and parents, who want to know which Ivy League school is the best.'+'\n\n'+'Interest in this answer stems from the Ivy League being synonymous with America’s most selective, prestigious, and elite colleges. In other words, not only are Ivy League acceptance rates among the country’s lowest, each school carries a strong brand name that follows its alumni throughout their educations, careers, and networks.',
                 'link':'/blogs-details  ',
+                'color':'blue',
                 'details':[
                     {
                         'question':'Introduction to Ivy League rankings',
@@ -175,9 +177,10 @@ export const NewsBlog : Array<object> = [
                 'id':'4',
                 'title':'Application Deadlines',
                 'subtitle':'College Application Deadlines for Fall 2023 Admission',
-                'image':'assets/images/news/application.webp',
+                'image':'assets/images/news/application.png',
                 'desc':'Most college applications — including the Common Application and the Coalition for College — will open August 1, 2022, for those who plan to start college in fall 2023. That said, you may complete the general application components at any time before this date.'+'\n\n'+'While most schools require similar application components, different admission options allow you to submit your application by different deadlines. The four basic options are early action, early decision, regular decision, and rolling admission.',
                 'link':'/blogs-details  ',
+                'color':'orange',
                 'details':[
                     {
                         'question':'College Application Deadlines for Fall 2023',
@@ -224,6 +227,7 @@ export const NewsBlog : Array<object> = [
                 'image':'assets/images/news/scholarship.jpg',
                 'desc':'Whether you’re about to start as an undergraduate, headed to graduate school, or in the middle of your studies, you might be wondering how to get or maximize scholarship money to help fund your education.'+'\n\n'+'You’re asking the right question. Getting a scholarship (or scholarships–you can get more than one!) can help reduce the cost burden of school on your bank account, however, it can also be a complicated process.'+'\n\n'+'When exploring how to pay for college, many students believe that financial aid and student loans are the only options available. While filing your FAFSA forms to apply for need-based financial aid (including grants and work-study programs) is incredibly important, prioritizing applications for merit-based scholarships can help make college even more affordable. Scholarships offer aid that does not need to be paid back, so follow our tips for getting scholarships before accepting federal loan offers.',
                 'link':'/blogs-details',
+                'color':'DarkRed',
                 'details':[
                     {
                         'question':'Start Your Scholarship Applications Early',
@@ -271,9 +275,10 @@ export const NewsBlog : Array<object> = [
                 'id':'6',
                 'title':'Exams',
                 'subtitle':'Exams To Study in USA: Know What Exams are Required to Study in USA in 2022',
-                'image':'assets/images/news/exam.webp',
+                'image':'assets/images/news/exam.png',
                 'desc':'Home to renowned educational institutions and a most preferred study abroad destination among international students, the United States is a country of advanced education and career possibilities. Because of its numerous undergraduate and graduate courses, the US universities have gained first place in various disciplines.'+'\n\n'+'However, it is not easy to get admission directly into the to universities in US. You are required to pass different exams to study in USA. A high GPA will increase your acceptance into the university, but there are other exams too that you should take. And, this is what are are going to discuss in this blog. Here we will have a comprehensive discussion on what exams are required to study in USA and related aspects.',
                 'link':'/blogs-details ',
+                'color':'purple',
                 'details':[
                     {
                         'question':'Overview of Exam Requirements for Studying in USA',

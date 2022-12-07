@@ -29,7 +29,7 @@ export class ShopComponent implements OnInit {
   constructor(
     private router: Router,
     private dataService:DataService,
-    private cartservice : CartService
+    private cartservice : CartService,
   ) { }
 
   ngOnInit(): void {

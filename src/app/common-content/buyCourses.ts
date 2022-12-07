@@ -8,7 +8,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "0",
-                        uniqId:'100',
+                        uniqueID:'100',
                         menuName: "SAT General",
                         image :"assets/images/courses/4by3/SAT.jpg",
                         variationCost: "60000",
@@ -24,6 +24,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "1",
+                        uniqueID:'101',
                         menuName: "AP Biology",
                         image :"assets/images/courses/4by3/Ap.jpg",
                         variationCost: "60000",
@@ -34,6 +35,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "2",
+                        uniqueID:'102',
                         menuName: "AP Calculus AB",
                         image :"assets/images/courses/4by3/Ap.jpg",
                         variationCost: "60000",
@@ -44,6 +46,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "3",
+                        uniqueID:'103',
                         menuName: "AP Calculus BC",
                         image :"assets/images/courses/4by3/Ap.jpg",
                         variationCost: "60000",
@@ -54,6 +57,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "4",
+                        uniqueID:'104',
                         menuName: "AP Physics 1",
                         subTitle:"Algebra-Based",
                         image :"assets/images/courses/4by3/Ap.jpg",
@@ -65,6 +69,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "5",
+                        uniqueID:'105',
                         menuName: "AP Physics 2",
                         subTitle:"Algebra-Based",
                         image :"assets/images/courses/4by3/Ap.jpg",
@@ -76,6 +81,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "6",
+                        uniqueID:'106',
                         menuName: "AP Physics C",
                         subTitle:"Electricity and Magnetism",
                         image :"assets/images/courses/4by3/Ap.jpg",
@@ -87,6 +93,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "7",
+                        uniqueID:'107',
                         menuName: "AP Physics C",
                         subTitle:"Mechanics",
                         image :"assets/images/courses/4by3/Ap.jpg",
@@ -98,6 +105,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "8",
+                        uniqueID:'108',
                         menuName: "AP Chemistry",
                         subTitle:"Mechanics",
                         image :"assets/images/courses/4by3/Ap.jpg",
@@ -109,6 +117,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "9",
+                        uniqueID:'109',
                         menuName: "AP Macroeconomics",
                         image :"assets/images/courses/4by3/Ap.jpg",
                         variationCost: "60000",
@@ -119,6 +128,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "10",
+                        uniqueID:'110',
                         menuName: "AP Microeconomics",
                         image :"assets/images/courses/4by3/Ap.jpg",
                         variationCost: "60000",
@@ -150,6 +160,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "1",
+                        uniqueID:"401",
                         menuName: "NEET – Medical Program in India",
                         image :"assets/images/flags/india.svg",
                         variationCost: "80000",
@@ -160,6 +171,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "2",
+                        uniqueID:"402",
                         menuName: "Medical Program – United Kingdom",
                         image :"assets/images/flags/uk.svg",
                         variationCost: "100000",
@@ -170,6 +182,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "3",
+                        uniqueID:"403",
                         menuName: "Medical Program – United States of America",
                         image :"assets/images/flags/us.svg",
                         variationCost: "100000",
@@ -185,6 +198,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "9",
+                        uniqueID:'201',
                         menuName: "JEE Mains & Advanced Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -195,6 +209,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "10",
+                        uniqueID:'202',
                         menuName: "BITSAT Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -205,6 +220,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "11",
+                        uniqueID:'203',
                         menuName: "CLAT Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -220,6 +236,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "1",
+                        uniqueID:'601',
                         menuName: "Career Navigation",
                         image :"assets/images/courses/4by3/Career Counselling.jpg",
                         variationCost: "1500",
@@ -235,6 +252,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id: "1",
+                        uniqueID:'701',
                         menuName: "Grade 9 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -245,6 +263,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "2",
+                        uniqueID:'702',
                         menuName: "Grade 9 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "104000",
@@ -255,6 +274,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "3",
+                        uniqueID:'703',
                         menuName: "Grade 10 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -265,6 +285,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "4",
+                        uniqueID:'704',
                         menuName: "Grade 10 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "104000",
@@ -275,6 +296,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "5",
+                        uniqueID:'705',
                         menuName: "Grade 11 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -285,6 +307,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "6",
+                        uniqueID:'706',
                         menuName: "Grade 11 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "104000",
@@ -295,6 +318,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "7",
+                        uniqueID:'707',
                         menuName: "Grade 12 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "80000",
@@ -305,6 +329,7 @@ export const allCourseForBuy =[
                     },
                     {
                         id: "8",
+                        uniqueID:'708',
                         menuName: "Grade 12 After School Program",
                         image :"assets/images/courses/4by3/Indian Entrance Prep.jpg",
                         variationCost: "104000",
@@ -326,6 +351,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id:"1",
+                        uniqueID:'01',
                         menuName:"Abroad Masters Placement",
                         image:"assets/images/courses/Abroad Masters Placement.jpg",
                         variationCost:"80000",
@@ -342,6 +368,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id:"2",
+                        uniqueID:'02',
                         menuName:"Abroad Transfers Program",
                         image:"assets/images/courses/Abroad Masters Placement.jpg",
                         variationCost:"160000",
@@ -363,6 +390,7 @@ export const allCourseForBuy =[
                 'course':[
                     {
                         id:"1",
+                        uniqueID:'03',
                         menuName:"Abroad Ph.D. Program",
                         image:"assets/images/courses/Abroad Ph.D. Program.jpg",
                         variationCost:"80000",

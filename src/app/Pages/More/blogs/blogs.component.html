@@ -60,12 +60,17 @@
              <ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab"
              role="tablist">
              <!-- Tab item -->
-             <ng-container *ngFor="let items of newsblogList; let i=index">
-                 <li *ngIf="i<7" class="nav-item me-2 me-sm-5">
-                     <a class="nav-link mb-2 mb-md-0" [ngClass]="{ 'active': i == 0 }" id="course-pills-tab-1"
+             <ng-container *ngFor="let items of allBlogsNews; let i=index" >
+                <li *ngIf="i < 1"><a class="nav-link mb-2 mb-md-0 mx-5" [ngClass]="{ 'active': i == 0 }" id="course-pills-tab-1"
+                    data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                    aria-controls="course-pills-tabs-1" aria-selected="false" (click)="getAllNewsBlogs()" >All</a>
+                </li>
+
+                 <li *ngIf="i < 7" class="nav-item me-2 me-sm-5" >
+                     <a class="nav-link mb-2 mb-md-0" [ngClass]="{ 'active': i == -1}" id="course-pills-tab-1"
                          data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
                          aria-controls="course-pills-tabs-1" aria-selected="false"
-                         (click)="getSelectedInternship(items.id)">{{items?.title}}</a>
+                         (click)="getNewsBlogsById(items.MenuId)">{{items?.name}}</a>
                  </li>
              </ng-container>
          </ul>
@@ -73,36 +78,40 @@
          
          <!-- Tabs END -->
 
-          <!-- Tabs content START -->
-          <div class="tab-content" id="course-pills-tabContent">
+         <!-- <div *ngFor="let data of allNewsBlogItems">{{data?.id}}</div> -->
+
+        <!-- Tabs content START -->
+        <div class="tab-content" id="course-pills-tabContent">
             <!-- Content START -->
             <div class="tab-pane fade show active" id="course-pills-tabs-1" role="tabpanel"
                 aria-labelledby="course-pills-tab-1">
                 <div class="row g-4" >
-                    <ng-container>
+                    <ng-container *ngFor="let data of newsblogList">
                         <!-- Card item START -->
-                        <div class="card" style="width: 18rem;cursor: pointer;" [routerLink]="['/blogs-details',newsblogId]" >
-                            <div class="overflow-hidden rounded-3">
-                                <a  class="">
-                                    <img [src]="newsblogImage" class="card-img" alt="course image" >
-                                </a>
-                                <!-- Overlay -->
-                                <div class="bg-overlay bg-dark opacity-4"></div>
-                                <div class="card-img-overlay d-flex align-items-start p-3">
-                                    <!-- badge -->
-                                    <a class="badge bg-danger text-white">{{newsblogTitle}}</a>
+                        <div class="card" style="width: 18rem;cursor: pointer;" >
+                            <a href="" [routerLink]="['/blogs-details',data?.id]" target="_blank">
+                                <div class="overflow-hidden rounded-3">
+                                    <a  class="">
+                                        <img src={{data?.image}} class="card-img" alt="course image" >
+                                    </a>
+                                    <!-- Overlay -->
+                                    <div class="bg-overlay bg-dark opacity-4"></div>
+                                    <div class="card-img-overlay d-flex align-items-start p-3">
+                                        <!-- badge -->
+                                        <a class="badge  text-white" [ngStyle]="{'backgroundColor':data?.color}">{{data?.title}}</a>
+                                    </div>
                                 </div>
-                            </div>
-    
-                            <div class="card-body">
-                              <h5 class="card-title text-truncate-2">{{newsblogSubTitle}}</h5>
-                              <p class="card-text text-truncate-2">{{newsblogDesc}}</p>
-                              <!-- <a  [attr.href]="newsblogLink" class="btn btn-primary" target="_blank">Go somewhere</a> -->
-                              <div class="d-flex justify-content-between">
-                                <!-- <h6 class="mb-0"><a href="#">Frances Guerrero</a></h6>
-                                <span class="small">30M Ago</span> -->
-                            </div>
-                            </div>
+        
+                                <div class="card-body">
+                                  <h5 class="card-title text-truncate-2">{{data?.subtitle}}</h5>
+                                  <p class="card-text text-truncate-2">{{data?.desc}}</p>
+                                  <!-- <a  [attr.href]="newsblogLink" class="btn btn-primary" target="_blank">Go somewhere</a> -->
+                                  <div class="d-flex justify-content-between">
+                                    <!-- <h6 class="mb-0"><a href="#">Frances Guerrero</a></h6>
+                                    <span class="small">30M Ago</span> -->
+                                </div>
+                                </div>
+                            </a>
                           </div>
                         <!-- Card item END -->
                     </ng-container>
@@ -112,6 +121,7 @@
             <!-- Content END -->
         </div>
         <!-- Tabs content END -->
+        
 
         
              <!-- Row end -->
