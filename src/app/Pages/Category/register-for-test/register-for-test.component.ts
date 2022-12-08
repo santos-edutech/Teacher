@@ -20,6 +20,14 @@ export class RegisterForTestComponent implements OnInit {
   step = 1;
   submitted = false ;
   submitted1 = false ;
+  allListRegisterForTest: any ;
+  allRegisterList: any;
+  registerforTest: any;
+  allRegisterListSegment: any;
+  allRegisterListGrade: any;
+  allGradeDetails: any;
+  selectedStreamName: any;
+  allGrade: any;
 
   constructor(
     private dataService:DataService,
@@ -29,6 +37,7 @@ export class RegisterForTestComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   
   this.personalDetails = this.fb.group({
     fname:['', [Validators.required]],
@@ -47,7 +56,24 @@ export class RegisterForTestComponent implements OnInit {
     date : new Date(),
   });
 
+  this.allListRegisterForTest = this.dataService.getallRegTest();
+  // console.log(this.allListRegisterForTest);
+  this.getAllTest();
   
+}
+
+strem:any ;
+getAllTest(){
+  // this.allGradeDetails = [];
+  this.registerforTest = [];
+  for(let registerList of this.allListRegisterForTest){
+    for(let obj of registerList.grade){
+      for(let test of obj.grade_Details){
+        this.registerforTest.push(test)
+      console.log(this.registerforTest);
+      }
+    }
+  }
 }
 
 get f() {

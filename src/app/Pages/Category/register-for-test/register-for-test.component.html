@@ -87,107 +87,114 @@
                             <!-- progressbar -->
                             
                             <!-- fieldsets -->
-                            <fieldset  *ngIf="step == 2" class="mx-1">
+                            <fieldset  *ngIf="step == 2" class="mx-1" >
                                  <h2 class="">Test Details</h2>
-                                 <!--Segement  Name -->
+                                <div class="" *ngFor="let item of allListRegisterForTest"  >
+                                     <!--Segement  Name -->
                                  <div class="mb-3 bg-light-input">
-                                      <select class="form-select form-control" aria-label="Default select example" formControlName="segement" id="segement" [ngClass]="{ 'is-invalid': submitted1 && g.segement.errors }">
-                                        <option    value="" >Select Segement </option>
-                                        <option   value="K12 Entrance India"  >K12 Entrance India</option>
-                                      </select>
-                                      <div *ngIf="submitted1 && g.segement.errors" class="invalid-feedback text-start">
-                                        <div *ngIf="g.segement.errors.required">Segement is required</div>
-                                    </div>
-                                    <!-- <div class="invalid-feedback" *ngIf="submitted1 && g.segement.errors?.required">
-                                        <sup>*</sup>Please enter your city name
-                                      </div> -->
-                                 </div>
-                                 <!--Grade  Name -->
-                                 <div class="mb-3 bg-light-input">
-                                    <select class="form-select form-control" aria-label="Default select example" formControlName="grade"   id="grade" [ngClass]="{ 'is-invalid': submitted1 && g.grade.errors }">
-                                        <option  value="" >Select Grade </option>
-                                        <option   value="Grade 10" >Grade 10</option>
-                                        <option   value="Grade 11" >Grade 11</option>
-                                        <option   value="Grade 12" >Grade 12</option>
+                                    <select class="form-select form-control" aria-label="Default select example"  formControlName="segement" id="segement" [ngClass]="{ 'is-invalid': submitted1 && g.segement.errors }">
+                                      <option    value="" >Select Segement </option>
+                                      <option  [value]="item?.segment">
+                                          <ng-container>
+                                              {{item?.segment}}
+                                          </ng-container>
+                                      </option>
                                     </select>
-                                    <div *ngIf="submitted1 && g.grade.errors" class="invalid-feedback text-start">
-                                      <div *ngIf="g.grade.errors.required">Grade is required</div>
+                                    <div *ngIf="submitted1 && g.segement.errors" class="invalid-feedback text-start">
+                                      <div *ngIf="g.segement.errors.required">Segement is required</div>
                                   </div>
+                                  <!-- <div class="invalid-feedback" *ngIf="submitted1 && g.segement.errors?.required">
+                                      <sup>*</sup>Please enter your city name
+                                    </div> -->
                                </div>
+                               <!--Grade  Name -->
+                               <div class="mb-3 bg-light-input" >
+                                  <select class="form-select form-control" aria-label="Default select example" formControlName="grade"   id="grade" [ngClass]="{ 'is-invalid': submitted1 && g.grade.errors }">
+                                      <option  value="" >Select Grade </option>
+                                      <option *ngFor="let grade of item.grade" [value]="grade?.grade_name">
+                                        <ng-container>
+                                            {{grade?.grade_name}}
+                                        </ng-container>
+                                      </option>
+                                  </select>
+                                  <div *ngIf="submitted1 && g.grade.errors" class="invalid-feedback text-start">
+                                    <div *ngIf="g.grade.errors.required">Grade is required</div>
+                                </div>
+                             </div>
 
-                                <!--Stream  Name -->
-                                <div class="mb-3 bg-light-input">
-                                    <select class="form-select form-control" aria-label="Default select example" formControlName="stream"   id="stream" [ngClass]="{ 'is-invalid': submitted1 && g.stream.errors }">
-                                        <option  value="" >Select Stream </option>
-                                        <option   value="MPC" >MPC</option>
-                                        <option   value="BIPC" >BIPC</option>
-                                        <option   value="CEC" >CEC</option>
-                                        <option   value="MEC" >MEC</option>
-                                    </select>
-                                    <div *ngIf="submitted1 && g.stream.errors" class="invalid-feedback text-start">
-                                      <div *ngIf="g.stream.errors.required">Stream is required</div>
-                                  </div>
-                               </div>
+                            
+                              <!--Stream  Name -->
+                              <div class="mb-3 bg-light-input" >
+                                  <select class="form-select form-control" aria-label="Default select example" formControlName="stream"   id="stream" [ngClass]="{ 'is-invalid': submitted1 && g.stream.errors }">
+                                      <option  value="" >Select Stream </option>
+                                      <option  *ngFor="let allStream of registerforTest" [value]="allStream?.stream">
+                                        <ng-container>
+                                            {{allStream?.stream}}
+                                        </ng-container>
+                                      </option>
+                                  </select>
+                                  <div *ngIf="submitted1 && g.stream.errors" class="invalid-feedback text-start">
+                                    <div *ngIf="g.stream.errors.required">Stream is required</div>
+                                </div>
+                             </div>
 
-                                <!--Branch  Name -->
-                                <div class="mb-3 bg-light-input">
-                                    <select class="form-select form-control" aria-label="Default select example" formControlName="branch"  id="branch" [ngClass]="{ 'is-invalid': submitted1 && g.branch.errors }">
-                                        <option  value="" >Select Branch </option>
-                                        <option   value="Engineering" >Engineering</option>
-                                        <option   value="Medical" >Medical</option>
-                                    </select>
-                                    <div *ngIf="submitted1 && g.branch.errors" class="invalid-feedback text-start">
-                                      <div *ngIf="g.branch.errors.required">Branch is required</div>
-                                  </div>
-                               </div>
+                              <!--Branch  Name -->
+                              <!-- <div class="mb-3 bg-light-input">
+                                  <select class="form-select form-control" aria-label="Default select example" formControlName="branch"  id="branch" [ngClass]="{ 'is-invalid': submitted1 && g.branch.errors }">
+                                      <option  value="" >Select Branch </option>
+                                      <option   value="Engineering" >Engineering</option>
+                                      <option   value="Medical" >Medical</option>
+                                  </select>
+                                  <div *ngIf="submitted1 && g.branch.errors" class="invalid-feedback text-start">
+                                    <div *ngIf="g.branch.errors.required">Branch is required</div>
+                                </div>
+                             </div> -->
 
-                                 <!--Region  Name -->
-                                 <div class="mb-3 bg-light-input">
-                                    <select class="form-select form-control" aria-label="Default select example" formControlName="region"   id="region" [ngClass]="{ 'is-invalid': submitted1 && g.region.errors }">
-                                        <option  value="" >Select Region </option>
-                                        <option   value="PAN INdia" >PAN India</option>
-                                        <option   value="Andhra Pradesh" >Andhra Pradesh</option>
-                                        <option   value="Arunachal Pradesh" >Arunachal Pradesh</option>
-                                        <option   value="Assam" >Assam</option>
-                                        <option   value="Bihar" >Bihar</option>
-                                        <option   value="Chhattisgarh" >Chhattisgarh</option>
-                                        <option   value="Gujarat" >Gujarat</option>
-                                        <option   value="Haryana" >Haryana</option>
-                                        <option   value="Himachal Pradesh" >Himachal Pradesh</option>
-                                        <option   value="Jammu and Kashmir" >Jammu and Kashmir</option>
-                                        <option   value="Jharkhand" >Jharkhand</option>
-                                        <option   value="Karnataka" >Karnataka</option>
-                                        <option   value="Kerala" >Kerala</option>
-                                        <option   value="Madhya Pradesh" >Madhya Pradesh</option>
-                                        <option   value="Maharashtra" >Maharashtra</option>
-                                        <option   value="Manipur" >Manipur</option>
-                                        <option   value="Meghalaya" >Meghalaya</option>
-                                        <option   value="Mizoram" >Mizoram</option>
-                                        <option   value="Nagaland" >Nagaland</option>
-                                        <option   value="Odisha" >Odisha</option>
-                                        <option   value="Punjab" >Punjab</option>
-                                        <option   value="Rajasthan" >Rajasthan</option>
-                                        <option   value="Sikkim" >Sikkim</option>
-                                        <option   value="Tamil Nadu" >Tamil Nadu</option>
-                                        <option   value="Telangana" >Telangana</option>
-                                        <option   value="Tripura" >Tripura</option>
-                                        <option   value="Uttar Pradesh" >Uttar Pradesh</option>
-                                        <option   value="Uttarakhand" >Uttarakhand</option>
-                                        <option   value="West Bengal" >West Bengal</option>
+                               <!--Region  Name -->
+                               <!-- <div class="mb-3 bg-light-input">
+                                  <select class="form-select form-control" aria-label="Default select example" formControlName="region"   id="region" [ngClass]="{ 'is-invalid': submitted1 && g.region.errors }">
+                                      <option  value="" >Select Region </option>
+                                      <option   value="PAN INdia" >PAN India</option>
+                                      <option   value="Andhra Pradesh" >Andhra Pradesh</option>
+                                      <option   value="Arunachal Pradesh" >Arunachal Pradesh</option>
+                                      <option   value="Assam" >Assam</option>
+                                      <option   value="Bihar" >Bihar</option>
+                                      <option   value="Chhattisgarh" >Chhattisgarh</option>
+                                      <option   value="Gujarat" >Gujarat</option>
+                                      <option   value="Haryana" >Haryana</option>
+                                      <option   value="Himachal Pradesh" >Himachal Pradesh</option>
+                                      <option   value="Jammu and Kashmir" >Jammu and Kashmir</option>
+                                      <option   value="Jharkhand" >Jharkhand</option>
+                                      <option   value="Karnataka" >Karnataka</option>
+                                      <option   value="Kerala" >Kerala</option>
+                                      <option   value="Madhya Pradesh" >Madhya Pradesh</option>
+                                      <option   value="Maharashtra" >Maharashtra</option>
+                                      <option   value="Manipur" >Manipur</option>
+                                      <option   value="Meghalaya" >Meghalaya</option>
+                                      <option   value="Mizoram" >Mizoram</option>
+                                      <option   value="Nagaland" >Nagaland</option>
+                                      <option   value="Odisha" >Odisha</option>
+                                      <option   value="Punjab" >Punjab</option>
+                                      <option   value="Rajasthan" >Rajasthan</option>
+                                      <option   value="Sikkim" >Sikkim</option>
+                                      <option   value="Tamil Nadu" >Tamil Nadu</option>
+                                      <option   value="Telangana" >Telangana</option>
+                                      <option   value="Tripura" >Tripura</option>
+                                      <option   value="Uttar Pradesh" >Uttar Pradesh</option>
+                                      <option   value="Uttarakhand" >Uttarakhand</option>
+                                      <option   value="West Bengal" >West Bengal</option>
 
 
-                                    </select>
-                                    <div *ngIf="submitted1 && g.region.errors" class="invalid-feedback text-start">
-                                      <div *ngIf="g.region.errors.required">Region is required</div>
-                                  </div>
-                               </div>
-                                
-                                
-                                
-                               <!-- <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/> -->
-                               <button class="btn mb-0 text-white mx-2" style="background-color: #444cae;" (click)="previous()">Previous</button>
-                                <!-- <input (click)="onSubmitTest()" type="button" name="next" class="next action-button" value="Next"/> -->
-                                <button class="btn mb-0 text-white" style="background-color: #444cae;">Submit</button>
+                                  </select>
+                                  <div *ngIf="submitted1 && g.region.errors" class="invalid-feedback text-start">
+                                    <div *ngIf="g.region.errors.required">Region is required</div>
+                                </div>
+                             </div> -->
+                             <!-- <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/> -->
+                             <button class="btn mb-0 text-white mx-2" style="background-color: #444cae;" (click)="previous()">Previous</button>
+                              <!-- <input (click)="onSubmitTest()" type="button" name="next" class="next action-button" value="Next"/> -->
+                              <button class="btn mb-0 text-white" style="background-color: #444cae;">Submit</button>
+                                </div>
                             </fieldset>
                         </form>
                       </div>
@@ -204,6 +211,14 @@
     </section>
     <!-- =======================
     Inner part END -->
+    <!-- <div *ngFor="let test of allListRegisterForTest">
+        <div *ngFor="let test1 of test['grade']">
+            {{test1?.stream}}
+        </div>
+     </div>
+
+     {{selectedStreamName}} -->
+
     
 </main>
 <!-- **************** MAIN CONTENT END **************** -->
