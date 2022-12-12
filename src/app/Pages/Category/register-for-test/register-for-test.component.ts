@@ -28,6 +28,12 @@ export class RegisterForTestComponent implements OnInit {
   allGradeDetails: any;
   selectedStreamName: any;
   allGrade: any;
+  selectedStream: any;
+  selectedTest: any;
+  selectedId: any;
+  allGeadeList: any;
+  allStreamList: any;
+  allbranchList: any;
 
   constructor(
     private dataService:DataService,
@@ -38,6 +44,11 @@ export class RegisterForTestComponent implements OnInit {
 
   ngOnInit(): void {
 
+  this.allListRegisterForTest = this.dataService.getallRegTest();
+  // this.allGeadeList = this.dataService.getAllGrade().filter(data=>data.siShow===true);
+  // this.allStreamList = this.dataService.getAllStream().filter(data=>data.siShow===true);
+  // this.allbranchList = this.dataService.getBranchList().filter(data=>data.siShow===true);
+  
   
   this.personalDetails = this.fb.group({
     fname:['', [Validators.required]],
@@ -55,25 +66,48 @@ export class RegisterForTestComponent implements OnInit {
     region:['', [Validators.required]],
     date : new Date(),
   });
-
-  this.allListRegisterForTest = this.dataService.getallRegTest();
-  // console.log(this.allListRegisterForTest);
   this.getAllTest();
-  
+  // this.xyz();
 }
 
+// xyz(){
+//   // console.log(this.allGeadeList);
+//   for(let obj of this.allGeadeList){
+//     console.log(obj);
+//   }
+// }
+
+
+
+onSelectSegment(val:any){
+    this.allGeadeList = this.dataService.getAllGrade().filter(data=>data.segment_id==val);
+}
+onSelectGrade(val:any){
+  this.allStreamList = this.dataService.getAllStream().filter(data=>data.grade_id==val);
+}
+onSelectStream(val:any){
+  this.allbranchList = this.dataService.getBranchList().filter(data=>data.stream_id==val);
+}
+val3:any;
+onSelectBranch(val:any){
+  // this.allGeadeList = this.dataService.getAllGrade().filter(data=>data.segment_id==val);
+  this.val3 = val ;
+}
 strem:any ;
 getAllTest(){
   // this.allGradeDetails = [];
   this.registerforTest = [];
-  for(let registerList of this.allListRegisterForTest){
-    for(let obj of registerList.grade){
-      for(let test of obj.grade_Details){
-        this.registerforTest.push(test)
-      console.log(this.registerforTest);
-      }
-    }
-  }
+  // for(let registerList of this.allListRegisterForTest){
+  //   for(let obj of registerList.grade){
+  //     for(let test of obj.grade_Details){
+  //       this.registerforTest.push(test)
+  //     // console.log(this.registerforTest);
+  //     this.selectedStream = test.stream;
+  //     this.selectedTest = test.test;
+  //     // console.log(this.selectedStream);
+  //     }
+  //   }
+  // }
 }
 
 get f() {
@@ -122,16 +156,39 @@ this.education_step = false;
 // alert("Well done!!")
 // }
 // }
-onSubmitTest(){
+
+onSubmitTest(ID:any){
+  this.registerforTest = [];
+  for(let registerList of this.allListRegisterForTest){
+    // for(let obj of registerList.grade){
+    //   for(let test of obj.grade_Details){
+    //     this.registerforTest.push(test)
+    //   // console.log(this.registerforTest);
+    //   this.selectedId = test.id;
+    //   this.selectedStream = test.stream;
+    //   this.selectedTest = test.test;
+    //   // console.log(this.selectedStream);
+    //   }
+    // }
+    console.log(registerList);
+   
+  }
+ 
+  // this.router.navigate(['/details-register-for-test']);
   this.submitted1 = true;
   // stop here if form is invalid
   if (this.testDetails.invalid) {
     return;
   }
   if(this.testDetails){
-    this.router.navigate(['/details-register-for-test']);
+    // for(let item of this.allListRegisterForTest){
+    //   console.log(item);
+    // }
+    this.router.navigate(['/details-register-for-test'],{state:{id:this.val3}});
   }
   
 }
+
+
 
 }

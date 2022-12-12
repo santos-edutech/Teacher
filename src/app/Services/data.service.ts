@@ -12,7 +12,7 @@ import { schoolServices } from '../common-content/school-services';
 import { subjectDetails } from '../common-content/subject-details';
 import { testimonials } from '../common-content/testimonials';
 import { allCategories} from '../common-content/allCategory';
-import { allRegTest } from '../common-content/register-for-test';
+import { allGrade, allRegTest, allStreamList, branchList, testList } from '../common-content/register-for-test';
 import { AllInternship } from '../common-content/internships';
 import { NewsBlog } from '../common-content/newes-blog';
 
@@ -95,9 +95,27 @@ export class DataService {
     return allRegTest;
   }
 
+  // getAllSegment(){
+  //   return allSegmentList;
+  // }
+
   //Get News & Blogs
   getNewsBlogs(){
     return NewsBlog;
   }
 
+  getAllGrade(){
+    return allGrade;
+  }
+  
+  getAllStream(){
+    return allStreamList;
+  }
+  getBranchList(){
+    return branchList;
+  }
+  getTestList(){
+    return testList;
+  }
+  
 }

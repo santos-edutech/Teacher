@@ -148,55 +148,59 @@
                     </div>
                     <!-- Search option END -->
                     
-    
-                    <!-- Book Grid START -->
-                    <div class="row g-4">
-                        <!-- Card item START -->
-                        <div id="{{ i }}" *ngFor="let list of AllRegisterTestList; let i = index" class="col-sm-6 col-lg-4 col-xl-3">
-                            <div class="card shadow h-100">
-                                <div class="position-relative">
-                                    <!-- Image -->
-                                    <img [src]="list?.image" class="card-img-top" alt="book image">
-                                    <!-- Overlay -->
-                                    <div class="card-img-overlay d-flex z-index-0 p-3">
-                                        <!-- Card overlay Top -->
-                                        <div class="mb-auto d-flex justify-content-end">
-                                            <!-- Card format icon -->
-                                            <!-- <div class="icon-md bg-dark rounded-circle fs-5">
-                                                <a href="#" class="text-white"><i class="bi bi-book"></i></a>
-                                            </div> -->
+                    <!-- all test List start -->
+                    <div>
+                        <div class="row g-4">
+                            <ng-container  *ngFor="let data of registerForTest ; let i=index" class="col-sm-6 col-lg-4 col-xl-3">
+                                <!-- Card item START -->
+                                <div *ngIf="i<20" class="col-sm-6 col-lg-4 col-xl-3">
+                                    <div class="card shadow h-100">
+                                        <!-- Image -->
+                                        <img [src]="data?.image" class="card-img-top" alt="course image">
+                                        <!-- Card body -->
+                                        <div class="card-body pb-0">
+                                            <!-- Badge and favorite -->
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <a class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+                                                <a class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <!-- Title -->
+                                            <h5 class="card-title overflow-hidden"
+                                                style="text-overflow: ellipsis;white-space: nowrap;">
+                                                <a>{{data.test_name}}</a>
+                                            </h5>
+                                            <p class="mb-2 text-truncate-2">
+                                                {{data.details}}
+                                            </p>
+                                        </div>
+                                        <!-- Card footer -->
+                                        <div class="card-footer pt-0 pb-3">
+                                            <hr>
+                                            <div class="">
+                                                <!-- <span class="h6 fw-light mb-0">
+                                                    {{subMenuItem?.price}}
+                                                    <span class="text-decoration-line-through">{{subMenuItem?.discount}}</span> <br>
+                                                    <span class="badge bg-success text-white">20% off</span>
+                                                </span> -->
+                                                <span class="h6 fw-light mb-0">
+                                                    <a [attr.href]="data?.url" target="_blank">
+                                                        <!-- <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2"
+                                                            style="background-color:#444cae"></i> -->
+                                                            <button class="btn btn-primary form-control">Test Details</button>
+                                                    </a>
+                                                   
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <h5 class="card-title text-truncate-2">{{list?.menuName}}</h5>
-                                        <!-- <a>viewmore</a> -->
-                                        <!-- <i class="fa-solid fa-ellipsis-vertical"></i> -->
-                                       <!-- <a [routerLink]="[list?.link]"><i class='fas fa-ellipsis-v text-dark'  > </i></a>  -->
-                                    </div>
-                                    <span class="h6">{{list?.subTitle ? list?.subTitle : ''}}</span>
-                                    <p class="card-text text-truncate-2">
-                                        {{list?.details}}
-                                    </p>
-                                </div>
-
-                                <div class="card-footer">
-                                    <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                                        Price
-                                        <h5 class="mb-0">₹{{list?.variationCost}}</h5>
-                                        <span class="text-decoration-line-through mb-0">₹{{list?.discount}}</span>
-                                        <span class="badge bg-success text-white mb-0 ms-3">20% off</span>
-                                    </div> -->
-                                    <div class="d-grid mx-auto">
-                                        <a  class="btn btn-success rounded-0 btn-sm">Test Start</a>
-                                   </div>
-                                </div>
-                            </div>
+                                <!-- Card item END -->
+                            </ng-container>
+        
                         </div>
-                        <!-- Card item END -->
                     </div>
-                    <!-- Book Grid END -->
+                    <!-- all test List end -->
+                  
                 </div>
                 <!-- Main content END -->
             </div><!-- Row END -->
