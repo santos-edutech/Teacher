@@ -47,13 +47,6 @@ export class ApCourseDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.enrollNowForm = this.fb.group({
-      name:['', [Validators.required]],
-      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
-      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      message:['', [Validators.required]],
-      date : new Date(),
-    });
     this.enrollNowFormData = this.db.collection('enrollNowForm');
     this.apCourses = this.dataService.getAllApCourses();
     this.router.params.subscribe(params => {
@@ -61,6 +54,14 @@ export class ApCourseDetailsComponent implements OnInit {
       // console.log(this.selectedCourse);
       this.getSelectedCourseDetails(this.selectedCourse);
       this.buyCourse();
+      this.enrollNowForm = this.fb.group({
+        name:['', [Validators.required]],
+        email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+        phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+        message:['', [Validators.required]],
+        course:this.selectedCourseName,
+        date : new Date(),
+      });
     });
   }
 

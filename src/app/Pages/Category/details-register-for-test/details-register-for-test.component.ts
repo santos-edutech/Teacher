@@ -19,6 +19,7 @@ export class DetailsRegisterForTestComponent implements OnInit {
   testData:any
   registerForTest: any;
   getTestId: any;
+  allListRegisterForTest: any;
 
 
   constructor(
@@ -31,6 +32,8 @@ export class DetailsRegisterForTestComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.allListRegisterForTest = this.dataService.getallRegTest();
+    
     this.allTestList = this.dataService.getTestList()
     this.getAllTestList();
     // this.AllRegTestList = this.dataService.getallRegTest();

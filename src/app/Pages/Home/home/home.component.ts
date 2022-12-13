@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     this.menuItem = this.megaMenuItems[0]['normalMenuItems'];
     // console.log(this.menuItem[0]['menuId']);
     this.getSelectedCourse(this.menuItem[0]['menuId']);
-    this.userData = this.db.collection('websiteLoadpopupData');
+    this.userData = this.db.collection('counsellingSession');
     this.counsellingForm = this.fb.group({
       name:['', [Validators.required]],
       email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],

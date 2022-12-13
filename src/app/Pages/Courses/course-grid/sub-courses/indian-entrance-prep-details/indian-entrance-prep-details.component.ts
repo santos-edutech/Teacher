@@ -48,15 +48,8 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.enrollNowForm = this.fb.group({
-      name:['', [Validators.required]],
-      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
-      phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      message:['', [Validators.required]],
-      date : new Date(),
-    });
+    
     this.enrollNowFormData = this.db.collection('enrollNowForm');
-
     this.syllabusDetails = this.fb.group({
       name:['', [Validators.required]],
       email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
@@ -72,6 +65,14 @@ export class IndianEntrancePrepDetailsComponent implements OnInit {
       // console.log(this.selectedCourse);
       this.getSelectedEntranceDetails(this.selectedEntrance);
       this.buyCourse();
+      this.enrollNowForm = this.fb.group({
+        name:['', [Validators.required]],
+        email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+        phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+        message:['', [Validators.required]],
+        course: this.selectedEntranceTitle,
+        date : new Date(),
+      });
     });
   }
 
