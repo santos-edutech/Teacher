@@ -25,12 +25,12 @@ export const footerItems: Array<Object> =[
        'items' : [
         {
             'name': 'SAT',
-            'link': '',
+            'link': '/course-details/1/K12/1/SAT%20General',
             
         },
         {
             'name': 'APs',
-            'link': '',
+            'link': '/apCourses/1/K12/2/Advanced%20Placement%20Tests',
         
         },
         {

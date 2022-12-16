@@ -15,12 +15,13 @@ export class InternshipsComponent implements OnInit {
   InternshipListName: any;
   InternshipListItem: any;
   internshipAllList: any;
+  selectedMenuID: any;
 
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
     this.allInternshipItems=this.dataService.getAllInternships();
-    // console.log(this.allInternshipItems);
+    console.log(this.allInternshipItems);
     this.getInternship();
     this.getSelectedInternship(1);
   }
@@ -41,7 +42,8 @@ export class InternshipsComponent implements OnInit {
     for(let data of this.allInternshipItems){
       // console.log(data);
       if(data.MenuId == ID){
-        console.log(data.MenuId);
+        this.selectedMenuID = data.MenuId;
+        console.log( this.selectedMenuID);
         this.internshipAllList = data.item;
         this.InternshipListName = data.title;
         

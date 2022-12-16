@@ -34,6 +34,8 @@ export class RegisterForTestComponent implements OnInit {
   allGeadeList: any;
   allStreamList: any;
   allbranchList: any;
+  registerFortestPersonalData: AngularFirestoreCollection<any>;
+  registerFortestTestdata: AngularFirestoreCollection<any>;
 
   constructor(
     private dataService:DataService,
@@ -49,15 +51,16 @@ export class RegisterForTestComponent implements OnInit {
   // this.allStreamList = this.dataService.getAllStream().filter(data=>data.siShow===true);
   // this.allbranchList = this.dataService.getBranchList().filter(data=>data.siShow===true);
   
-  
+  this.registerFortestPersonalData = this.db.collection('personalDetails');
   this.personalDetails = this.fb.group({
     fname:['', [Validators.required]],
     lname:['', [Validators.required]],
-    email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+    email:['', [Validators.required,Validators.pattern('[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}')]],
     phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
     date : new Date(),
   });
 
+  this.registerFortestTestdata = this.db.collection('testDetails');
   this.testDetails = this.fb.group({
     segement:['', [Validators.required]],
     grade:['', [Validators.required]],

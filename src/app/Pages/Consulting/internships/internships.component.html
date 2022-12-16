@@ -48,8 +48,8 @@
             <!-- Title -->
             <div class="row mb-4">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2>Popular Job Categories</h2>
-                    <p class="mb-0">Perceived end knowledge certainly day sweetness why cordially</p>
+                    <h2>Enhance Your Skills Through Internships</h2>
+                    <p class="mb-0">Curated Internship Programs for students and individuals aligned with their passion and skills</p>
                 </div>
             </div>
 
@@ -97,25 +97,40 @@
                                         <p class="mb-2 text-truncate-2">
                                             {{item?.desc}}
                                         </p>
+                                         <!-- Rating star -->
+                                         <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
+                                            </li>
+                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
+                                            </li>
+                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
+                                            </li>
+                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
+                                            </li>
+                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
+                                            </li>
+                                            <!-- <li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i>
+                                            </li> -->
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
+                                        </ul>
                                     </div>
                                     <!-- Card footer -->
                                     <div class="card-footer pt-0 pb-3">
                                         <hr>
-                                        <!-- <div class="d-flex justify-content-between">
+                                        <div class="d-flex justify-content-between">
                                             <span class="h6 fw-light mb-0">
-                                                {{subMenuItem?.price}}
-                                                <span class="text-decoration-line-through">{{subMenuItem?.discount}}</span> <br>
+                                                56000
+                                                <span class="text-decoration-line-through">70000</span> <br>
                                                 <span class="badge bg-success text-white">20% off</span>
                                             </span>
                                             <span class="h6 fw-light mb-0">
-                                                <a
-                                                    [routerLink]="[subMenuItem?.link,couSubMenuId,courseMenuName, subMenuItem?.id , subMenuItem?.title]">
+                                                <a [routerLink]="['/internship-details',selectedMenuID,item?.id]" >
                                                     <i class="fas fa-arrow-right me-2 rounded-circle text-white p-2"
                                                         style="background-color:#444cae"></i>
                                                 </a>
                                             </span>
-                                        </div> -->
-                                        <button type="button" class="btn btn-primary form-control">Enroll Now</button>
+                                        </div>
+                                        <!-- <button type="button" class="btn btn-primary form-control">Enroll Now</button> -->
                                     </div>
                                 </div>
                             </div>

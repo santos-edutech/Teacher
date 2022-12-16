@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     this.userData = this.db.collection('counsellingSession');
     this.counsellingForm = this.fb.group({
       name:['', [Validators.required]],
-      email:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+(\.[a-zA-Z0-9-]+)*')]],
+      email:['', [Validators.required,Validators.pattern('[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}')]],
       phone:['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       city:['', [Validators.required]],
       date : new Date(),

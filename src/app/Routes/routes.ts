@@ -11,6 +11,7 @@ import { DetailsRegisterForTestComponent } from "../Pages/Category/details-regis
 import { EducationIndiaComponent } from "../Pages/Category/education-india/education-india.component";
 import { RegisterForTestComponent } from "../Pages/Category/register-for-test/register-for-test.component";
 import { CollegesComponent } from "../Pages/Consulting/colleges/colleges.component";
+import { InternshipDetailsComponent } from "../Pages/Consulting/internship-details/internship-details.component";
 import { InternshipsComponent } from "../Pages/Consulting/internships/internships.component";
 import { ITComponent } from "../Pages/Consulting/it/it.component";
 import { SchoolsComponent } from "../Pages/Consulting/schools/schools.component";
@@ -93,6 +94,10 @@ export const routes: Routes = [
     {
         path:'internships',
         component:InternshipsComponent,
+    },
+    {
+        path:'internship-details/:menuId/:id',
+        component:InternshipDetailsComponent,
     },
     {
         path:'blogs',

@@ -44,6 +44,7 @@ import { HomeModule } from './Pages/Home/home.module';
 import { RegisterForTestComponent } from './Pages/Category/register-for-test/register-for-test.component';
 import { DetailsRegisterForTestComponent } from './Pages/Category/details-register-for-test/details-register-for-test.component';
 import { BlogsDetailsComponent } from './Pages/More/blogs-details/blogs-details.component';
+import { InternshipDetailsComponent } from './Pages/Consulting/internship-details/internship-details.component';
 
 
 
@@ -82,6 +83,7 @@ import { BlogsDetailsComponent } from './Pages/More/blogs-details/blogs-details.
     RegisterForTestComponent,
     DetailsRegisterForTestComponent,
     BlogsDetailsComponent,
+    InternshipDetailsComponent,
   ],
   imports: [
     BrowserModule,
