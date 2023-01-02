@@ -15,14 +15,27 @@ import { allCategories} from '../common-content/allCategory';
 import { allRegTest } from '../common-content/register-for-test';
 import { AllInternship } from '../common-content/internships';
 import { NewsBlog } from '../common-content/newes-blog';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
  
+  baseUrlApi = environment.apiUrl;
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+   // GET All  Segment
+   allSegment(){
+    return  this.http.get(`${this.baseUrlApi}/Segment/GetSegmentList`);
+  }
+
+  // GET All Course
+  allCourse(){
+    return  this.http.get(`${this.baseUrlApi}/Course/GetCourseList`);
+  }
 
   getMegaMenu(){
     return megaMenuItems;

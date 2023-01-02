@@ -44,6 +44,7 @@ import { HomeModule } from './Pages/Home/home.module';
 import { RegisterForTestComponent } from './Pages/Category/register-for-test/register-for-test.component';
 import { DetailsRegisterForTestComponent } from './Pages/Category/details-register-for-test/details-register-for-test.component';
 import { BlogsDetailsComponent } from './Pages/More/blogs-details/blogs-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -93,7 +94,8 @@ import { BlogsDetailsComponent } from './Pages/More/blogs-details/blogs-details.
     ReactiveFormsModule,
     Ng2SearchPipeModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

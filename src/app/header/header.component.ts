@@ -16,6 +16,26 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.megaMenuItems = this.dataService.getMegaMenu();
+    this.getAllSegment();
+    this.getAllCourses();
+  }
+
+  // All Segment
+  allsegmentList:any;
+  getAllSegment(){
+    // this.allsegmentList = [];
+    this.dataService.allSegment().subscribe((res:any) => {
+      this.allsegmentList = res ;
+    });
+  }
+
+  //All Course
+  allCourseList:any ;
+  getAllCourses(){
+    this.dataService.allCourse().subscribe((res:any) => {
+      console.log();
+      this.allCourseList = res ;
+    });
   }
 
 }

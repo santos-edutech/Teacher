@@ -48,18 +48,15 @@
 				<!-- Nav Main menu START -->
 				<ul  class="navbar-nav navbar-nav-scroll me-auto">
 					<!-- Nav item-->
-					<li *ngFor="let menuItem of megaMenuItems" class="nav-item" [ngClass]="menuItem?.normalMenuItems ? 'dropdown' : ''">
-						<a class="nav-link " [ngClass]="menuItem?.normalMenuItems ? 'dropdown-toggle' : ''" [routerLink]="menuItem?.link" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menuItem?.label}}</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Courses</a>
 						<ul class="dropdown-menu"  aria-labelledby="demoMenu">
-							<li *ngFor="let item of menuItem['normalMenuItems']" class="dropend" [ngClass]="item?.subMenu ? 'dropdown-submenu' : '' ">
-								<a class="dropdown-item d-none d-lg-block" [ngClass]="item?.subMenu ? 'dropdown-toggle' : '' " [routerLink]="item?.menuId ? [item?.link , item?.menuId,item?.name] : [item?.link]">{{item?.name}}</a>
-								<a class="dropdown-item d-lg-none" [ngClass]="item?.subMenu ? 'dropdown-toggle' : '' " [routerLink]="item?.menuId ? [item?.link , item?.menuId,item?.name] : [item?.link]" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">{{item?.name}}</a>
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend" *ngFor="let data of allsegmentList">
+								<a class="dropdown-item dropdown-toggle" href="#">{{data?.title}}</a>
 								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-									<li *ngFor="let subMenuItem of item['subMenu']"> 
-										<a class="dropdown-item d-none d-lg-block" [routerLink]="[subMenuItem?.link ,item?.menuId,item?.name,subMenuItem?.id,subMenuItem?.title]" data-bs-toggle="dropdown" aria-expanded="false">{{subMenuItem?.title}}
-										</a>
-										<a class="dropdown-item d-lg-none" [routerLink]="[subMenuItem?.link ,item?.menuId,item?.name,subMenuItem?.id,subMenuItem?.title]" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">{{subMenuItem?.title}}
-										</a>
+									<li *ngFor = "let course of allCourseList">
+										<a class="dropdown-item" >{{course?.courseTitle}}</a>
 									</li>
 								</ul>
 							</li>

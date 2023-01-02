@@ -8,4 +8,5 @@ export const environment = {
     messagingSenderId: "949146011903",
     appId: "1:949146011903:web:1b21ead4a31cb166b0e4ca"  
   },
+  apiUrl:'https://api.edutechex.org/api',
 };
