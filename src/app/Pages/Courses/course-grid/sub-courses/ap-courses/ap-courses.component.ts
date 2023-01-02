@@ -51,6 +51,7 @@ export class ApCoursesComponent implements OnInit {
 
 
   menuId:any;
+  objectLenght :any ;
   getSelectedSubmenuCourse(MenuId:any,ID:any){
       this.selecetdSubCourseId = ID;
       for(let menuItems of this.menuItem){
@@ -61,14 +62,10 @@ export class ApCoursesComponent implements OnInit {
         for(let itm of this.menuItemList){
           // console.log(itm);
           if(itm.id === ID){
-            console.log(itm);
-          var  objectLenght = Object.keys(itm).length;
-          // var  objectLenght =  Object.keys(itm).filter((v:any) => v.length)
-          console.log(objectLenght);
+          this.objectLenght = Object.values(itm).length;
           this.selecetdSubCourseId = itm.id;
           this.selectedSubMenuCourseTitle = itm.title;
           this.selectedSubMenuCourseDetails = itm.details;
-          
           }
         }
       }

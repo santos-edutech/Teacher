@@ -161,10 +161,9 @@
                                         <div class="col-12">
                                             <ng-container *ngFor="let item of menuItemList; let i=index">
                                                 <div *ngIf="item?.id !== selecetdSubCourseId">
-                                                    <div class="d-flex justify-content-between align-items-center " >
-                                                        <a href="{{item?.websiteLink}}"  style="cursor: pointer; color: #747579;">{{item?.title}}</a>
-                                                        {{item.length}}
-                                                        <!-- <span *ngIf="i<6" class="small">({{item?.subMenu?.length}})</span> -->
+                                                    <div class="d-flex justify-content-between align-items-start " >
+                                                        <a href="{{item?.websiteLink}}"  class="mb-1" style="cursor: pointer; color:#747579" >{{item?.title}}</a>
+                                                        <a class="small">({{item?.lenght}})</a>
                                                     </div>
                                                 </div>
                                             </ng-container>

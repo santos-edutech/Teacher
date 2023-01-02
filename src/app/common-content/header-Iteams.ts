@@ -20,6 +20,7 @@ export const megaMenuItems : Array<Object>=[
                     {
                         'id':'1',
                         'uniqueID':'100',
+                        'lenght':'1',
                         'title':'SAT General',
                         'link': '/course-details/',
                         'websiteLink':'#/course-details/1/K12/1/SAT%20General',
@@ -278,6 +279,7 @@ export const megaMenuItems : Array<Object>=[
                     },
                     {
                         'id':'2',
+                        'lenght':'10',
                         'title':'Advanced Placement Tests',
                         'price':'Starting ₹50,400',
                         'link': '/apCourses',
@@ -288,6 +290,7 @@ export const megaMenuItems : Array<Object>=[
                     },
                     {
                         'id':'3',
+                        'lenght':'1',
                         'uniqueID':'301',
                         'title':' Ivy League Bachelors Program',
                         'link': '/Ivy-League-course-details',
@@ -494,6 +497,7 @@ export const megaMenuItems : Array<Object>=[
                     },
                     {
                         'id':'4',
+                        'lenght':'3',
                         'title':'Medical Program',
                         'price':'Starting ₹80,000',
                         'link': '/medical-program',
@@ -503,6 +507,7 @@ export const megaMenuItems : Array<Object>=[
                     },
                     {
                         'id':'5',
+                        'lenght':'3',
                         'title':'Indian Entrance Prep',
                         'price':'Starting ₹80,000',
                         'link': '/indian-entrance-prep',
@@ -513,6 +518,7 @@ export const megaMenuItems : Array<Object>=[
                     {
                         'id':'6',
                         'uniqueID':'601',
+                        'lenght':'1',
                         'title':'Career Navigation',
                         'link': '/career-navigation-details/',
                         'websiteLink':'#/career-navigation-details/1/K12/6/Career%20Navigation',
@@ -710,6 +716,7 @@ export const megaMenuItems : Array<Object>=[
                     // },
                     {
                         'id':'10',
+                        'lenght':'8',
                         'title':'After School Services',
                         'link': '/after-school-services',
                         'websiteLink':'#/after-school-services/1/K12/10/After%20School%20Services',
